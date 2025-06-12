@@ -12,14 +12,14 @@
 ko: &DEFAULT_KO
   header:
     title: "@Ounols"
-    text: "Portfolio for Developers"
+    text: "Portfolio"
     button: "Recent Activities"
-    buttonlink: "#team"
+    buttonlink: "#recent"
 
   services:
-    title: "Technical Stack 🛠"
+    title: "Technical Stack"
     text: "주로 사용하는 기술들입니다."
-    section: services
+    section: stack
     list:
       - title: "Unity Engine"
         desc: "게임 컨텐츠 제작은 물론, 심도있는 렌더링 로직 수정까지 진행한 경험이 있습니다."
@@ -81,7 +81,7 @@ ko: &DEFAULT_KO
   about:
     title: "About Me"
     text: "안녕하세요!"
-    body: "<h3>흥미로운 것에 도전하는 걸 좋아하는<p>게임 엔진 그래픽스 지망 프로그래머 입니다.</p></h3>학생 때부터 게임 개발에 흥미를 느끼고 꿈을 키웠고,<br/>회사에서 많은 일들을 배우며 성장하고자 노력하고 있습니다.<br/>프로그래밍뿐만 아니라 흥미로운 것이라면 한번 도전해보고 있습니다."
+    body: "<h4 class='introduce'>흥미로운 것에 도전하는 걸 좋아하는</h4><h1 class='introduce highlight'>게임 엔진 그래픽스 지망 프로그래머</h1><h4 class='introduce'>입니다.</h4>학생 때부터 게임 개발에 흥미를 느끼고 꿈을 키웠고,<br/>회사에서 많은 일들을 배우며 성장하고자 노력하고 있습니다.<br/>프로그래밍뿐만 아니라 흥미로운 것이라면 한번 도전해보고 있습니다."
     section: about
 
   clients:
@@ -105,40 +105,32 @@ ko: &DEFAULT_KO
   team:
     title: "Recent Activities"
     text: "최근에 활동했던 내용을 작성했습니다."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
-    section: team
+    subtext: "이 곳에 더 많은 내용을 담지 못해서 무척 아쉽네요!<br/><b>더 많은 활동이나 기술 이력, 블로그 게시글은 <a href='https://ounols.kr'>제 블로그</a>에서 확인할 수 있습니다.</b>"
+    section: recent
     people:
-      - name: "Unity에 원신의 동적 조명 Global Illumination 적용"
+      - name: "<span class='highlight'>Unity에 원신의 동적 조명 Global Illumination 적용</span>"
         role: "Unity 프로젝트에서 <b>동적 조명을 적용한 글로벌 일루미네이션(GI)</b>을 구현하기 위해 <b>G-Buffer를 활용</b>하고, <b>diffuse</b>와 <b>reflection</b>을 계산했습니다."
-        image: assets/img/team/500x500.jpg
+        image: assets/img/recent/unity-gi.png
         social:
           - url: https://x.com/eftdjmr/status/1780503749380935833
             icon: fab fa-twitter
           - url: https://ounols.kr/posts/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84
             icon: fa-solid fa-circle-info
-      - name: "SDF를 이용한 Global Illumination 구현"
+      - name: "<span class='highlight'>SDF를 이용한 Global Illumination 구현</span>"
         role: "<b>레이마칭</b>을 이용한 <b>SDF 기반의 글로벌 일루미네이션</b> 구현 과정을 다룹니다. 이전의 <b>GI 구현에 실패한 경험을 바탕</b>으로, SDF를 활용해 성공적으로 구현했습니다."
-        image: assets/img/team/2.jpg
+        image: assets/img/recent/gi.png
         social:
           - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
           - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
             icon: fa-solid fa-circle-info
-      - name: "자체 엔진 개발"
+      - name: "<span class='highlight'>자체 엔진 개발</span>"
         role: "자체 엔진인 CSEngine을 취미로 개발하고 있습니다. <b>기본적인 렌더링을 위한 준비는 완료</b>되었기 때문에 최근에 <b>에디터를 제작</b>하고 있습니다."
-        image: assets/img/team/500x500.jpg
+        image: assets/img/recent/editor.png
         social:
           - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
           - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
-            icon: fa-solid fa-circle-info
-      - name: "자체 엔진 개발"
-        role: "자체 엔진인 CSEngine을 취미로 개발하고 있습니다. <b>기본적인 렌더링을 위한 준비는 완료</b>되었기 때문에 최근에 <b>에디터를 제작</b>하고 있습니다."
-        image: assets/img/team/500x500.jpg
-        social:
-          # - url: https://x.com/eftdjmr
-          #   icon: fab fa-twitter
-          - url: https://ounols.kr/categories/%EC%9E%90%EC%B2%B4-%EA%B2%8C%EC%9E%84-%EC%97%94%EC%A7%84-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
             icon: fa-solid fa-circle-info
 
   contact:
