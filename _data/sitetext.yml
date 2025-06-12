@@ -7,77 +7,87 @@
 # How to use:
 # {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
 
-# English (default)
+# Korean (default)
 # -----------------
-en: &DEFAULT_EN
+ko: &DEFAULT_KO
   header:
-    title: Welcome to our Studio!
-    text: It's Nice To Meet You
-    button: Tell Me More
-    buttonlink: "#services"
+    title: "@Ounols"
+    text: "Portfolio for Developers"
+    button: "Recent Activities"
+    buttonlink: "#team"
 
   services:
-    title: "Services"
-    text: "Lorem ipsum"
+    title: "Technical Stack 🛠"
+    text: "주로 사용하는 기술들입니다."
     section: services
     list:
-      - title: "E-Commerce"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
-        icon: fab fa-markdown
+      - title: "Unity Engine"
+        desc: "게임 컨텐츠 제작은 물론, 심도있는 렌더링 로직 수정까지 진행한 경험이 있습니다."
+        icon: fa-brands fa-unity
+      - title: "Unreal Engine"
+        desc: "STL C++과의 차이점을 이해하며, 현재 비공개 언리얼 프로젝트의 로직 및 렌더링 업무를 담당합니다."
+        icon: fa-solid fa-gamepad
+      - title: "C++"
+        desc: "모던 C++의 꽃인 Move Semantics, RAII, Smart Pointer 등을 활용하여 언리얼을 포함한 C++ 경험이 있습니다."
+        icon: fas fa-code
+      - title: "C#"
+        desc: "C#을 이용한 Unity 엔진 개발 경험이 있으며, C#이 추구하는 설계방식을 이해하고 있습니다."
+        icon: fas fa-code
+      - title: "Graphics<br/>with DirectX & OpenGL"
+        desc: "자체 실시간 렌더링 엔진을 취미삼아 개발하며, 이 지식을 통해 업무에 적극적으로 활용합니다."
+        icon: fas fa-cube
+      - title: "Server Backend"
+        desc: "업무 중에 백엔드를 자주 경험하면서, 실 서비스를 위한 개발에도 참여한 적 있습니다."
+        icon: fas fa-server
 
   portfolio:
     title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    text: "제가 진행했던 프로젝트들입니다."
     section: portfolio
-    closebutton: "Close Project"
+    closebutton: "닫기"
 
   timeline:
-    title: "Timeline"
-    text: "Lorem ipsum timeline"
+    title: "Career Timeline"
+    text: "학력을 포함한 경력사항입니다."
     section: timeline
-    # left is the default
-    #start_align: "left"
     events:
-      - title: "Our Humble Beginnings"
-        year: "2009-2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      - title: "울산애니원고등학교 졸업"
+        year: "2016"
+        desc: "컴퓨터게임개발과 전공"
         image: assets/img/timeline/1.jpg
-        alt:
-      - title: "An Agency is Born"
-        year: "March 2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        alt: "울산애니원고등학교"
+      - title: "Eight Studio 게임 프로그래머"
+        year: "2020 - 2021"
+        desc: "클라이언트 & 서버 담당 (1년 6개월)"
         image: assets/img/timeline/2.jpg
-        alt:
-      - title: "Jekyll Theme is created"
-        year: "2019"
-        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+        alt: "에이트 스튜디오"
+      - title: "청강문화산업대학 산학사업 그래픽스 프로그래머"
+        year: "2021 - 2022"
+        desc: "Web 프론트엔드 렌더링 담당 (5개월)"
         image: assets/img/timeline/3.jpg
-        alt: image alt text
-      - title: "Title"
-        year: "2009-2011"
-        desc: "Your description here, **Markdown** is fully supported."
+        alt: "모여다오"
+      - title: "청강문화산업대학 학사 졸업"
+        year: "2024"
+        desc: "게임컨텐츠스쿨 전공 (심화과정 포함)"
         image: assets/img/timeline/4.jpg
-        alt:
-        # you can enforce the alignment
-        align: right
-    end: "Be Part <br> of Our <br> Story!"
+        alt: "대학교"
+      - title: "주식회사 펀딜 프로그래머"
+        year: "2022 - 현재"
+        desc: "컨텐츠 개발 및 그래픽스 연구 담당 (3년 이상)"
+        image: assets/img/timeline/5.jpg
+        alt: "펀딜"
+
 
   about:
-    title: "About Us"
-    text: "our story"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    title: "About Me"
+    text: "안녕하세요!"
+    body: "<h3>흥미로운 것에 도전하는 걸 좋아하는<p>게임 엔진 그래픽스 지망 프로그래머 입니다.</p></h3>학생 때부터 게임 개발에 흥미를 느끼고 꿈을 키웠고,<br/>회사에서 많은 일들을 배우며 성장하고자 노력하고 있습니다.<br/>프로그래밍뿐만 아니라 흥미로운 것이라면 한번 도전해보고 있습니다."
     section: about
 
   clients:
     section: clients
     max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
+    horizontal-scrolling: "yes" #"yes/no"
     list:
       - title: "envato"
         url: https://github.com/raviriley/agency-jekyll-theme
@@ -93,230 +103,73 @@ en: &DEFAULT_EN
         logo: assets/img/clients/creative-market.jpg
 
   team:
-    title: "OUR AMAZING TEAM"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    title: "Recent Activities"
+    text: "최근에 활동했던 내용을 작성했습니다."
     subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     section: team
     people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
+      - name: "Unity에 원신의 동적 조명 Global Illumination 적용"
+        role: "Unity 프로젝트에서 <b>동적 조명을 적용한 글로벌 일루미네이션(GI)</b>을 구현하기 위해 <b>G-Buffer를 활용</b>하고, <b>diffuse</b>와 <b>reflection</b>을 계산했습니다."
         image: assets/img/team/500x500.jpg
         social:
-          - url: https://twitter.com
+          - url: https://x.com/eftdjmr/status/1780503749380935833
             icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
+          - url: https://ounols.kr/posts/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84
+            icon: fa-solid fa-circle-info
+      - name: "SDF를 이용한 Global Illumination 구현"
+        role: "<b>레이마칭</b>을 이용한 <b>SDF 기반의 글로벌 일루미네이션</b> 구현 과정을 다룹니다. 이전의 <b>GI 구현에 실패한 경험을 바탕</b>으로, SDF를 활용해 성공적으로 구현했습니다."
         image: assets/img/team/2.jpg
         social:
-          - url: https://twitter.com
+          - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
+          - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
+            icon: fa-solid fa-circle-info
+      - name: "자체 엔진 개발"
+        role: "자체 엔진인 CSEngine을 취미로 개발하고 있습니다. <b>기본적인 렌더링을 위한 준비는 완료</b>되었기 때문에 최근에 <b>에디터를 제작</b>하고 있습니다."
         image: assets/img/team/500x500.jpg
         social:
-          - url: https://twitter.com
+          - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
+          - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
+            icon: fa-solid fa-circle-info
+      - name: "자체 엔진 개발"
+        role: "자체 엔진인 CSEngine을 취미로 개발하고 있습니다. <b>기본적인 렌더링을 위한 준비는 완료</b>되었기 때문에 최근에 <b>에디터를 제작</b>하고 있습니다."
+        image: assets/img/team/500x500.jpg
+        social:
+          # - url: https://x.com/eftdjmr
+          #   icon: fab fa-twitter
+          - url: https://ounols.kr/categories/%EC%9E%90%EC%B2%B4-%EA%B2%8C%EC%9E%84-%EC%97%94%EC%A7%84-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
+            icon: fa-solid fa-circle-info
 
   contact:
-    title: "Contact Us"
-    text: "Lorem ipsum or call 123456789"
+    title: "Contact"
+    text: "연락처"
     section: contact
-    name: "Name*"
-    name-validation: "Please enter your name."
-    email: "Email*"
-    email-validation: "Please enter your email address."
-    phone: "Phone Number"
-    phone-validation: "Please enter your phone number."
-    message: "Message*"
-    message-validation: "Please enter a message."
-    subject: "Contact Form Submission"
-    submit: "Send Message"
+    name: "이름*"
+    name-validation: "이름을 입력해주세요."
+    email: "이메일*"
+    email-validation: "이메일을 입력해주세요."
+    phone: "전화번호"
+    phone-validation: "전화번호를 입력해주세요."
+    message: "메시지*"
+    message-validation: "메시지를 입력해주세요."
+    subject: "포트폴리오 문의"
+    submit: "보내기"
 
   footer:
-    legal: "Privacy Policy"
+    legal: "개인정보처리방침"
     social:
-      - url: https://twitter.com
-        icon: "fab fa-twitter"
-      - url: https://facebook.com
-        icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
-        icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
+      - url: https://github.com/ounols
         icon: "fab fa-github"
-      - url: https://instagram.com
-        icon: "fab fa-instagram"
+      - url: mailto:ounols@ounols.kr
+        icon: "fas fa-envelope"
 en-US:
-  <<: *DEFAULT_EN
+  <<: *DEFAULT_KO
 en-CA:
-  <<: *DEFAULT_EN
+  <<: *DEFAULT_KO
 en-GB:
-  <<: *DEFAULT_EN
+  <<: *DEFAULT_KO
 en-AU:
-  <<: *DEFAULT_EN
-
-# Spanish
-# -------
-es: &DEFAULT_ES
-  header:
-    title: ¡Bienvenido a nuestro Estudio!
-    text: Es un placer conocerle
-    button: Ver más
-    buttonlink: "#servicios"
-
-  services:
-    title: "Servicios"
-    text: "Lorem ipsum"
-    section: servicios
-    list:
-      - title: "Comercio Electrónico"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Diseño Responsivo"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Su descripción aquí, soporte completo de **Markdown**"
-        icon: fab fa-markdown
-
-  portfolio:
-    title: "Portafolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    section: portafolio
-    closebutton: "Cerrar Proyecto"
-
-  timeline:
-    title: "Cronología"
-    text: "Lorem ipsum timeline"
-    section: cronologia
-    # left is the default
-    #start_align: "left"
-    events:
-      - title: "Nuestro Humilde Comienzo"
-        year: "2009-2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/1.jpg
-        alt:
-      - title: "Una Agencia nace"
-        year: "March 2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/2.jpg
-        alt:
-      - title: "La plantilla Jekyll es creada"
-        year: "2019"
-        desc: "Ravi Riley convirtió Agency, una plantilla basada en Bootstrap, en una plantilla de Jekyll. La plantilla Jekyll puede ser instalada commo una gema de Ruby (Ruby gem) o remotamente. Para más información, visite la documentación."
-        image: assets/img/timeline/3.jpg
-        alt: image alt text
-      - title: "Título"
-        year: "2009-2011"
-        desc: "Su descripción aquí, **Markdown** es soportado completamente."
-        image: assets/img/timeline/4.jpg
-        alt:
-        # you can enforce the alignment
-        align: right
-    end: "¡Se parte <br> de Nuestra <br> Historia!"
-
-  about:
-    title: "Sobre nosotros"
-    text: "nuestra historia"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
-    section: nosotros
-
-  clients:
-    section: clientes
-    max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
-    list:
-      - title: "envato"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/raviriley/agency-jekyll-theme
-        logo: assets/img/clients/creative-market.jpg
-
-  team:
-    title: "NUESTRO INCREÍBLE EQUIPO"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
-    section: equipo
-    people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
-        image: assets/img/team/2.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-
-  contact:
-    title: "Contáctenos"
-    text: "Lorem ipsum or call 123456789"
-    section: contacto
-    name: "Nombre*"
-    name-validation: "Por favor ingrese su nombre."
-    email: "Correo Electrónico*"
-    email-validation: "Por favor ingrese su correo electrónico."
-    phone: "Número Telefónico*"
-    phone-validation: "Por favor ingrese su número telefónico."
-    message: "Mensaje*"
-    message-validation: "Por favor escriba un mensaje."
-    subject: "Envío del formulario de contacto"
-    submit: "Enviar Mensaje"
-
-  footer:
-    legal: "Política de Privacidad"
-    social:
-      - url: https://twitter.com
-        icon: "fab fa-twitter"
-      - url: https://facebook.com
-        icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
-        icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
-      - url: https://instagram.com
-        icon: "fab fa-instagram"
-es-ES:
-  <<: *DEFAULT_ES
-es-CO:
-  <<: *DEFAULT_ES
+  <<: *DEFAULT_KO
+ko-KR:
+  <<: *DEFAULT_KO
