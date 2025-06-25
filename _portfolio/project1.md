@@ -1,14 +1,20 @@
 ---
 title: CSEngine - 자체 개발 크로스 플랫폼 3D 게임 엔진
-subtitle: subtitle lorem ipsum dolor sit amet consectetur.
+subtitle: 자체 개발 크로스 플랫폼 실시간 3D 게임 엔진
 image: assets/img/portfolio/01-full.jpg
-alt: Shirts on a hanger
+alt: CSEngine Demo Scene
 
 caption:
   title: CSEngine
   subtitle: <span class="section-subheading">자체 개발 크로스 플랫폼 실시간 3D 게임 엔진</span>
   thumbnail: assets/img/portfolio/01-thumbnail.jpg
 ---
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
 ## 간단 소개
 
 <div class="row d-flex justify-content-center">
@@ -85,46 +91,70 @@ caption:
 
 ## 주요 기능 요약
 
-<div class="row d-flex justify-content-center">
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/1.jpg" alt="">
-      <h3>렌더링</h3>
-      <p class="text-muted"><b>PBR</b>, <b>프레임버퍼</b>, <b>디퍼드 렌더링</b> 기반 구현</p>
-      </div>
+<div id="featureCarousel" class="carousel carousel-dark slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="렌더링"></button>
+    <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1" aria-label="애니메이션"></button>
+    <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2" aria-label="프리팹 & 씬"></button>
+    <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3" aria-label="커스텀 스크립트"></button>
+    <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="4" aria-label="크로스 플랫폼"></button>
   </div>
+  <div class="carousel-inner">
 
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/1.jpg" alt="">
-      <h3>애니메이션</h3>
-      <p class="text-muted"><b>스켈레탈 스킨닝</b>, <b>타임라인 애니메이션</b> 지원</p>
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="assets/img/portfolio/01-full.jpg" class="d-block mx-auto" alt="렌더링">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>렌더링</h5>
+        <p><b>PBR</b>, <b>프레임버퍼</b>, <b>디퍼드 렌더링</b> 기반 구현</p>
+        <a href="https://ounols.kr/posts/CSEngine-%EB%A0%8C%EB%8D%94%EB%A7%81" class="btn btn-info">자세히 보기 →</a>
       </div>
-  </div>
+    </div>
 
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/1.jpg" alt="">
-      <h3>프리팹 & 씬</h3>
-      <p class="text-muted"><b>객체 복제</b>, <b>프리팹 시스템</b>, <b>씬 파일 직렬화</b> 지원</p>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="assets/img/timeline/1.jpg" class="d-block mx-auto" alt="애니메이션">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>애니메이션</h5>
+        <p><b>스켈레탈 스킨닝</b>, <b>타임라인 애니메이션</b> 지원</p>
+        <a href="https://ounols.kr/posts/CSEngine-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98" class="btn btn-info">자세히 보기 →</a>
       </div>
-  </div>
+    </div>
 
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/1.jpg" alt="">
-      <h3>커스텀 스크립트</h3>
-      <p class="text-muted"><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="assets/img/timeline/1.jpg" class="d-block mx-auto" alt="프리팹 & 씬">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>프리팹 & 씬</h5>
+        <p><b>객체 복제</b>, <b>프리팹 시스템</b>, <b>씬 파일 직렬화</b> 지원</p>
+        <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" class="btn btn-info">자세히 보기 →</a>
       </div>
-  </div>
+    </div>
 
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/1.jpg" alt="">
-      <h3>크로스 플랫폼</h3>
-      <p class="text-muted"><b>Windows</b>, <b>Linux</b>, <b>Android</b>, <b>macOS</b>, <b>WebGL</b> 등 지원</p>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="assets/img/timeline/1.jpg" class="d-block mx-auto" alt="커스텀 스크립트">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>커스텀 스크립트</h5>
+        <p><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
+        <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" class="btn btn-info">자세히 보기 →</a>
       </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="assets/img/timeline/1.jpg" class="d-block mx-auto" alt="크로스 플랫폼">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>크로스 플랫폼</h5>
+        <p><b>Windows</b>, <b>Linux</b>, <b>Android</b>, <b>macOS</b>, <b>WebGL</b> 등 지원</p>
+        <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" class="btn btn-info">자세히 보기 →</a>
+      </div>
+    </div>
+
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">이전</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">다음</span>
+  </button>
 </div>
 
 
