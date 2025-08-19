@@ -1,13 +1,13 @@
 ---
 title: "괴도 앙팡 - 3D 착시 퍼즐 게임 제작 학교 프로젝트"
 subtitle: 팀원 5명에서 학교 앱 게임 프로젝트로 제작했던 Unity 기반 착시 퍼즐 게임
-image: assets/img/portfolio/02-full.jpg
-alt: Keep Exploring
+# image: assets/img/portfolio/02-full.jpg
+# alt: 
 
 caption:
-  title: "괴도 앙팡"
+  title: "[개인] 괴도 앙팡"
   subtitle: 3D 착시 퍼즐 게임 학교 프로젝트
-  thumbnail: assets/img/portfolio/02-thumbnail.jpg
+  thumbnail: assets/img/portfolio/g.png
 ---
 
 ## 프로젝트 소개

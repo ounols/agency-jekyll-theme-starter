@@ -1,19 +1,21 @@
 ---
 title: CSEngine - 자체 개발 크로스 플랫폼 3D 게임 엔진
 subtitle: 자체 개발 크로스 플랫폼 실시간 3D 게임 엔진
-image: assets/img/portfolio/01-full.jpg
-alt: CSEngine Demo Scene
+# image: assets/img/portfolio/01-full.jpg
+# alt: CSEngine Demo Scene
 
 caption:
-  title: CSEngine
+  title: "[개인] CSEngine"
   subtitle: <span class="section-subheading">자체 개발 크로스 플랫폼 실시간 3D 게임 엔진</span>
-  thumbnail: assets/img/portfolio/01-thumbnail.jpg
+  thumbnail: assets/img/portfolio/c.png
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
+![](assets/img/portfolio/intro_image2.gif)
 
 ## 간단 소개
 
