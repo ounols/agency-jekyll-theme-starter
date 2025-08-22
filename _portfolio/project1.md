@@ -64,6 +64,121 @@ caption:
 
 ---
 
+## 이 프로젝트를 통해
+
+<div class="experience-section py-4">
+  <div class="row">
+    <div class="col-12">
+      <p class="lead text-center mb-4">
+        몇년 동안 이 프로젝트를 작업하며 게임 엔진의 핵심 기술들을 직접 구현하고, 
+        실제 업무에 활용할 수 있는 깊이 있는 경험을 쌓았습니다.
+      </p>
+    </div>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h5 class="card-title mb-0">렌더링 파이프라인 설계</h5>
+          </div>
+          <p class="card-text">
+            PBR, 디퍼드 렌더링, 포스트 프로세싱 등 현대적 렌더링 기법을 직접 구현하며 
+            <strong>Unity URP/HDRP</strong>와 같은 상용 렌더링 파이프라인의 동작 원리를 깊이 이해했습니다. 
+            이 경험을 바탕으로 회사에서 커스텀 포스트 프로세싱의 구현 및 최적화를 성공적으로 진행할 수 있었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-success bg-gradient text-white rounded-3 me-3">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h5 class="card-title mb-0">C++에서의 Reflection 구현</h5>
+          </div>
+          <p class="card-text">
+            메타데이터 추출, 동적 타입 정보 관리, 객체 직렬화 등을 통해 
+            <strong>Unreal Engine의 GC 및 리플렉션 시스템</strong>의 작동 원리를 체득했습니다. 
+            이를 통해 복잡한 객체 관리와 에디터 툴 개발에 필요한 핵심 기술을 습득했습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-warning bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h5 class="card-title mb-0">크로스플랫폼 추상화</h5>
+          </div>
+          <p class="card-text">
+            Windows, Linux, Android, macOS, WebGL 등 다양한 플랫폼을 지원하며 
+            각 플랫폼별 최적화 포인트와 <strong>Undefined Behavior 발생 지점</strong>을 파악했습니다. 
+            플랫폼 간 일관성을 유지하면서도 각각의 특성을 활용하는 설계 능력을 기를 수 있었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-info bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h5 class="card-title mb-0">에디터 툴 개발</h5>
+          </div>
+          <p class="card-text">
+            직관적인 에디터 인터페이스 구현을 통해 엔진의 전반적인 모듈화를 진행했습니다. 
+            이 과정에서 <strong>Unity, Unreal 등 상용 엔진 에디터의 UX 설계 원칙과 아키텍처</strong>를 
+            분석하고 적용할 수 있는 안목을 기를 수 있었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.experience-section .feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.experience-section .card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.experience-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+.experience-section .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+</style>
+
+---
+
 ## 프로젝트 구조
 
 <div class="row">
@@ -72,7 +187,7 @@ caption:
       <div class="card-body">
         <h4 class="card-title">📚 개발 배경 & 의도</h4>
         <p class="card-text">게임 엔진을 직접 만들어 본 경험, 기술 성장 및 자기 주도 개발의 동기를 소개</p>
-        <a href="https://velog.io/@ounols/Cpp%EB%A1%9C-%EC%A0%9C%EC%9E%91%ED%95%98%EB%8A%94-%ED%81%AC%EB%A1%9C%EC%8A%A4%ED%94%8C%EB%9E%AB%ED%8F%BC-%EA%B2%8C%EC%9E%84%EC%97%94%EC%A7%84-%EC%A0%9C%EC%9E%91%EA%B8%B0" 
+        <a href="https://ounols.kr/posts/%EC%97%94%EC%A7%84-%EC%A0%9C%EC%9E%91%EA%B8%B0/" 
            class="section-subheading btn btn-outline-primary">자세히 보기 →</a>
       </div>
     </div>
@@ -158,7 +273,6 @@ caption:
     <span class="visually-hidden">다음</span>
   </button>
 </div>
-
 
 ---
 
