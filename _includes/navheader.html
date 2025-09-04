@@ -83,10 +83,12 @@
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              // Header is visible - activate iframe
+              // Header is visible - activate iframe and resume Emscripten loop
               iframe.style.display = 'block';
+              iframe.contentWindow.postMessage({action: 'resume'}, '*');
             } else {
-              // Header is not visible - deactivate iframe
+              // Header is not visible - pause Emscripten loop and hide iframe
+              iframe.contentWindow.postMessage({action: 'pause'}, '*');
               iframe.style.display = 'none';
             }
           });
