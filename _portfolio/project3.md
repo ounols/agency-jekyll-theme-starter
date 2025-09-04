@@ -25,6 +25,8 @@ Eight Studio에 재직하며 유니티로 제작하던 카드 수집형 타워 �
   </a>
 </div>
 
+-----
+
 ## 프로젝트 사양
 
 <ul class="text-left mb-1" style="padding-left:1em;">
@@ -35,6 +37,8 @@ Eight Studio에 재직하며 유니티로 제작하던 카드 수집형 타워 �
     4GB+ RAM, 1GB+ Storage
   </li>
 </ul>
+
+-----
 
 ## 담당 파트
 

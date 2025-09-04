@@ -11,8 +11,8 @@
 # -----------------
 ko: &DEFAULT_KO
   header:
-    title: "@Ounols"
-    text: "Portfolio"
+    title: "portfolio"
+    text: ""
     button: "Recent Activities"
     buttonlink: "#recent"
 
@@ -80,8 +80,8 @@ ko: &DEFAULT_KO
 
   about:
     title: "About Me"
-    text: "안녕하세요!"
-    body: "<h4 class='introduce'>흥미로운 것에 도전하는 걸 좋아하는</h4><h1 class='btn-outline-primary'>게임 엔진 그래픽스 지망 프로그래머</h1><h4 class='introduce'>입니다.</h4>학생 때부터 게임 개발에 흥미를 느끼고 꿈을 키웠고,<br/>회사에서 많은 일들을 배우며 성장하고자 노력하고 있습니다.<br/>프로그래밍뿐만 아니라 흥미로운 것이라면 한번 도전해보고 있습니다."
+    text: "상단의 3D Scene은 제가 개발한 자체 엔진으로 직접 만들었습니다."
+    body: "<h4 class='introduce'>흥미로운 것에 도전하는 걸 좋아하는</h4><h1 class='btn-outline-primary'>게임 엔진 그래픽스 지망 프로그래머</h1><h4 class='introduce'>이진영 입니다.</h4>학생 때부터 게임 개발에 흥미를 느끼고 꿈을 키웠고,<br/>회사에서 많은 일들을 배우며 성장하고자 노력하고 있습니다.<br/>프로그래밍뿐만 아니라 흥미로운 것이라면 한번 도전해보고 있습니다."
     section: about
 
   clients:
