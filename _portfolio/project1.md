@@ -15,7 +15,6 @@ caption:
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-![](assets/img/portfolio/intro_image2.gif)
 
 ## 간단 소개
 
@@ -440,7 +439,7 @@ caption:
 
 ---
 
-## ✅ 개발 현황 및 계획
+## 개발 현황 및 계획
 
 진행 중인 작업, 구현 예정 기능, TODO 리스트가 별도 페이지에 정리되어 있음  
 👉 [개발 현황 & TODO](https://pofo.ounols.kr/CSEngine) *(메인 페이지 내 링크 포함)*

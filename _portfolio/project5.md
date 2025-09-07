@@ -7,10 +7,15 @@ subtitle: 모바일 웹 브라우저로 돌아가는 보훈 메타버스 프로�
 caption:
   title: "[회사] 보훈 메타버스"
   subtitle: 모바일 WebGL의 구동을 목표로 대규모 배경의 최적화
-  thumbnail: assets/img/portfolio/h.png
+  thumbnail: assets/img/portfolio/b/b.png
 ---
 
 ## 프로젝트 소개
+
+<div class="d-flex justify-content-center align-items-center gap-3 flex-nowrap">
+  <img class="img-fluid" src="assets/img/portfolio/b/b-1.png" alt="" style="max-height: 300px; max-width: 45%; object-fit: contain; flex-shrink: 1;">
+  <img class="img-fluid" src="assets/img/portfolio/b/b-2.png" alt="" style="max-height: 300px; max-width: 45%; object-fit: contain; flex-shrink: 1;">
+</div>
 
 보훈 메타버스 프로젝트에서 메타버스의 대규모 배경 제작 관련 팀에 속했었고, 그 곳에서 쉐이더 제작 및 최적화를 담당하였습니다.
 

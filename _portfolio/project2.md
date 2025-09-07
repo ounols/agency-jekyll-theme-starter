@@ -38,7 +38,6 @@ caption:
 
 <div class="container">
   <div class="media mb-4 align-items-start text-left">
-    <i class="fas fa-users fa-2x mr-3 text-primary"></i>
     <div class="media-body text-left">
       <h4 class="text-left mb-1">1. 팀원과의 팀워크</h4>
       <p class="text-left mb-0">
@@ -50,7 +49,6 @@ caption:
   </div>
 
   <div class="media mb-4 align-items-start text-left">
-    <i class="fas fa-exclamation-triangle fa-2x mr-3 text-danger"></i>
     <div class="media-body text-left">
       <h4 class="text-left mb-1">2. 겪었던 문제점들</h4>
       <p class="text-left mb-1">
@@ -74,7 +72,6 @@ caption:
 
 <div class="container">
   <div class="media mb-4 align-items-start text-left">
-    <i class="fas fa-code fa-3x mr-3 text-primary"></i>
     <div class="media-body">
       <h3 class="text-left">프로그래밍</h3>
       <p class="text-muted text-left">모든 프로그래밍을 맡아 진행했으며, 이 때 처음으로 광고 및 인앱 결제도 구현을 해봤습니다.</p>
@@ -82,7 +79,6 @@ caption:
   </div>
 
   <div class="media mb-4 align-items-start text-left">
-    <i class="fas fa-music fa-3x mr-3 text-primary"></i>
     <div class="media-body">
       <h3 class="text-left">배경음악 작곡</h3>
       <p class="text-muted text-left">게임 내의 일부 배경음악은 제가 작곡한 곡입니다.
@@ -91,7 +87,6 @@ caption:
   </div>
 
   <div class="media mb-4 align-items-start text-left">
-    <i class="fas fa-video fa-3x mr-3 text-primary"></i>
     <div class="media-body">
       <h3 class="text-left">트레일러 영상 제작</h3>
       <p class="text-muted text-left">트레일러 영상 및 음원은 직접 제작하였습니다.
@@ -100,7 +95,6 @@ caption:
   </div>
 
   <div class="media mb-4 align-items-start text-left">
-    <i class="fab fa-github fa-3x mr-3 text-primary"></i>
     <div class="media-body">
       <h3 class="text-left">Git 관리</h3>
       <p class="text-muted text-left">Git의 사용방식을 팀원들에게 알려주었습니다.

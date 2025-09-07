@@ -1,60 +1,141 @@
-<!-- About -->
-  <section class="page-section" id="{{ site.data.sitetext[site.locale].timeline.section | default: "about" }}">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | markdownify | default: "About" }}</h2>
-          <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].timeline.text | default: "timeline"}}</h3>
-        </div>
+<section class="page-section" id="{{ site.data.sitetext[site.locale].timeline.section | default: "about" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | markdownify | default: "About" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].timeline.text | default: "timeline"}}</h3>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
-      {%- assign align = site.data.sitetext[site.locale].timeline.start_align -%}
-      {%- for event in site.data.sitetext[site.locale].timeline.events -%}
-            {%- if align == "right" -%}
-              {%- if event.align and event.align == "left" -%}
-                {%- assign align = "right" -%}
-                <li>
-              {%- else -%}
-                {%- assign align = "left" %}
-                <li class="timeline-inverted">
-              {% endif %}
-            {% else %}
-              {%- if event.align and event.align == "right" -%}
-                {%- assign align = "left" -%}
-                <li class="timeline-inverted">
-              {%- else -%}
-                {%- assign align = "right" %}
-                <li>
-              {% endif %}
-            {%- endif -%}
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="timeline-clean">
+          {% for event in site.data.sitetext[site.locale].timeline.events %}
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-heading">
+                <span class="timeline-year">{{ event.year }}</span>
+                <h4 class="timeline-title">{{ event.title }}</h4>
               </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>{{ event.year | markdownify }}</h4>
-                  <h4 class="subheading">{{ event.title }}</h4>
-                </div>
-                <div class="timeline-body">
-                  <div class="text-muted">{{ event.desc | markdownify }}</div>
-                </div>
+              <div class="timeline-body">
+                {{ event.desc | markdownify }}
               </div>
-            </li>
-		  {% endfor %}	
-            
-		  {% if site.data.sitetext[site.locale].timeline.end %}	
-			<li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>{{ site.data.sitetext[site.locale].timeline.end }}</h4>
-              </div>
-            </li>
-		  {% endif %}
-
-          </ul>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% if site.data.sitetext[site.locale].timeline.end %}
+          <div class="timeline-item timeline-end">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content text-center">
+              <h4 class="timeline-end-text">{{ site.data.sitetext[site.locale].timeline.end }}</h4>
+            </div>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
-  </section>
-<!-- End About -->
+  </div>
+</section>
+
+<style>
+.timeline-clean {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-clean::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #6c757d, #dee2e6);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 4rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 21px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 3px solid #6c757d;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 4px solid #6c757d;
+}
+
+.timeline-heading {
+  margin-bottom: 1rem;
+}
+
+.timeline-year {
+  display: inline-block;
+  background: #6c757d;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  margin: 0.5rem 0 0 0;
+  color: #212529;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.timeline-body {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.timeline-end .timeline-marker {
+  border-color: #28a745;
+  background: #28a745;
+}
+
+.timeline-end .timeline-content {
+  border-left-color: #28a745;
+}
+
+.timeline-end-text {
+  color: #28a745;
+  margin: 0;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .timeline-clean::before {
+    left: 15px;
+  }
+  
+  .timeline-marker {
+    left: 6px;
+  }
+  
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+}
+</style>

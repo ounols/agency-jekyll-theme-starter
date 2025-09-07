@@ -46,7 +46,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 <div class="container">
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🖥️ 백엔드 시스템</h3>
+      <h3 class="text-left">백엔드 시스템</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>서버 아키텍처 설계</b>: 공기업 Spring Boot 기반 게임 서버 구축
@@ -66,7 +66,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">⚡ 클라이언트 렌더링 최적화</h3>
+      <h3 class="text-left">클라이언트 렌더링 최적화</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>커스텀 오클루전 컬링 시스템</b>: Unity 기본 청크 시스템의 바이너리 탐색 방식을 대체하여 CPU 오버헤드 대폭 감소
@@ -86,7 +86,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🔄 CI/CD 및 배포 자동화</h3>
+      <h3 class="text-left">CI/CD 및 배포 자동화</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>폐쇄망에서의 CI/CD 적용</b>: H사 폐쇄망에 적용된 VM 인스턴싱과 CI/CD를 적용하여 공정에서 실제 작업중인 작업자의 스마트폰 앱까지 배포 자동화 적용
@@ -106,7 +106,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 <div class="container">
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🎯 성과 기반 보상 시스템</h3>
+      <h3 class="text-left">성과 기반 보상 시스템</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>작업 효율 측정</b>: 실시간 작업 데이터 기반 성과 평가
@@ -123,7 +123,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🚗 차량 수집 및 커스터마이징</h3>
+      <h3 class="text-left">차량 수집 및 커스터마이징</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>순차적 조립</b>: 실제 차량 조립과 유사한 단계별 부품 장착
@@ -140,7 +140,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🌏 글로벌 적용 사례</h3>
+      <h3 class="text-left">글로벌 적용 사례</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>싱가포르 스마트 팩토리</b>: 현지 문화와 랜드마크를 반영한 게임 맵 제작
@@ -163,7 +163,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 <div class="container">
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">📈 성능 최적화 결과</h3>
+      <h3 class="text-left">성능 최적화 결과</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>렌더링 성능</b>: 커스텀 오클루전 컬링으로 CPU 사용률 40% 감소
@@ -183,7 +183,7 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
 
   <div class="media mb-4 align-items-start text-left">
     <div class="media-body">
-      <h3 class="text-left">🔧 산업용 특화 기술</h3>
+      <h3 class="text-left">산업용 특화 기술</h3>
       <ul class="text-left mb-1" style="padding-left:1em;">
         <li>
           <b>실시간 시스템 연동</b>: 생산라인과의 끊김없는 데이터 교환
@@ -198,25 +198,6 @@ H 자동차 기업의 차량 조립 공정에서 작업자의 업무 효율을 �
     </div>
   </div>
 </div>
-
------
-
-## 프로젝트 임팩트
-
-<ul class="text-left mb-1" style="padding-left:1em;">
-  <li>
-    <b>작업 효율 향상</b>: 게이미피케이션을 통한 자발적 동기 부여 시스템 구축
-  </li>
-  <li class="mt-2">
-    <b>기술적 혁신</b>: 산업용 게임 시스템의 성능 최적화 기술 개발
-  </li>
-  <li class="mt-2">
-    <b>글로벌 확산</b>: 싱가포르 스마트 팩토리 적용으로 해외 진출 성공
-  </li>
-  <li class="mt-2">
-    <b>B2B 게임화</b>: 산업 현장에 게이미피케이션 도입 성공 사례 창출
-  </li>
-</ul>
 
 -----
 

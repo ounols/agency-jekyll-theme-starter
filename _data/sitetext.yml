@@ -130,7 +130,7 @@ ko: &DEFAULT_KO
         social:
           - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
-          - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
+          - url: https://ounols.kr/categories/%EC%9E%90%EC%B2%B4-%EA%B2%8C%EC%9E%84-%EC%97%94%EC%A7%84-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/
             icon: fa-solid fa-circle-info
 
   contact:
