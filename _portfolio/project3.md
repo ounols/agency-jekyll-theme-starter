@@ -17,10 +17,10 @@ caption:
 Eight Studio에 재직하며 유니티로 제작하던 카드 수집형 타워 디펜스 게임입니다.
 
 <div class="project-links text-center mb-5">
-  <a href="https://cafe.naver.com/eightgames" class="section-subheading btn btn-outline-success m-2">
+  <a href="https://cafe.naver.com/eightgames" target="_blank" class="section-subheading btn btn-outline-success m-2">
     <i class="fa-solid fa-mug-saucer"></i> 게임 공식 카페
   </a>
-  <a href="https://play.google.com/store/apps/details?id=com.eightstduio.projectrd" class="section-subheading btn btn-outline-dark m-2">
+  <a href="https://play.google.com/store/apps/details?id=com.eightstduio.projectrd" target="_blank" class="section-subheading btn btn-outline-dark m-2">
     <i class="fas fa-play"></i> 구글 플레이 (서비스 종료로 인한 비공개)
   </a>
 </div>

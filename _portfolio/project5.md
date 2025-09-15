@@ -20,7 +20,7 @@ caption:
 보훈 메타버스 프로젝트에서 메타버스의 대규모 배경 제작 관련 팀에 속했었고, 그 곳에서 쉐이더 제작 및 최적화를 담당하였습니다.
 
 <div class="project-links text-center mb-5">
-  <a href="https://mpva.kr" class="section-subheading btn btn-outline-success m-2">
+  <a href="https://mpva.kr" target="_blank" class="section-subheading btn btn-outline-success m-2">
     <i class="fas fa-play"></i> 공식 홈페이지 (로그인 필요)
   </a>
 </div>

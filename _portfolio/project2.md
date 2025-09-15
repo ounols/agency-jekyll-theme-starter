@@ -17,13 +17,13 @@ caption:
 팀원 5명에서 학교 앱 게임 프로젝트로 제작했던 Unity기반 착시 퍼즐 게임입니다.
 
 <div class="project-links text-center mb-5">
-  <a href="https://bitbucket.org/amazonparrot/goedo-angpang/src/master" class="section-subheading btn btn-outline-dark m-2">
+  <a href="https://bitbucket.org/amazonparrot/goedo-angpang/src/master" target="_blank" class="section-subheading btn btn-outline-dark m-2">
     <i class="fab fa-github"></i> 괴도앙팡 Git 주소
   </a>
-  <a href="https://blog.naver.com/PostList.nhn?blogId=ounols&from=postList&categoryNo=83" class="section-subheading btn btn-outline-danger m-2">
+  <a href="https://blog.naver.com/PostList.nhn?blogId=ounols&from=postList&categoryNo=83" target="_blank" class="section-subheading btn btn-outline-danger m-2">
     <i class="fa-solid fa-pen-nib"></i> 관련 블로그 소식
   </a>
-  <a href="https://play.google.com/store/apps/details?id=com.amazonparrot.angpang" class="section-subheading btn btn-outline-success m-2">
+  <a href="https://play.google.com/store/apps/details?id=com.amazonparrot.angpang" target="_blank" class="section-subheading btn btn-outline-success m-2">
     <i class="fas fa-play"></i> 구글 플레이
   </a>
 </div>
@@ -70,35 +70,111 @@ caption:
 
 ## 팀에서 담당한 파트
 
-<div class="container">
-  <div class="media mb-4 align-items-start text-left">
-    <div class="media-body">
-      <h3 class="text-left">프로그래밍</h3>
-      <p class="text-muted text-left">모든 프로그래밍을 맡아 진행했으며, 이 때 처음으로 광고 및 인앱 결제도 구현을 해봤습니다.</p>
+<div class="experience-section py-4">
+  <div class="row">
+    <div class="col-12">
+      <p class="text-center mb-4">
+        팀 프로젝트를 통해 게임 개발의 전 과정을 경험하며, <br>
+        개발뿐만 아니라 다양한 창작 영역에서의 역량을 발휘했습니다.
+      </p>
     </div>
   </div>
-
-  <div class="media mb-4 align-items-start text-left">
-    <div class="media-body">
-      <h3 class="text-left">배경음악 작곡</h3>
-      <p class="text-muted text-left">게임 내의 일부 배경음악은 제가 작곡한 곡입니다.
-제가 취미로 작곡하는 일이 있어 이 게임의 일부 배경음악도 작곡을 시도해보았습니다.</p>
+  
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-code"></i>
+            </div>
+            <h5 class="card-title mb-0">프로그래밍</h5>
+          </div>
+          <p class="card-text">
+            모든 프로그래밍을 맡아 진행했으며, 이 때 처음으로 <strong>광고 및 인앱 결제</strong>도 구현을 해봤습니다. 
+            게임의 핵심 로직부터 소박하지만 첫 출시 경험까지 전반적인 개발 경험을 쌓을 수 있었습니다.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="media mb-4 align-items-start text-left">
-    <div class="media-body">
-      <h3 class="text-left">트레일러 영상 제작</h3>
-      <p class="text-muted text-left">트레일러 영상 및 음원은 직접 제작하였습니다.
-영상 제작도 취미로 하였기 때문에 트레일러 영상 제작도 같이 시도하였습니다.</p>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-success bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-music"></i>
+            </div>
+            <h5 class="card-title mb-0">배경음악 작곡</h5>
+          </div>
+          <p class="card-text">
+            게임 내의 일부 배경음악은 제가 직접 작곡한 곡입니다. 
+            취미로 작곡하는 경험을 살려 게임의 분위기와 어울리는 <strong>오리지널 배경음악</strong>을 
+            제작하며 게임의 완성도를 높였습니다.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="media mb-4 align-items-start text-left">
-    <div class="media-body">
-      <h3 class="text-left">Git 관리</h3>
-      <p class="text-muted text-left">Git의 사용방식을 팀원들에게 알려주었습니다.
-컨셉안은 카페를 통해 컨펌하고 왠만한 구현은 Git을 통해 진행하기로 하였습니다.</p>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-warning bg-gradient text-white rounded-3 me-3">
+              <i class="fas fa-video"></i>
+            </div>
+            <h5 class="card-title mb-0">트레일러 영상 제작</h5>
+          </div>
+          <p class="card-text">
+            트레일러 영상 및 음원은 직접 제작하였습니다. 
+            영상 제작 경험을 바탕으로 <strong>마케팅용 트레일러 영상</strong>을 기획부터 편집까지 완성했습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <div class="feature-icon bg-info bg-gradient text-white rounded-3 me-3">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h5 class="card-title mb-0">Git 관리</h5>
+          </div>
+          <p class="card-text">
+            Git의 사용방식을 팀원들에게 알려주었습니다. 
+            컨셉안은 카페를 통해 컨펌하고 구현은 <strong>Git을 통한 협업 체계</strong>를 구축하여 
+            효율적인 팀 프로젝트 관리를 진행했습니다.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+.experience-section .feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.experience-section .card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.experience-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+.experience-section .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+</style>
