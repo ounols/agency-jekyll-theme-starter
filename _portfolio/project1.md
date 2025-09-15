@@ -342,7 +342,7 @@ caption:
         <div class="feature-content">
           <h5>프리팹 & 씬</h5>
           <p><b>객체 복제</b>, <b>프리팹 시스템</b>, <b>씬 파일 직렬화</b> 지원</p>
-          <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-Prefab-Scene" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -355,7 +355,7 @@ caption:
         <div class="feature-content">
           <h5>커스텀 스크립트</h5>
           <p><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
-          <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
