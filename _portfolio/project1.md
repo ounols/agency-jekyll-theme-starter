@@ -263,33 +263,6 @@ caption:
 
 ---
 
-## 프로젝트 구조
-
-<div class="row">
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h4 class="card-title">📚 개발 배경 & 의도</h4>
-        <p class="card-text">게임 엔진을 직접 만들어 본 경험, 기술 성장 및 자기 주도 개발의 동기를 소개</p>
-        <a href="https://ounols.kr/posts/%EC%97%94%EC%A7%84-%EC%A0%9C%EC%9E%91%EA%B8%B0/" target="_blank" 
-           class="section-subheading btn btn-outline-primary">자세히 보기 →</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h4 class="card-title">🔧 엔진 아키텍처</h4>
-        <p class="card-text">모듈 기반 구조 (렌더러, 애니메이터, 씬/프리팹, 스크립트, 플랫폼 핸들링 등) 로직</p>
-        <a href="https://pofo.ounols.kr/%EC%97%94%EC%A7%84-%EA%B5%AC%EC%A1%B0" target="_blank" 
-           class="section-subheading btn btn-outline-primary">구조 살펴보기 →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
 ## 주요 기능 요약
 
 <div class="features-grid mb-5">
@@ -368,7 +341,7 @@ caption:
         <div class="feature-content">
           <h5>크로스 플랫폼</h5>
           <p><b>Windows</b>, <b>Linux</b>, <b>Android</b>, <b>macOS</b>, <b>WebGL</b> 등 지원</p>
-          <a href="https://ounols.kr/posts/CSEngine-%ED%81%AC%EB%A1%9C%EC%8A%A4%ED%94%8C%EB%9E%AB%ED%8F%BC" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-크로스-플랫폼/" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -383,19 +356,19 @@ caption:
 <div class="row d-flex justify-content-center">
   <div class="col-sm-6">
       <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/4.jpg" alt="">
+      <img class="mx-auto rounded-circle" src="assets/img/portfolio/pac.png" alt="">
       <h3>팩맨 프로토타입</h3>
       <p class="text-muted">FSM 기반 고스트 AI 및 길찾기 시스템 테스트</p>
-      <a href="https://pofo.ounols.kr/%ED%8C%A9%EB%A7%A8-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85" target="_blank" class="section-subheading btn btn-primary">팩맨 데모 보기</a>
+      <a href="https://ounols.kr/posts/%ED%8C%A9%EB%A7%A8-%EB%8D%B0%EB%AA%A8/" target="_blank" class="section-subheading btn btn-primary">팩맨 데모 보기</a>
       </div>
   </div>
 
   <div class="col-sm-6">
       <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/timeline/5.jpg" alt="">
+      <img class="mx-auto rounded-circle" src="assets/img/portfolio/moyo.png" alt="">
       <h3>모여다오 프로젝트</h3>
       <p class="text-muted">NFT 컨셉 기반 3D 씬 활용</p>
-      <a href="https://pofo.ounols.kr/moyodao-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" class="section-subheading btn btn-primary">모여다오 데모 보기</a>
+      <a href="https://ounols.kr/posts/%EB%AA%A8%EC%97%AC%EB%8B%A4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" class="section-subheading btn btn-primary">모여다오 데모 보기</a>
       </div>
   </div>
 </div>
@@ -432,6 +405,33 @@ caption:
         <i class="fas fa-puzzle-piece fa-2x mb-2"></i>
         <h5>종속성</h5>
         <p>GLEW, GLFW, stb_image, IMGUI, Squirrel, ZIP 라이브러리 등</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## 프로젝트 구조
+
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title">📚 개발 배경 & 의도</h4>
+        <p class="card-text">게임 엔진을 직접 만들어 본 경험, 기술 성장 및 자기 주도 개발의 동기를 소개</p>
+        <a href="https://ounols.kr/posts/%EC%97%94%EC%A7%84-%EC%A0%9C%EC%9E%91%EA%B8%B0/" target="_blank" 
+           class="section-subheading btn btn-outline-primary">자세히 보기 →</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title">🔧 엔진 아키텍처</h4>
+        <p class="card-text">모듈 기반 구조 (렌더러, 애니메이터, 씬/프리팹, 스크립트, 플랫폼 핸들링 등) 로직</p>
+        <a href="https://pofo.ounols.kr/%EC%97%94%EC%A7%84-%EA%B5%AC%EC%A1%B0" target="_blank" 
+           class="section-subheading btn btn-outline-primary">구조 살펴보기 →</a>
       </div>
     </div>
   </div>
