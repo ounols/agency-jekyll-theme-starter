@@ -12,7 +12,9 @@ caption:
 
 ## 프로젝트 소개
 
-<iframe width="720" height="360" src="https://www.youtube.com/embed/UIOEsoDFFR4" title="&#39;괴도 앙팡&#39; 트레일러 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="responsive-video">
+  <iframe src="https://www.youtube.com/embed/UIOEsoDFFR4" title="&#39;괴도 앙팡&#39; 트레일러 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 팀원 5명에서 학교 앱 게임 프로젝트로 제작했던 Unity기반 착시 퍼즐 게임입니다.
 
@@ -67,6 +69,8 @@ caption:
     </div>
   </div>
 </div>
+
+---
 
 ## 팀에서 담당한 파트
 
@@ -153,7 +157,25 @@ caption:
   </div>
 </div>
 
+---
+
 <style>
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .experience-section .feature-icon {
   width: 50px;
   height: 50px;

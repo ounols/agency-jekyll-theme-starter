@@ -114,7 +114,7 @@ ko: &DEFAULT_KO
         social:
           - url: https://x.com/eftdjmr/status/1780503749380935833
             icon: fab fa-twitter
-          - url: https://ounols.kr/posts/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84
+          - url: https://ounols.kr/posts/unity에-동적-조명을-적용한-global-illumination-구현
             icon: fa-solid fa-circle-info
       - name: "<span class='highlight'>SDF를 이용한 Global Illumination 구현</span>"
         role: "<b>레이마칭</b>을 이용한 <b>SDF 기반의 글로벌 일루미네이션</b> 구현 과정을 다룹니다. 이전의 <b>GI 구현에 실패한 경험을 바탕</b>으로, SDF를 활용해 성공적으로 구현했습니다."
@@ -122,7 +122,7 @@ ko: &DEFAULT_KO
         social:
           - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
-          - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2
+          - url: https://ounols.kr/posts/자체-엔진에-global-illumination을-적용하기-위한-삽질기-2
             icon: fa-solid fa-circle-info
       - name: "<span class='highlight'>자체 엔진 개발</span>"
         role: "자체 엔진인 CSEngine을 취미로 개발하고 있습니다. <b>기본적인 렌더링을 위한 준비는 완료</b>되었기 때문에 최근에 <b>에디터를 제작</b>하고 있습니다."
@@ -130,7 +130,7 @@ ko: &DEFAULT_KO
         social:
           - url: https://x.com/eftdjmr/status/1666120054960959488
             icon: fab fa-twitter
-          - url: https://ounols.kr/posts/%EC%9E%90%EC%B2%B4%EC%97%94%EC%A7%84-%EC%97%90%EB%94%94%ED%84%B0-%EC%A0%9C%EC%9E%91%EA%B8%B0/
+          - url: https://ounols.kr/posts/자체엔진-에디터-제작기/
             icon: fa-solid fa-circle-info
 
   contact:

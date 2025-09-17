@@ -276,7 +276,7 @@ caption:
         <div class="feature-content">
           <h5>렌더링</h5>
           <p><b>PBR</b>, <b>프레임버퍼</b>, <b>디퍼드 렌더링</b> 기반 구현</p>
-          <a href="https://ounols.kr/posts/CSEngine-%EB%A0%8C%EB%8D%94%EB%A7%81" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-렌더링" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -289,7 +289,7 @@ caption:
         <div class="feature-content">
           <h5>에디터</h5>
           <p><b>자체 엔진의 Editor</b>를 구현하여 <b>GUI기반의 엔진 작업</b></p>
-          <a href="https://ounols.kr/posts/%EC%9E%90%EC%B2%B4%EC%97%94%EC%A7%84-%EC%97%90%EB%94%94%ED%84%B0-%EC%A0%9C%EC%9E%91%EA%B8%B0" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/자체엔진-에디터-제작기" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -302,7 +302,7 @@ caption:
         <div class="feature-content">
           <h5>애니메이션</h5>
           <p><b>스켈레탈 스킨닝</b>, <b>타임라인 애니메이션</b> 지원</p>
-          <a href="https://ounols.kr/posts/CSEngine-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-애니메이션" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -328,7 +328,7 @@ caption:
         <div class="feature-content">
           <h5>커스텀 스크립트</h5>
           <p><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
-          <a href="https://ounols.kr/posts/CSEngine-%EC%BB%A4%EC%8A%A4%ED%85%80-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank" class="btn btn-info">자세히 보기 →</a>
+          <a href="https://ounols.kr/posts/CSEngine-커스텀-스크립트" target="_blank" class="btn btn-info">자세히 보기 →</a>
         </div>
       </div>
     </div>
@@ -359,7 +359,7 @@ caption:
       <img class="mx-auto rounded-circle" src="assets/img/portfolio/pac.png" alt="">
       <h3>팩맨 프로토타입</h3>
       <p class="text-muted">FSM 기반 고스트 AI 및 길찾기 시스템 테스트</p>
-      <a href="https://ounols.kr/posts/%ED%8C%A9%EB%A7%A8-%EB%8D%B0%EB%AA%A8/" target="_blank" class="section-subheading btn btn-primary">팩맨 데모 보기</a>
+      <a href="https://ounols.kr/posts/팩맨-데모/" target="_blank" class="section-subheading btn btn-primary">팩맨 데모 보기</a>
       </div>
   </div>
 
@@ -368,7 +368,7 @@ caption:
       <img class="mx-auto rounded-circle" src="assets/img/portfolio/moyo.png" alt="">
       <h3>모여다오 프로젝트</h3>
       <p class="text-muted">NFT 컨셉 기반 3D 씬 활용</p>
-      <a href="https://ounols.kr/posts/%EB%AA%A8%EC%97%AC%EB%8B%A4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8" target="_blank" class="section-subheading btn btn-primary">모여다오 데모 보기</a>
+      <a href="https://ounols.kr/posts/모여다오-프로젝트" target="_blank" class="section-subheading btn btn-primary">모여다오 데모 보기</a>
       </div>
   </div>
 </div>
@@ -420,7 +420,7 @@ caption:
       <div class="card-body">
         <h4 class="card-title">📚 개발 배경 & 의도</h4>
         <p class="card-text">게임 엔진을 직접 만들어 본 경험, 기술 성장 및 자기 주도 개발의 동기를 소개</p>
-        <a href="https://ounols.kr/posts/%EC%97%94%EC%A7%84-%EC%A0%9C%EC%9E%91%EA%B8%B0/" target="_blank" 
+        <a href="https://ounols.kr/posts/엔진-제작기/" target="_blank" 
            class="section-subheading btn btn-outline-primary">자세히 보기 →</a>
       </div>
     </div>
