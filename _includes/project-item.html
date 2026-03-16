@@ -1,0 +1,44 @@
+<!-- Project Item Component
+     Parameters:
+       title    — 프로젝트 제목
+       desc     — 한줄 설명
+       tags     — 쉼표 구분 태그 (예: "Unity,HLSL,G-Buffer")
+       image    — 이미지 경로 (없으면 placeholder)
+       details  — 쉼표 구분 상세 항목 (예: "항목1,항목2,항목3")
+-->
+<div class="project-item">
+  <div class="project-col project-summary">
+    <h3 class="project-title">{{ include.title }}</h3>
+    {% if include.desc %}
+    <p class="project-desc">{{ include.desc }}</p>
+    {% endif %}
+    {% if include.tags %}
+    <div class="project-tags">
+      {% assign tag_list = include.tags | split: "," %}
+      {% for tag in tag_list %}
+      <span class="project-tag">{{ tag | strip }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="project-col project-visual">
+    {% if include.image %}
+    <img src="{{ include.image | relative_url }}" alt="{{ include.title }}">
+    {% else %}
+    <div class="project-image-placeholder">
+      <i class="fas fa-image"></i>
+      <span>스크린샷</span>
+    </div>
+    {% endif %}
+  </div>
+  <div class="project-col project-detail">
+    {% if include.details %}
+    <ul>
+      {% assign detail_list = include.details | split: "," %}
+      {% for item in detail_list %}
+      <li>{{ item | strip }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>
