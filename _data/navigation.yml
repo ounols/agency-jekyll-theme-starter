@@ -2,6 +2,8 @@
   section: about
 - title: "Technical Stack"
   section: stack
+- title: "Key Projects"
+  section: projects
 - title: "Recent"
   section: recent
 - title: "Portfolio"

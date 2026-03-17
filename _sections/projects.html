@@ -6,7 +6,7 @@ order: 3
 type: freeform
 ---
 <section class="page-section" id="projects">
-  <div class="container-fluid px-4 px-lg-5">
+  <div>
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Key Projects</h2>
@@ -17,50 +17,58 @@ type: freeform
     <!-- Category Tabs -->
     <div class="project-tabs">
       <button class="project-tab active" data-category="graphics">Graphics &amp; Rendering</button>
-      <button class="project-tab" data-category="client">Game Client</button>
+      <button class="project-tab" data-category="client">Game Programming</button>
       <button class="project-tab" data-category="others">Others</button>
     </div>
 
     <!-- Graphics & Rendering -->
-    <div id="cat-graphics" class="project-category">
+    <div id="cat-graphics" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Graphics &amp; Rendering</div>
 
       {% include project-item.html
-        title="Unity GI 구현"
-        desc="동적 조명 환경에서의 Global Illumination 구현"
-        tags="Unity,HLSL,G-Buffer"
-        details="G-Buffer를 활용한 Deferred Rendering 파이프라인 구성,Diffuse & Reflection 분리 계산,실시간 동적 조명 대응"
+        title="Unity 실시간 GI 구현"
+        desc="<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br>원신(Genshin Impact)을 분석해서 직접 구현</h5>"
+        tags="Unity,URP,HLSL,G-Buffer,Mobile Optimization"
+        images="https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%2010.png,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/2.mp4"
+        captions="빛의 방향에 따라 환경광이 변화하는 유니티 데모,바닥 흙의 색상이 오브젝트에 반영된 웹 시연 장면,G-buffer가 실시간으로 Directional Light의 영향을 받고 반영되는 영상"
+        stack="fab fa-unity|Unity URP,fa-solid fa-lightbulb|런타임을 위한 최적화,fa-duotone fa-regular fa-building|회사 프로젝트에 적용,fa-brands fa-chrome|모바일 &amp; 웹 최적화"
+        links="자세히 알아보기|https://ounols.kr/posts/unity에-동적-조명을-적용한-global-illumination-구현"
       %}
 
       {% include project-item.html
-        title="SDF 기반 GI"
-        desc="레이마칭을 이용한 SDF 기반 Global Illumination"
-        tags="자체엔진,SDF,Ray Marching"
-        details="이전 GI 구현 실패 경험을 바탕으로 SDF 접근,레이마칭 기반 라이팅 계산,실시간 간접광 표현"
+        title="OpenGL 실시간 SDF-based GI 연구"
+        desc="<h5>Unreal의 Lumen 시스템에서 영감을 얻고,<br>OpenGL로 기초부터 SDFDGI를 구현</h5>"
+        tags="자체엔진,OpenGL,SDF,Global Illumination"
+        images="https://ounols.kr/media/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2/C_2023-06-06_22-56-36.mp4,/assets/img/portfolio/05-full.jpg"
+        captions="왼쪽은 기존 레거시 렌더링 - 오른쪽은 직접 생성한 SDF Volume Map을 시각화"
+        stack="/assets/img/icons/opengl.svg|OpenGL,fa-solid fa-signature|손수제작 렌더링 파이프라인,fa-solid fa-hexagon-nodes-bolt|SDF 모델 생성부터...,fa-solid fa-arrow-up-right-dots|실시간 GI까지 구현"
+        links="자세히 알아보기|https://ounols.kr/posts/자체-엔진에-global-illumination을-적용하기-위한-삽질기-2"
       %}
     </div>
 
-    <!-- Game Client -->
-    <div id="cat-client" class="project-category">
-      <div class="project-category-label">Game Client</div>
+    <!-- Game Programming -->
+    <div id="cat-client" class="bg-light container-fluid px-4 px-lg-5 project-category">
+      <div class="project-category-label">Game Programming</div>
 
       {% include project-item.html
         title="클라이언트 프로젝트"
         desc="게임 클라이언트 개발 경험"
         tags="Unity,Unreal,C++"
-        details="Unity & Unreal 기반 상용 프로젝트 참여,라이브 서비스 경험,파트장으로 팀 협업 리드"
+        images="/assets/img/portfolio/06-full.jpg,/assets/img/portfolio/h.png"
+        stack="fab fa-unity|Unity,fa-solid fa-gamepad|Unreal,fas fa-code|C++,fas fa-people-group|팀 협업"
       %}
     </div>
 
     <!-- Others -->
-    <div id="cat-others" class="project-category">
+    <div id="cat-others" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Others</div>
 
       {% include project-item.html
         title="인프라 & 백엔드"
         desc="서비스 운영을 위한 백엔드 및 CI/CD"
         tags="Node.js,Jenkins,AWS"
-        details="실 서비스 백엔드 개발 참여,Jenkins 기반 CI/CD 파이프라인 구축,AWS 인프라 운영 경험"
+        images="/assets/img/portfolio/r-full.png,/assets/img/portfolio/moyo.png"
+        stack="fab fa-node-js|Node.js,fab fa-jenkins|Jenkins,fab fa-aws|AWS"
       %}
     </div>
 
@@ -102,27 +110,28 @@ type: freeform
 
 /* Category */
 .project-category {
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .project-category-label {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #adb5bd;
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e9ecef;
+  border-top: 1px solid #e9ecef;
+  padding-top: 1rem;
 }
 
 /* Project Item — 3 column grid */
 .project-item {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
   align-items: start;
-  padding: 3rem 0;
+  padding: 10rem 0;
 }
 
 .project-item + .project-item {
@@ -132,6 +141,9 @@ type: freeform
 /* Left column — Summary */
 .project-summary {
   padding-right: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
@@ -167,6 +179,7 @@ type: freeform
 /* Center column — Visual */
 .project-visual {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -189,41 +202,205 @@ type: freeform
   font-weight: 600;
 }
 
-.project-visual img {
+/* Slider */
+.project-slider {
+  position: relative;
   width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-/* Right column — Detail */
+.slider-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e9ecef;
+}
+
+.slider-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.slider-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f3f5;
+  color: #495057;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.slider-btn:hover {
+  background: #212529;
+  color: #fff;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 1;
+}
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ced4da;
+  transition: background 0.2s;
+}
+
+.slider-dot.active {
+  background: #495057;
+}
+
+/* Right column — Tech icon grid */
 .project-detail {
   padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.project-detail ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.project-stack-icons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 3rem;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
 }
 
-.project-detail li {
-  position: relative;
-  padding-left: 1.2rem;
-  margin-bottom: 0.85rem;
-  font-size: 0.9rem;
+.project-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-stack-item i {
+  width: 128px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: #f8f9fa;
+  border-radius: 14px;
   color: #495057;
-  line-height: 1.6;
+  transition: background 0.2s, color 0.2s;
 }
 
-.project-detail li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.55rem;
-  width: 6px;
-  height: 6px;
+.project-stack-item:hover i {
   background: #fed136;
-  border-radius: 50%;
+  color: #212529;
+}
+
+.project-stack-item img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 10px;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.project-stack-item:hover img {
+  background: #fed136;
+  opacity: 0.85;
+}
+
+.project-stack-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Slider captions */
+.slider-captions {
+  position: relative;
+  min-height: 1.6em;
+  margin-top: 0.6rem;
+}
+
+.slider-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 0.82rem;
+  color: #6c757d;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.slider-caption.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Links at bottom of project-summary */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #495057;
+  border: 1.5px solid #ced4da;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.project-link-btn:hover {
+  border-color: #fed136;
+  color: #212529;
+  background: #fff9e6;
+  text-decoration: none;
 }
 
 /* ── Responsive: 세로 3문단 ── */
@@ -245,14 +422,19 @@ type: freeform
 
   .project-detail {
     padding-left: 0;
+    justify-content: center;
+  }
+
+  .project-links {
+    justify-content: center;
   }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const tabs = document.querySelectorAll('.project-tab');
-
+  /* Category tabs */
+  var tabs = document.querySelectorAll('.project-tab');
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       var category = this.getAttribute('data-category');
@@ -260,10 +442,90 @@ document.addEventListener('DOMContentLoaded', function () {
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-
       tabs.forEach(function (t) { t.classList.remove('active'); });
       this.classList.add('active');
     });
+  });
+
+  /* Image sliders */
+  document.querySelectorAll('.project-slider').forEach(function (slider) {
+    var slides = slider.querySelectorAll('.slider-slide');
+    var dots = slider.querySelectorAll('.slider-dot');
+    var visual = slider.closest('.project-visual');
+    var captions = visual ? visual.querySelectorAll('.slider-caption') : [];
+    var current = 0;
+    var isInView = false;
+
+    function getVideo(slide) {
+      return slide.tagName === 'VIDEO' ? slide : null;
+    }
+
+    function playActive() {
+      var vid = getVideo(slides[current]);
+      if (vid && isInView) {
+        if (vid.preload === 'none') vid.preload = 'auto';
+        vid.play().catch(function () {});
+      }
+    }
+
+    function pauseAll() {
+      slides.forEach(function (slide) {
+        var vid = getVideo(slide);
+        if (vid) vid.pause();
+      });
+    }
+
+    function goTo(idx) {
+      if (slides.length === 0) return;
+      idx = (idx + slides.length) % slides.length;
+
+      // 이전 슬라이드 비활성
+      var prevVid = getVideo(slides[current]);
+      if (prevVid) prevVid.pause();
+      slides[current].classList.remove('active');
+      if (dots[current]) dots[current].classList.remove('active');
+      if (captions[current]) captions[current].classList.remove('active');
+
+      current = idx;
+
+      // 다음 슬라이드 활성
+      var nextVid = getVideo(slides[current]);
+      if (nextVid) {
+        if (nextVid.preload === 'none') nextVid.preload = 'auto';
+        nextVid.currentTime = 0;
+      }
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+      if (captions[current]) captions[current].classList.add('active');
+      playActive();
+    }
+
+    slider.querySelector('.slider-prev').addEventListener('click', function () {
+      goTo(current - 1);
+    });
+
+    slider.querySelector('.slider-next').addEventListener('click', function () {
+      goTo(current + 1);
+    });
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); });
+      dot.style.cursor = 'pointer';
+    });
+
+    /* IntersectionObserver — 뷰포트 밖이면 pause */
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        isInView = entry.isIntersecting;
+        if (isInView) {
+          playActive();
+        } else {
+          pauseAll();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(slider);
   });
 });
 </script>
