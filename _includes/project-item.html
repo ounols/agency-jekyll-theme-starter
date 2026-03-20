@@ -94,11 +94,13 @@
             {% assign icon_or_img = parts[0] | strip %}
             {% assign label = parts[1] | strip %}
             <div class="project-stack-item" title="{{ label }}">
-              {% if icon_or_img contains "/" or icon_or_img contains ".svg" or icon_or_img contains ".png" %}
-                <img src="{{ icon_or_img | relative_url }}" alt="{{ label }}">
-              {% else %}
-                <i class="{{ icon_or_img }}"></i>
-              {% endif %}
+              <div class="stack-icon-box">
+                {% if icon_or_img contains "/" or icon_or_img contains ".svg" or icon_or_img contains ".png" %}
+                  <img src="{{ icon_or_img | relative_url }}" alt="{{ label }}">
+                {% else %}
+                  <i class="{{ icon_or_img }}"></i>
+                {% endif %}
+              </div>
               <span>{{ label }}</span>
             </div>
           {% endif %}
