@@ -1,0 +1,278 @@
+graphics:
+  - title: "Unity 실시간 GI 구현"
+    desc: "<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
+    tags: [Unity, URP, HLSL, G-Buffer, 모바일 최적화]
+    images:
+      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4"
+        caption: "빛의 방향에 따라 환경광이 변화하는 GI 데모"
+        stack:
+        - icon: "fab fa-unity"
+          label: "Unity에서 밤낮에 따라<br>변화하는 환경맵을 요구"
+        - icon: "fa-duotone fa-regular fa-building"
+          label: "회사 프로젝트로<br>연구에서 구현까지"
+        - icon: "fa-solid fa-lightbulb"
+          label: "리얼타임 게임 프로젝트에<br>알맞는 최적화"
+        - icon: "fa-brands fa-chrome"
+          label: "모바일 위주 최적화<br>하지만 웹에서도 정상 작동"
+      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/3.mp4"
+        caption: "PBR기반 재질에 따른 Reflection GI 및 Diffuse GI가 적용된 모습"
+        stack:
+        - icon: "/assets/img/icons/genshin.svg"
+          label: "원신의 환경광 발표자료에서<br>영감을 얻음"
+        - icon: "fa-solid fa-cubes"
+          label: "기존 URP와 호환성을 유지한<br>PBR 재질 적용"
+      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%202.png"
+        caption: "아티스트를 위한 Tool 중 베이킹을 설정하는 화면 일부"
+        stack:
+        - icon: "fa-solid fa-user-pen"
+          label: "결국 사용하는 사람은<br>아티스트"
+        - icon: "fa-solid fa-gears"
+          label: "툴에 대한 사용법을 안내"
+        - icon: "fa-solid fa-hand-point-up"
+          label: "아티스트 원하는 의도대로<br>환경광을 설정하도록"
+        - icon: "fa-solid fa-sliders"
+          label: "프로브 베이킹부터<br>환경광 세부옵션까지"
+      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/2.mp4"
+        caption: "G-buffer가 실시간으로 Directional Light의 영향을 받고 반영되는 영상"
+        stack:
+        - icon: "fa-solid fa-forward"
+          label: "유니티에서 바로 확인가능"
+        - icon: "fa-solid fa-panorama"
+          label: "베이킹부터 실시간으로<br>GI가 적용되는 모습까지"
+      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%2010.png"
+        caption: "바닥 흙의 색상이 오브젝트에 반영된 웹 시연 장면"
+        stack:
+        - icon: "fa-brands fa-android"
+          label: "모바일 디바이스는 기본"
+        - icon: "fa-brands fa-chrome"
+          label: "웹 브라우저까지 실행 가능"
+    links:
+      - label: "회고록 자세히 알아보기"
+        url: "https://ounols.kr/posts/unity에-동적-조명을-적용한-global-illumination-구현"
+
+  - title: "모바일 브라우저용<br>오픈월드 최적화 작업"
+    desc: "<h5>아티스트와 소통하며 환경을 조율하고,<br>렌더링 및 배경 최적화를 전반적으로 담당</h5>"
+    tags: [Unity, URP, WebGL, HLSL, 모바일 최적화]
+    images:
+      - src: "/assets/img/projects/boh-project/hc_preview.jpg"
+        caption: "오픈월드로 만들어진 배경"
+        stack:
+        - icon: "fab fa-unity"
+          label: "Unity URP"
+        - icon: "fa-brands fa-safari"
+          label: "모바일 WebGL"
+        - icon: "fa-solid fa-paint-brush"
+          label: "쉐이더 최적화"
+        - icon: "fa-solid fa-mobile-alt"
+          label: "갤럭시 S10 브라우저 기종<br>RAM 700MB · 50fps 달성"
+      - src: "/assets/img/projects/boh-project/IMG_7211.jpg"
+        caption: "갤럭시 플립 3 기종에서 테스트 중인 화면"
+        stack:
+        - icon: "fa-regular fa-face-flushed"
+          label: "상당히 당혹스러웠던<br>사양 스펙"
+        - icon: "fa-solid fa-circle-exclamation"
+          label: "모바일 브라우저에서<br>3D 오픈월드라니..."
+        - icon: "fa-solid fa-mobile-screen"
+          label: "중장년층 타겟으로<br>보급형 디바이스까지"
+        - icon: "fa-solid fa-child-reaching"
+          label: "팀원들과 함께 연구하며<br>우여곡절 최적화 성공"
+      - src: "/assets/img/projects/boh-project/IMG_7334.jpg"
+        caption: "모바일 웹 브라우저에서 커스텀 URP 쉐이더로 만들어진 동상 오브젝트의 GPU Instancing 부하 테스트"
+        stack:
+        - icon: "fa-solid fa-dice"
+          label: "GPU Instancing과<br>Batching 사이의 선택"
+        - icon: "fa-solid fa-balance-scale"
+          label: "최고의 효율을 위한<br>집중과 선택"
+        - icon: "fa-solid fa-image"
+          label: "모든 텍스쳐 사양에 대한<br>가이드라인 제시"
+        - icon: "fa-solid fa-magnifying-glass-chart"
+          label: "프로파일링 툴을 이용해<br>최적화 작업 진행"
+      - src: "/assets/img/projects/boh-project/bs_preview.jpg"
+        caption: "오픈월드로 만들어진 배경"
+        stack:
+        - icon: "fa-solid fa-crop-simple"
+          label: "넓은 공간의<br>구간 별 컬링 처리"
+        - icon: "fa-solid fa-user-astronaut"
+          label: "매쉬 최적화와<br>최종 검수까지"
+      - src: "/assets/img/projects/boh-project/화면 캡처 2025-02-19 135029.png"
+        caption: "RAM이 700MB 미만을 유지해주기 때문에 iPhone SE 3의 웹 브라우저에서도 정상 작동을 지원"
+        stack:
+        - icon: "fa-solid fa-gauge-high"
+          label: "노력 끝에<br>RAM 600MB 대 유지"
+        - icon: "fa-solid fa-spray-can-sparkles"
+          label: "라이트 맵부터<br>포스트 프로세싱까지 유지"
+    links:
+      - label: "공식 홈페이지"
+        url: "https://mpva.kr"
+
+  - title: "OpenGL 실시간 SDF-based GI 연구"
+    desc: "<h5>Unreal의 Lumen 시스템에서 영감을 얻고,<br>OpenGL과 C++로 SDFDGI를 구현</h5>"
+    tags: [자체엔진, OpenGL, C++, SDF, Global Illumination]
+    images:
+      - src: "/assets/img/projects/sdfdgi-project/2026-03-19 03-51-33_1.mp4"
+        caption: "SDFGI가 실시간 조명과 위치에 따라 다르게 적용되는 모습"
+        stack:
+        - icon: "/assets/img/icons/opengl.svg"
+          label: "OpenGL & C++"
+        - icon: "fa-solid fa-signature"
+          label: "직접 설계하고 구현한<br>렌더링 파이프라인"
+        - icon: "fa-solid fa-hexagon-nodes-bolt"
+          label: "SDF 모델 베이킹<br>직접 구현"
+        - icon: "fa-solid fa-arrow-up-right-dots"
+          label: "실시간 SDF맵 갱신과<br>GI까지 구현"
+      - src: "/assets/img/projects/sdfdgi-project/vs.jpg"
+        caption: "SDFGI의 적용 전과 후의 비교사진"
+        stack:
+        - icon: "fa-solid fa-code-compare"
+          label: "GI 유무만으로<br>완전히 달라지는 결과"
+        - icon: "fa-solid fa-chart-simple"
+          label: "SSGI보다 낮은 디테일<br>그러나<br>화면 밖의 조명도 반영 가능"
+        - icon: "fa-solid fa-thumbs-up"
+          label: "환경맵 없이도<br>부족함 없는 GI 효과"
+        - icon: "fa-solid fa-lightbulb"
+          label: "Unreal Lumen도 근·중경에<br>SDFGI를 활용하는 이유"
+      - src: "https://ounols.kr/media/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2/C_2023-06-06_22-56-36.mp4"
+        caption: "왼쪽은 기존 Mesh 기반 렌더링 - 오른쪽은 직접 베이킹한 SDF Model Volume을 시각화"
+        stack:
+        - icon: "fa-solid fa-person-chalkboard"
+          label: "Mesh → SDF 베이킹<br>처음부터 직접 구현"
+        - icon: "fa-solid fa-microscope"
+          label: "SDF 공간과 일치하도록<br>여러 차례 분석 후 동기화"
+      - src: "/assets/img/projects/sdfdgi-project/2026-03-19 02-35-35_1.mp4"
+        caption: "움직이는 오브젝트를 중심으로 실시간으로 누적되는 SDF맵 텍스쳐"
+        stack:
+        - icon: "fa-solid fa-file-pen"
+          label: "SDF맵을 통해<br>환경광 오프-렌더링"
+        - icon: "fa-solid fa-sync"
+          label: "오브젝트의 위치에 따라<br>갱신 우선순위 지정"
+        - icon: "fa-solid fa-circle-check"
+          label: "PBR 계산식에 맞게<br>물리적으로 옳은 조명"
+        - icon: "fa-solid fa-user-graduate"
+          label: "대학 졸업 연구과제로<br>좋은 성적을 Get😇"
+    links:
+      - label: "아티클 자세히 알아보기"
+        url: "https://ounols.kr/posts/자체-엔진에-global-illumination을-적용하기-위한-삽질기-2"
+
+  - title: "다양한 커스텀 쉐이더 제작"
+    desc: "<h5>유니티부터 언리얼까지<br><b>아트 친화적</b>과 <b>최적화</b>를 동시에</h5>"
+    tags: [Unity, Unreal, HLSL, Shader Graph, Amplify Shader]
+    images:
+      - src: "/assets/img/projects/custom-shader/sketch.mp4"
+        caption: "러프 스케치 효과는 텍스쳐 모앙에 맞게 연출되며 아티스트가 쉽게 세부 조절이 가능하도록 구현했습니다."
+        stack:
+        - icon: "fa-solid fa-1"
+          label: "레퍼런스 이미지로<br>쉐이더 제작까지"
+        - icon: "fa-solid fa-2"
+          label: "레이마칭 기법으로<br>다양한 연출"
+        - icon: "fa-solid fa-3"
+          label: "노드형 쉐이더도<br>무리없이 소화"
+        - icon: "fa-solid fa-4"
+          label: "손쉽게 사용가능이 목표"
+      - src: "/assets/img/projects/boh-project/bs_preview.jpg"
+        caption: "아티스트가 작업한 식생 쉐이더를 모바일에서도 사용 가능하게 최적화를 진행하였습니다."
+        stack:
+        - icon: "fa-solid fa-mobile-alt"
+          label: "모바일에서도<br>예쁜 식생 표현"
+      - src: "/assets/img/projects/custom-shader/ppc.jpg"
+        caption: "Unreal 프로젝트에서 2D 이미지를 3D 오브젝트에 조명을 입힌 것 같은 PBR 쉐이더를 제작하여 사용한 장면"
+        stack:
+        - icon: "fa-solid fa-image"
+          label: "2D 이미지에<br>3D 조명을 입히다"
+      - src: "/assets/img/projects/custom-shader/preview_db.mp4"
+        caption: "직접 제작한 Stylized Toon Shading이 적용된 시네마틱 프로젝트 영상 일부"
+        stack:
+        - icon: "fa-solid fa-film"
+          label: "시네마틱에 쓰인<br>직접 만든 Toon Shader"
+      - src: "https://ounols.kr/media/Spine-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/3.png"
+        caption: "Unity Spine 쉐이더를 수정하다가 발견한 버그를 수정하여 실제 Spine 프로젝트에 기여를 했습니다."
+        stack:
+        - icon: "fa-brands fa-github"
+          label: "오픈소스 Spine에<br>직접 버그 기여"
+
+  - title: "C++로 구현한 <b>자체엔진 개발</b>"
+    desc: "<h5>PBR · 디퍼드 렌더링 · GUI 에디터까지<br><b>C++</b>로 밑바닥부터 직접 만든 3D 엔진</h5>"
+    tags: [C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
+    images:
+      - src: "/assets/img/projects/csengine-project/editor_1.mp4"
+        caption: "자체엔진 에디터로 Scene을 불러오는 시연 영상"
+        stack:
+        - icon: "/assets/img/icons/opengl.svg"
+          label: "OpenGL & C++14"
+        - icon: "fa-solid fa-eye"
+          label: "PBR · 디퍼드 렌더링<br>밑바닥부터 직접 구현"
+        - icon: "fa-solid fa-code"
+          label: "Unreal 같은 Reflection<br>직접 설계"
+        - icon: "fa-solid fa-tools"
+          label: "씬 에디터 UI까지<br>전부 직접 구현"
+      - src: "/assets/img/projects/csengine-project/C_2021-11-08_18-19-32_1_1.mp4"
+        caption: "자체엔진으로 만든 간단한 팩맨 데모"
+        stack:
+        - icon: "fa-solid fa-gamepad"
+          label: "엔진으로 돌아가는<br>실제 게임 데모"
+      - src: "https://ounols.kr/media/2025-06-01-CSEngine-%EB%A0%8C%EB%8D%94%EB%A7%81/4.png"
+        caption: "PBR을 기반의 다양한 렌더링 파이프라인이 적용된 모습"
+        stack:
+        - icon: "/assets/img/icons/opengl.svg"
+          label: "OpenGL & C++14"
+        - icon: "fa-solid fa-eye"
+          label: "PBR · 디퍼드 렌더링<br>밑바닥부터 직접 구현"
+        - icon: "fa-solid fa-code"
+          label: "Unreal 같은 Reflection<br>직접 설계"
+        - icon: "fa-solid fa-tools"
+          label: "씬 에디터 UI까지<br>전부 직접 구현"
+      - src: "/assets/img/projects/csengine-project/ani.mp4"
+        caption: "스켈레탈 애니메이션 시스템"
+        stack:
+        - icon: "fa-solid fa-person-running"
+          label: "스켈레탈 애니메이션도<br>직접 구현"
+      - src: "/assets/img/portfolio/csengine/cross.png"
+        caption: "Windows · Android · iOS 등 데모씬을 다양한 플랫폼으로 이식한 모습"
+        stack:
+        - icon: "fa-solid fa-globe"
+          label: "Windows · Android · iOS<br>멀티 플랫폼 이식"
+      - src: "/assets/img/projects/csengine-project/web-demo.jpg"
+        caption: "포트폴리오에 오시면 먼저 반겨주는 이 화면도 자체엔진으로 만들어졌습니다!"
+        stack:
+        - icon: "fa-solid fa-star"
+          label: "이 포트폴리오 화면도<br>자체엔진으로 제작됐다"
+    links:
+      - label: "GitHub"
+        url: "https://github.com/ounols/CSEngine"
+      - label: "웹 데모"
+        url: "https://ounols.github.io/CSEngine-Demo"
+
+client:
+  - title: "클라이언트 프로젝트"
+    desc: "게임 클라이언트 개발 경험"
+    tags: [Unity, Unreal, C++]
+    images:
+      - src: "/assets/img/portfolio/06-full.jpg"
+        caption: ""
+      - src: "/assets/img/portfolio/h.png"
+        caption: ""
+    stack:
+      - icon: "fab fa-unity"
+        label: "Unity"
+      - icon: "fa-solid fa-gamepad"
+        label: "Unreal"
+      - icon: "fas fa-code"
+        label: "C++"
+      - icon: "fas fa-people-group"
+        label: "팀 협업"
+
+others:
+  - title: "인프라 & 백엔드"
+    desc: "서비스 운영을 위한 백엔드 및 CI/CD"
+    tags: [Node.js, Jenkins, AWS]
+    images:
+      - src: "/assets/img/portfolio/r-full.png"
+        caption: ""
+      - src: "/assets/img/portfolio/moyo.png"
+        caption: ""
+    stack:
+      - icon: "fab fa-node-js"
+        label: "Node.js"
+      - icon: "fab fa-jenkins"
+        label: "Jenkins"
+      - icon: "fab fa-aws"
+        label: "AWS"

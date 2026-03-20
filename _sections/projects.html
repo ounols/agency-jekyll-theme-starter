@@ -16,7 +16,7 @@ type: freeform
 
     <!-- Category Tabs -->
     <div class="project-tabs">
-      <button class="project-tab active" data-category="graphics">Engine &amp; Graphics</button>
+      <button class="project-tab" data-category="graphics">Engine &amp; Graphics</button>
       <button class="project-tab" data-category="client">Game Programming</button>
       <button class="project-tab" data-category="others">Others</button>
     </div>
@@ -24,82 +24,26 @@ type: freeform
     <!-- Graphics & Rendering -->
     <div id="cat-graphics" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Engine &amp; Graphics</div>
-
-      {% include project-item.html
-        title="Unity 실시간 GI 구현"
-        desc="<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
-        tags="Unity,URP,HLSL,G-Buffer,모바일 최적화"
-        images="https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%202.png,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/3.mp4,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%2010.png,https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/2.mp4"
-        captions="빛의 방향에 따라 환경광이 변화하는 GI 데모,아티스트를 위한 Tool 중 베이킹을 설정하는 화면 일부,PBR기반 재질에 따른 Reflection GI 및 Diffuse GI가 적용된 모습,바닥 흙의 색상이 오브젝트에 반영된 웹 시연 장면,G-buffer가 실시간으로 Directional Light의 영향을 받고 반영되는 영상"
-        stack="fab fa-unity|Unity URP,fa-solid fa-lightbulb|리얼타임 게임 프로젝트에<br>알맞는 최적화,fa-duotone fa-regular fa-building|회사 프로젝트로<br>연구에서 구현까지,fa-brands fa-chrome|모바일 위주 최적화<br>하지만 웹에서도 정상 작동"
-        links="회고록 자세히 알아보기|https://ounols.kr/posts/unity에-동적-조명을-적용한-global-illumination-구현"
-      %}
-
-      {% include project-item.html
-        title="모바일 브라우저용<br>오픈월드 최적화 작업"
-        desc="<h5>아티스트와 소통하며 환경을 조율하고,<br>렌더링 및 배경 최적화를 전반적으로 담당</h5>"
-        tags="Unity,URP,WebGL,HLSL,모바일 최적화"
-        images="/assets/img/projects/boh-project/hc_preview.jpg,/assets/img/projects/boh-project/IMG_7211.jpg,/assets/img/projects/boh-project/IMG_7334.jpg,/assets/img/projects/boh-project/bs_preview.jpg,/assets/img/projects/boh-project/화면 캡처 2025-02-19 135029.png"
-        captions="오픈월드로 만들어진 배경,갤럭시 플립 3 기종에서 테스트 중인 화면,모바일 웹 브라우저에서 커스텀 URP 쉐이더로 만들어진 동상 오브젝트의 GPU Instancing 테스트 장면,오픈월드로 만들어진 배경,RAM이 700MB 미만을 유지해주기 때문에 iPhone SE 3의 웹 브라우저에서도 정상 작동을 지원"
-        stack="fab fa-unity|Unity URP,fa-brands fa-safari|모바일 WebGL,fa-solid fa-paint-brush|쉐이더 최적화,fa-solid fa-mobile-alt|갤럭시 S10 브라우저 기종<br>RAM 700MB · 50fps 달성"
-        links="공식 홈페이지|https://mpva.kr"
-      %}
-
-      {% include project-item.html
-        title="OpenGL 실시간 SDF-based GI 연구"
-        desc="<h5>Unreal의 Lumen 시스템에서 영감을 얻고,<br>OpenGL과 C++로 SDFDGI를 구현</h5>"
-        tags="자체엔진,OpenGL,C++,SDF,Global Illumination"
-        images="/assets/img/projects/sdfdgi-project/2026-03-19 03-51-33_1.mp4,/assets/img/projects/sdfdgi-project/vs.jpg,/assets/img/projects/sdfdgi-project/2026-03-19 02-35-35_1.mp4,https://ounols.kr/media/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2/C_2023-06-06_22-56-36.mp4"
-        captions="SDFGI가 실시간 조명과 위치에 따라 다르게 적용되는 모습,SDFGI의 적용 전과 후의 비교사진,움직이는 오브젝트를 중심으로 실시간으로 누적되는 SDF맵 텍스쳐,왼쪽은 기존 Mesh 기반 렌더링 - 오른쪽은 직접 베이킹한 SDF Model Volume을 시각화"
-        stack="/assets/img/icons/opengl.svg|OpenGL & C++,fa-solid fa-signature|직접 설계하고 구현한<br>렌더링 파이프라인,fa-solid fa-hexagon-nodes-bolt|SDF 모델 베이킹<br>직접 구현,fa-solid fa-arrow-up-right-dots|실시간 SDF맵 갱신과<br>GI까지 구현"
-        links="아티클 자세히 알아보기|https://ounols.kr/posts/자체-엔진에-global-illumination을-적용하기-위한-삽질기-2"
-      %}
-
-      {% include project-item.html
-        title="다양한 커스텀 쉐이더 제작"
-        desc="<h5>유니티부터 언리얼까지<br><b>아트 친화적</b>과 <b>최적화</b>를 동시에</h5>"
-        tags="Unity,Unreal,HLSL,Shader Graph,Amplify Shader"
-        images="/assets/img/projects/custom-shader/sketch.mp4,/assets/img/projects/custom-shader/ppc.jpg,https://ounols.kr/media/Spine-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/3.png"
-        captions="러프 스케치 효과는 텍스쳐 모앙에 맞게 연출되며 아티스트가 쉽게 세부 조절이 가능하도록 구현했습니다.,Unreal 프로젝트에서 2D 이미지를 3D 오브젝트에 조명을 입힌 것 같은 PBR 쉐이더를 제작하여 사용한 장면,Unity Spine 쉐이더를 수정하다가 발견한 버그를 수정하여 실제 Spine 프로젝트에 기여를 했습니다."
-        stack="fab fa-unity|Unity URP,fa-brands fa-safari|모바일 WebGL,fa-solid fa-paint-brush|쉐이더 최적화,fa-solid fa-mobile-alt|갤럭시 S10 브라우저 기종<br>RAM 700MB · 50fps 달성"
-        links="공식 홈페이지|https://mpva.kr"
-      %}
-
-      {% include project-item.html
-        title="C++로 구현한 <b>자체엔진 개발</b>"
-        desc="<h5>PBR · 디퍼드 렌더링 · GUI 에디터까지<br><b>C++</b>로 밑바닥부터 직접 만든 3D 엔진</h5>"
-        tags="C++,OpenGL,GLSL,PBR,Deferred Rendering,ImGui"
-        images="https://ounols.kr/media/2025-08-26-%EC%9E%90%EC%B2%B4%EC%97%94%EC%A7%84-%EC%97%90%EB%94%94%ED%84%B0-%EC%A0%9C%EC%9E%91%EA%B8%B0/editor.mp4,/assets/img/portfolio/csengine/editor1.png,/assets/img/portfolio/csengine/ani.png,/assets/img/portfolio/csengine/prefab.png,/assets/img/portfolio/csengine/cross.png"
-        captions="자체엔진의 에디터로 씬을 불러오는 시연 영상,GUI 기반 자체 에디터,스켈레탈 애니메이션 시스템,프리팹 & 씬 직렬화,Windows · Android · WebGL 크로스플랫폼"
-        stack="/assets/img/icons/opengl.svg|OpenGL & C++14,fa-solid fa-eye|PBR · 디퍼드 렌더링<br>밑바닥부터 직접 구현,fa-solid fa-code|Unreal 같은 Reflection<br>직접 설계,fa-solid fa-tools|씬 에디터 UI까지<br>전부 직접 구현"
-        links="GitHub|https://github.com/ounols/CSEngine,웹 데모|https://ounols.github.io/CSEngine-Demo"
-      %}
+      {% for project in site.data.projects.graphics %}
+        {% include project-item.html project=project %}
+      {% endfor %}
+      {% include sns-marquee.html %}
     </div>
 
     <!-- Game Programming -->
     <div id="cat-client" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Game Programming</div>
-
-      {% include project-item.html
-        title="클라이언트 프로젝트"
-        desc="게임 클라이언트 개발 경험"
-        tags="Unity,Unreal,C++"
-        images="/assets/img/portfolio/06-full.jpg,/assets/img/portfolio/h.png"
-        stack="fab fa-unity|Unity,fa-solid fa-gamepad|Unreal,fas fa-code|C++,fas fa-people-group|팀 협업"
-      %}
+      {% for project in site.data.projects.client %}
+        {% include project-item.html project=project %}
+      {% endfor %}
     </div>
 
     <!-- Others -->
     <div id="cat-others" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Others</div>
-
-      {% include project-item.html
-        title="인프라 & 백엔드"
-        desc="서비스 운영을 위한 백엔드 및 CI/CD"
-        tags="Node.js,Jenkins,AWS"
-        images="/assets/img/portfolio/r-full.png,/assets/img/portfolio/moyo.png"
-        stack="fab fa-node-js|Node.js,fab fa-jenkins|Jenkins,fab fa-aws|AWS"
-      %}
+      {% for project in site.data.projects.others %}
+        {% include project-item.html project=project %}
+      {% endfor %}
     </div>
 
   </div>
@@ -142,15 +86,11 @@ type: freeform
 }
 
 .project-tab:hover {
-  border-color: #6e7681;
-  color: #e6edf3;
-}
-
-.project-tab.active {
   background: #e6edf3;
   border-color: #e6edf3;
   color: #0d1117;
 }
+
 
 /* Category */
 .project-category {
@@ -295,12 +235,12 @@ type: freeform
 .slider-btn {
   flex-shrink: 0;
   width: 36px;
-  height: 36px;
+  align-self: stretch;
   border: none;
-  border-radius: 50%;
-  background: #21262d;
-  color: #8b949e;
-  font-size: 0.85rem;
+  border-radius: 10%;
+  background: #00000000;
+  color: #e6edf3;
+  font-size: 3rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -309,8 +249,31 @@ type: freeform
 }
 
 .slider-btn:hover {
-  background: #e6edf3;
-  color: #0d1117;
+  color: #fed136;
+}
+
+
+.slider-prev i,
+.slider-next i {
+  -webkit-text-stroke: 1.5px currentColor;
+}
+
+.slider-prev i {
+  animation: nudge-left 1.5s ease-in-out infinite;
+}
+
+.slider-next i {
+  animation: nudge-right 1.5s ease-in-out infinite;
+}
+
+@keyframes nudge-left {
+  0%, 100% { transform: translateX(-5px); }
+  50%       { transform: translateX(-10px); }
+}
+
+@keyframes nudge-right {
+  0%, 100% { transform: translateX(5px); }
+  50%       { transform: translateX(10px); }
 }
 
 .slider-dots {
@@ -335,13 +298,30 @@ type: freeform
   background: #8b949e;
 }
 
-/* Right column — Tech icon grid */
+/* Right column — detail panels */
 .project-detail {
   padding-left: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  align-self: stretch;
+}
+
+.detail-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.detail-panel.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .project-stack-icons {
@@ -443,14 +423,15 @@ type: freeform
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .project-link-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.8rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #e6edf3;
   border: 1.5px solid #8b949e;
@@ -461,9 +442,9 @@ type: freeform
 }
 
 .project-link-btn:hover {
-  border-color: #fed136;
-  color: #f0f6fc;
-  background: #1a1500;
+  border-color: #e6edf3;
+  color: #0d1117;
+  background: #e6edf3;
   text-decoration: none;
 }
 
@@ -504,10 +485,10 @@ document.addEventListener('DOMContentLoaded', function () {
       var category = this.getAttribute('data-category');
       var target = document.getElementById('cat-' + category);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var navHeight = document.getElementById('mainNav').offsetHeight;
+        var top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       }
-      tabs.forEach(function (t) { t.classList.remove('active'); });
-      this.classList.add('active');
     });
   });
 
@@ -517,6 +498,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var dots = slider.querySelectorAll('.slider-dot');
     var visual = slider.closest('.project-visual');
     var captions = visual ? visual.querySelectorAll('.slider-caption') : [];
+    var panels = slider.closest('.project-item').querySelectorAll('.detail-panel');
     var current = 0;
     var isInView = false;
 
@@ -561,6 +543,14 @@ document.addEventListener('DOMContentLoaded', function () {
       slides[current].classList.add('active');
       if (dots[current]) dots[current].classList.add('active');
       if (captions[current]) captions[current].classList.add('active');
+
+      // detail panel 동기화
+      if (panels.length > 1) {
+        var panelIdx = Math.min(current, panels.length - 1);
+        panels.forEach(function (panel) { panel.classList.remove('active'); });
+        if (panels[panelIdx]) panels[panelIdx].classList.add('active');
+      }
+
       playActive();
     }
 

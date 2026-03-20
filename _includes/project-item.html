@@ -1,42 +1,21 @@
 <!-- Project Item Component
      Parameters:
-       title    — 프로젝트 제목
-       desc     — 한줄 설명
-       tags     — 쉼표 구분 태그 (예: "Unity,HLSL,G-Buffer")
-       images   — 쉼표 구분 이미지/동영상 경로들 (예: "/assets/img/a.jpg,/assets/video/b.mp4")
-       captions — 쉼표 구분 캡션 (images 순서와 동일, 예: "메인 화면,런타임 데모")
-       stack    — 파이프|쉼표 구분 아이콘 그리드 (예: "fab fa-unity|Unity,fas fa-cube|렌더링")
-                  이미지 경로도 가능: "/assets/img/icons/opengl.svg|OpenGL"
-       links    — 파이프|쉼표 구분 링크 (예: "블로그 포스트|https://...,GitHub|https://...")
+       project — _data/projects.yml 의 항목 객체
+                 (title, desc, tags, images, stack, links)
 -->
+{% assign p = include.project %}
 <div class="project-item">
 
-  <!-- 왼쪽: 제목 · 설명 · 태그 · 링크 -->
+  <!-- 왼쪽: 제목 · 설명 · 태그 -->
   <div class="project-col project-summary">
-    <h3 class="project-title">{{ include.title }}</h3>
-    {% if include.desc %}
-    <p class="project-desc">{{ include.desc }}</p>
+    <h3 class="project-title">{{ p.title }}</h3>
+    {% if p.desc %}
+    <p class="project-desc">{{ p.desc }}</p>
     {% endif %}
-    {% if include.tags %}
+    {% if p.tags %}
     <div class="project-tags">
-      {% assign tag_list = include.tags | split: "," %}
-      {% for tag in tag_list %}
-      <span class="project-tag">{{ tag | strip }}</span>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    {% if include.links %}
-    <div class="project-links">
-      {% assign link_list = include.links | split: "," %}
-      {% for link_entry in link_list %}
-        {% assign parts = link_entry | strip | split: "|" %}
-        {% if parts.size >= 2 %}
-        <a class="project-link-btn" href="{{ parts[1] | strip }}" target="_blank" rel="noopener">
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          {{ parts[0] | strip }}
-        </a>
-        {% endif %}
+      {% for tag in p.tags %}
+      <span class="project-tag">{{ tag }}</span>
       {% endfor %}
     </div>
     {% endif %}
@@ -44,37 +23,33 @@
 
   <!-- 중간: 이미지 슬라이더 -->
   <div class="project-col project-visual">
-    {% if include.images %}
-      {% assign img_list = include.images | split: "," %}
+    {% if p.images %}
       <div class="project-slider">
-        <button class="slider-btn slider-prev" aria-label="이전"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn slider-prev" aria-label="이전"><i class="fa-solid fa-circle-left"></i></button>
         <div class="slider-viewport">
-          {% for img in img_list %}
-            {% assign src = img | strip %}
+          {% for image in p.images %}
+            {% assign src = image.src %}
             {% if src contains '.mp4' or src contains '.webm' %}
           <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" {% if forloop.first %}autoplay{% endif %} muted loop playsinline preload="{% if forloop.first %}auto{% else %}none{% endif %}"></video>
             {% else %}
-          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" alt="{{ include.title }} - {{ forloop.index }}">
+          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" alt="{{ p.title }} - {{ forloop.index }}">
             {% endif %}
           {% endfor %}
-          {% if img_list.size > 1 %}
+          {% if p.images.size > 1 %}
           <div class="slider-dots">
-            {% for img in img_list %}
+            {% for image in p.images %}
             <span class="slider-dot{% if forloop.first %} active{% endif %}"></span>
             {% endfor %}
           </div>
           {% endif %}
         </div>
-        <button class="slider-btn slider-next" aria-label="다음"><i class="fas fa-chevron-right"></i></button>
+        <button class="slider-btn slider-next" aria-label="다음"><i class="fa-solid fa-circle-right"></i></button>
       </div>
-      {% if include.captions %}
-      {% assign caption_list = include.captions | split: "," %}
       <div class="slider-captions">
-        {% for caption in caption_list %}
-        <p class="slider-caption{% if forloop.first %} active{% endif %}">{{ caption | strip }}</p>
+        {% for image in p.images %}
+        <p class="slider-caption{% if forloop.first %} active{% endif %}">{{ image.caption }}</p>
         {% endfor %}
       </div>
-      {% endif %}
     {% else %}
     <div class="project-image-placeholder">
       <i class="fas fa-image"></i>
@@ -83,29 +58,57 @@
     {% endif %}
   </div>
 
-  <!-- 오른쪽: 아이콘 기술 그리드 -->
+  <!-- 오른쪽: 슬라이드별 detail panel + 링크 -->
   <div class="project-col project-detail">
-    {% if include.stack %}
-      <div class="project-stack-icons">
-        {% assign stack_list = include.stack | split: "," %}
-        {% for stack_entry in stack_list %}
-          {% assign parts = stack_entry | strip | split: "|" %}
-          {% if parts.size >= 2 %}
-            {% assign icon_or_img = parts[0] | strip %}
-            {% assign label = parts[1] | strip %}
-            <div class="project-stack-item" title="{{ label }}">
+    {% if p.images %}
+      {% for image in p.images %}
+        {% assign panel_stack = image.stack | default: p.stack %}
+        <div class="detail-panel{% if forloop.first %} active{% endif %}">
+          {% if panel_stack %}
+          <div class="project-stack-icons">
+            {% for item in panel_stack %}
+            <div class="project-stack-item" title="{{ item.label }}">
               <div class="stack-icon-box">
-                {% if icon_or_img contains "/" or icon_or_img contains ".svg" or icon_or_img contains ".png" %}
-                  <img src="{{ icon_or_img | relative_url }}" alt="{{ label }}">
+                {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
+                  <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
                 {% else %}
-                  <i class="{{ icon_or_img }}"></i>
+                  <i class="{{ item.icon }}"></i>
                 {% endif %}
               </div>
-              <span>{{ label }}</span>
+              <span>{{ item.label }}</span>
             </div>
+            {% endfor %}
+          </div>
           {% endif %}
-        {% endfor %}
+        </div>
+      {% endfor %}
+    {% elsif p.stack %}
+      <div class="detail-panel active">
+        <div class="project-stack-icons">
+          {% for item in p.stack %}
+          <div class="project-stack-item" title="{{ item.label }}">
+            <div class="stack-icon-box">
+              {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
+                <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
+              {% else %}
+                <i class="{{ item.icon }}"></i>
+              {% endif %}
+            </div>
+            <span>{{ item.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
       </div>
+    {% endif %}
+    {% if p.links %}
+    <div class="project-links">
+      {% for link in p.links %}
+      <a class="project-link-btn" href="{{ link.url }}" target="_blank" rel="noopener">
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        {{ link.label }}
+      </a>
+      {% endfor %}
+    </div>
     {% endif %}
   </div>
 

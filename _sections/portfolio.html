@@ -37,31 +37,271 @@ type: freeform
 
 <!-- Portfolio Modals -->
 {% for project in site.portfolio %}
-<div class="portfolio-modal modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl"></div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="modal-body">
-              <h2 class="text-uppercase">{{ project.title }}</h2>
-              <p class="item-intro text-muted">{{ project.subtitle }}</p>
-              <img class="img-fluid d-block mx-auto" src="{{ project.image }}" alt="{{ project.alt }}" />
-              <p>{{ project.content }}</p>
-              <button class="btn btn-primary" data-dismiss="modal" type="button">
-                <i class="fas fa-times"></i>
-                닫기
-              </button>
-            </div>
+<div class="pm-overlay modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="pm-dialog modal-dialog" role="document">
+    <div class="pm-content modal-content">
+
+      <!-- Sticky Header -->
+      <div class="pm-header">
+        <div class="pm-header-inner">
+          <div class="pm-header-text">
+            <h2 class="pm-title">{{ project.title }}</h2>
+            <p class="pm-subtitle">{{ project.subtitle }}</p>
           </div>
+          <button class="pm-close-btn" data-dismiss="modal" type="button" aria-label="닫기">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
       </div>
+
+      <!-- Scrollable Body -->
+      <div class="pm-body">
+        <div class="pm-body-inner">
+          {{ project.content }}
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 {% endfor %}
+
+<style>
+/* ── Portfolio Modal — Dark Fullscreen ── */
+
+/* 모달 자체 스크롤 방지 — 내부 body가 스크롤 담당 */
+.pm-overlay {
+  overflow: hidden !important;
+}
+
+.pm-overlay .pm-dialog {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.pm-overlay .pm-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0d1117;
+  color: #e6edf3;
+  border: none;
+  border-radius: 0;
+}
+
+/* Header */
+.pm-header {
+  flex-shrink: 0;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.pm-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pm-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pm-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.pm-subtitle {
+  font-size: 0.88rem;
+  color: #8b949e;
+  margin: 0;
+}
+
+.pm-close-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #30363d;
+  border-radius: 50%;
+  background: transparent;
+  color: #8b949e;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.pm-close-btn:hover {
+  border-color: #e6edf3;
+  color: #0d1117;
+  background: #e6edf3;
+}
+
+/* Body */
+.pm-body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.pm-body-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Override content styles inside modal ── */
+
+/* Headings */
+.pm-body h2,
+.pm-body h3,
+.pm-body h4,
+.pm-body h5 {
+  color: #f0f6fc;
+}
+
+.pm-body p,
+.pm-body li {
+  color: #c9d1d9;
+}
+
+.pm-body hr {
+  border-color: #21262d;
+  margin: 3rem 0;
+}
+
+/* Cards → dark */
+.pm-body .card {
+  background: #161b22 !important;
+  border-color: #30363d !important;
+  color: #c9d1d9;
+}
+
+.pm-body .card-title {
+  color: #f0f6fc !important;
+}
+
+.pm-body .card-text {
+  color: #8b949e !important;
+}
+
+.pm-body .card.border-0.shadow-sm {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+}
+
+/* Feature icon boxes */
+.pm-body .feature-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+/* Feature image cards */
+.pm-body .feature-card {
+  background: #161b22 !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35) !important;
+}
+
+/* Tech stack */
+.pm-body .tech-item i {
+  color: #8b949e;
+}
+
+.pm-body .tech-item h5 {
+  color: #f0f6fc;
+}
+
+/* Team member circles */
+.pm-body .team-member h3 {
+  color: #f0f6fc;
+}
+
+/* Link buttons */
+.pm-body .project-links .btn-outline-dark {
+  border-color: #30363d;
+  color: #c9d1d9;
+}
+
+.pm-body .project-links .btn-outline-dark:hover {
+  background: #e6edf3;
+  color: #0d1117;
+}
+
+/* Muted text */
+.pm-body .text-muted {
+  color: #8b949e !important;
+}
+
+/* Horizontal rule as section divider */
+.pm-body-inner > hr {
+  border: none;
+  border-top: 1px solid #21262d;
+}
+
+/* Section heading spacing */
+.pm-body h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Scrollbar */
+.pm-body::-webkit-scrollbar {
+  width: 6px;
+}
+.pm-body::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+.pm-body::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+.pm-body::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .pm-header-inner {
+    padding: 1rem;
+  }
+
+  .pm-title {
+    font-size: 1.1rem;
+  }
+
+  .pm-body-inner {
+    padding: 2rem 1rem 4rem;
+  }
+}
+</style>
