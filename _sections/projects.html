@@ -290,12 +290,16 @@ type: freeform
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #30363d;
+  background: #1b1e22;
+  border: 1.5px solid #c9d1d9;
   transition: background 0.2s;
 }
 
 .slider-dot.active {
-  background: #8b949e;
+  width: 8px;
+  height: 8px;
+  background: #c9d1d9;
+  border: 0.5px solid #1b1e22;
 }
 
 /* Right column — detail panels */
@@ -327,10 +331,11 @@ type: freeform
 .project-stack-icons {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 3rem;
   justify-content: center;
-  align-content: center;
   width: 100%;
+  height: 352px;
 }
 
 .project-stack-item {
@@ -418,12 +423,10 @@ type: freeform
 
 /* Links at bottom of project-summary */
 .project-links {
-  display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 1.25rem;
-  margin-bottom: 2rem;
 }
 
 .project-link-btn {

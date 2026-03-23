@@ -10,37 +10,7 @@ caption:
   thumbnail: assets/img/portfolio/c.png
 ---
 
-
-## 간단 소개
-
-<div class="row d-flex justify-content-center">
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle feature-image" src="assets/img/portfolio/csengine/rendering.png" alt="">
-      <h3>C++ & OpenGL 엔진</h3>
-      <p class="text-muted">개인 개발 3D 게임 엔진</p>
-      </div>
-  </div>
-
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle feature-image" src="assets/img/portfolio/csengine/cross.png" alt="">
-      <h3>크로스 플랫폼</h3>
-      <p class="text-muted">멀티 플랫폼 지원</p>
-      </div>
-  </div>
-
-  <div class="col-sm-4">
-      <div class="team-member">
-      <img class="mx-auto rounded-circle feature-image" src="assets/img/portfolio/csengine/editor1.png" alt="">
-      <h3>모듈화</h3>
-      <p class="text-muted">엔진의 모듈화 구조</p>
-      </div>
-  </div>
-</div>
-
-저의 프로젝트와 개발하며 느꼈던 경험부터,<br/>
-구현 기능에 대한 작업 내역은 아래의 링크에서 확인하실 수 있습니다.
+<p class="text-center">저의 프로젝트와 개발하며 느꼈던 경험부터, 구현 기능에 대한 작업 내역은 아래의 링크에서 확인하실 수 있습니다.</p>
 <div class="project-links text-center mb-5">
   <a href="https://github.com/ounols/CSEngine" target="_blank" class="section-subheading btn btn-outline-dark m-2">
     <i class="fab fa-github"></i> GitHub 프로젝트
@@ -58,15 +28,104 @@ caption:
 
 ---
 
+## 주요 기능 요약
+
+<div class="features-grid mb-5">
+  <div class="row g-4">
+    
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/rendering.png" class="feature-image" alt="렌더링">
+        </div>
+        <div class="feature-content">
+          <h5>렌더링</h5>
+          <p><b>PBR</b>, <b>프레임버퍼</b>, <b>디퍼드 렌더링</b> 기반 구현</p>
+          <a href="https://ounols.kr/posts/CSEngine-렌더링" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/editor1.png" class="feature-image" alt="에디터">
+        </div>
+        <div class="feature-content">
+          <h5>에디터</h5>
+          <p><b>자체 엔진의 Editor</b>를 구현하여 <b>GUI기반의 엔진 작업</b></p>
+          <a href="https://ounols.kr/posts/자체엔진-에디터-제작기" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/ani.png" class="feature-image" alt="애니메이션">
+        </div>
+        <div class="feature-content">
+          <h5>애니메이션</h5>
+          <p><b>스켈레탈 스킨닝</b>, <b>타임라인 애니메이션</b> 지원</p>
+          <a href="https://ounols.kr/posts/CSEngine-애니메이션" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/prefab.png" class="feature-image" alt="프리팹 & 씬">
+        </div>
+        <div class="feature-content">
+          <h5>프리팹 & 씬</h5>
+          <p><b>객체 복제</b>, <b>프리팹 시스템</b>, <b>씬 파일 직렬화</b> 지원</p>
+          <a href="https://ounols.kr/posts/CSEngine-Prefab-Scene" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/script.png" class="feature-image" alt="커스텀 스크립트">
+        </div>
+        <div class="feature-content">
+          <h5>커스텀 스크립트</h5>
+          <p><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
+          <a href="https://ounols.kr/posts/CSEngine-커스텀-스크립트" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="assets/img/portfolio/csengine/cross.png" class="feature-image" alt="크로스 플랫폼">
+        </div>
+        <div class="feature-content">
+          <h5>크로스 플랫폼</h5>
+          <p><b>Windows</b>, <b>Linux</b>, <b>Android</b>, <b>macOS</b>, <b>WebGL</b> 등 지원</p>
+          <a href="https://ounols.kr/posts/CSEngine-크로스-플랫폼/" target="_blank" class="btn btn-info">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+---
+
+
 ## 이 프로젝트를 통해
 
 <div class="experience-section py-4">
   <div class="row">
     <div class="col-12">
-      <p class="text-center mb-4">
-        몇년 동안 이 프로젝트를 작업하며 게임 엔진의 핵심 기술들을 직접 구현하고, <br>
-        실제 업무에 활용할 수 있는 깊이 있는 경험을 쌓았습니다.
+      <p class="text-center">
+        몇년 동안 이 프로젝트를 작업하며 게임 엔진의 핵심 기술들을 직접 구현하고, 실제 업무에 활용할 수 있는 깊이 있는 경험을 쌓았습니다.
       </p>
+      <br>
     </div>
   </div>
   
@@ -258,94 +317,6 @@ caption:
 
 ---
 
-## 주요 기능 요약
-
-<div class="features-grid mb-5">
-  <div class="row g-4">
-    
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/rendering.png" class="feature-image" alt="렌더링">
-        </div>
-        <div class="feature-content">
-          <h5>렌더링</h5>
-          <p><b>PBR</b>, <b>프레임버퍼</b>, <b>디퍼드 렌더링</b> 기반 구현</p>
-          <a href="https://ounols.kr/posts/CSEngine-렌더링" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/editor1.png" class="feature-image" alt="에디터">
-        </div>
-        <div class="feature-content">
-          <h5>에디터</h5>
-          <p><b>자체 엔진의 Editor</b>를 구현하여 <b>GUI기반의 엔진 작업</b></p>
-          <a href="https://ounols.kr/posts/자체엔진-에디터-제작기" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/ani.png" class="feature-image" alt="애니메이션">
-        </div>
-        <div class="feature-content">
-          <h5>애니메이션</h5>
-          <p><b>스켈레탈 스킨닝</b>, <b>타임라인 애니메이션</b> 지원</p>
-          <a href="https://ounols.kr/posts/CSEngine-애니메이션" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/prefab.png" class="feature-image" alt="프리팹 & 씬">
-        </div>
-        <div class="feature-content">
-          <h5>프리팹 & 씬</h5>
-          <p><b>객체 복제</b>, <b>프리팹 시스템</b>, <b>씬 파일 직렬화</b> 지원</p>
-          <a href="https://ounols.kr/posts/CSEngine-Prefab-Scene" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/script.png" class="feature-image" alt="커스텀 스크립트">
-        </div>
-        <div class="feature-content">
-          <h5>커스텀 스크립트</h5>
-          <p><b>Squirrel Script</b> 기반, <b>런타임 스크립팅</b> 및 컴파일</p>
-          <a href="https://ounols.kr/posts/CSEngine-커스텀-스크립트" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-6 col-md-12">
-      <div class="feature-card">
-        <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/cross.png" class="feature-image" alt="크로스 플랫폼">
-        </div>
-        <div class="feature-content">
-          <h5>크로스 플랫폼</h5>
-          <p><b>Windows</b>, <b>Linux</b>, <b>Android</b>, <b>macOS</b>, <b>WebGL</b> 등 지원</p>
-          <a href="https://ounols.kr/posts/CSEngine-크로스-플랫폼/" target="_blank" class="btn btn-info">자세히 보기 →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
----
-
 ## 데모 & 프로토타입
 
 <div class="row d-flex justify-content-center">
@@ -400,33 +371,6 @@ caption:
         <i class="fas fa-puzzle-piece fa-2x mb-2"></i>
         <h5>종속성</h5>
         <p>GLEW, GLFW, stb_image, IMGUI, Squirrel, ZIP 라이브러리 등</p>
-      </div>
-    </div>
-  </div>
-</div>
-
----
-
-## 프로젝트 구조
-
-<div class="row">
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h4 class="card-title">📚 개발 배경 & 의도</h4>
-        <p class="card-text">게임 엔진을 직접 만들어 본 경험, 기술 성장 및 자기 주도 개발의 동기를 소개</p>
-        <a href="https://ounols.kr/posts/엔진-제작기/" target="_blank" 
-           class="section-subheading btn btn-outline-primary">자세히 보기 →</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-body">
-        <h4 class="card-title">🔧 엔진 아키텍처</h4>
-        <p class="card-text">모듈 기반 구조 (렌더러, 애니메이터, 씬/프리팹, 스크립트, 플랫폼 핸들링 등) 로직</p>
-        <a href="https://pofo.ounols.kr/%EC%97%94%EC%A7%84-%EA%B5%AC%EC%A1%B0" target="_blank" 
-           class="section-subheading btn btn-outline-primary">구조 살펴보기 →</a>
       </div>
     </div>
   </div>

@@ -103,7 +103,7 @@
     {% if p.links %}
     <div class="project-links">
       {% for link in p.links %}
-      <a class="project-link-btn" href="{{ link.url }}" target="_blank" rel="noopener">
+      <a class="project-link-btn" href="{{ link.url }}"{% if link.modal %} data-toggle="modal"{% elsif link.target %} target="{{ link.target }}"{% else %} target="_blank" rel="noopener"{% endif %}>
         <i class="fas fa-arrow-up-right-from-square"></i>
         {{ link.label }}
       </a>
