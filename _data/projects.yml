@@ -1,7 +1,7 @@
 graphics:
   - title: "Unity 실시간 GI 구현"
     desc: "<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
-    tags: [Unity, URP, HLSL, G-Buffer, 모바일 최적화]
+    tags: [Unity, 15인 규모 프로젝트, URP, HLSL, G-Buffer, 모바일 최적화]
     images:
       - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4"
         caption: "빛의 방향에 따라 환경광이 변화하는 GI 데모"
@@ -52,7 +52,7 @@ graphics:
 
   - title: "모바일 브라우저용<br>오픈월드 최적화 작업"
     desc: "<h5>아티스트와 소통하며 환경을 조율하고,<br>렌더링 및 배경 최적화를 전반적으로 담당</h5>"
-    tags: [Unity, URP, WebGL, HLSL, 모바일 최적화]
+    tags: [Unity, 5인 소규모 외주 프로젝트, URP, WebGL, HLSL, 모바일 최적화]
     images:
       - src: "/assets/img/projects/boh-project/hc_preview.jpg"
         caption: "오픈월드로 만들어진 배경"
@@ -155,7 +155,7 @@ graphics:
 
   - title: "다양한 커스텀 쉐이더 제작"
     desc: "<h5>유니티부터 언리얼까지<br><b>아트 친화적</b>과 <b>최적화</b>를 동시에</h5>"
-    tags: [Unity, Unreal, HLSL, Shader Graph, Amplify Shader, Post Processing]
+    tags: [Unity, 다양한 프로젝트들, Unreal, HLSL, Shader Graph, Amplify Shader, Post Processing]
     images:
       - src: "/assets/img/projects/custom-shader/sketch.mp4"
         caption: "러프 스케치 효과는 텍스쳐 모앙에 맞게 연출되며 아티스트가 쉽게 세부 조절이 가능하도록 구현했습니다."
@@ -214,7 +214,7 @@ graphics:
           label: "PR 제출 후<br>Spine 4.2에 공식 머지"
   - title: "C++로 구현한 <b>자체엔진 개발</b>"
     desc: "<h5>PBR · 디퍼드 렌더링 · GUI 에디터까지<br><b>C++</b>로 밑바닥부터 직접 만든 3D 엔진</h5>"
-    tags: [C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
+    tags: [혼자 개발 중, C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
     images:
       - src: "/assets/img/projects/csengine-project/editor_1.mp4"
         caption: "자체엔진 에디터로 Scene을 불러오는 시연 영상"
@@ -286,7 +286,7 @@ graphics:
 client:
   - title: "랜덤 기사단"
     desc: "<h5>개발 시작부터 라이브 서비스까지<br>모든 과정을 겪어본 프로젝트</h5>"
-    tags: [Unity, 설계 참여, 우편함, 퀘스트, 랭킹 시스템, 백엔드, UI, Asset Bundle, 라이브 업데이트]
+    tags: [Unity, 15인 규모 프로젝트, 설계 참여, 우편함, 퀘스트, 랭킹 시스템, 백엔드, UI, Asset Bundle, 라이브 업데이트]
     images:
       - src: "/assets/img/portfolio/r-full.png"
         caption: "Unity 기반 카드 수집형 타워디펜스 게임"
@@ -327,7 +327,7 @@ client:
 
   - title: "Unreal 기반<br>워게임 프로젝트"
     desc: "<h5>현재 활발하게 개발 중인<br>전투기 워게임 B2B 프로젝트</h5>"
-    tags: [Unreal, 워게임 시뮬레이터, 시스템 설계, 에디터 제작, Unreal Widget, JSBSim과 Cesium 사용]
+    tags: [Unreal, 5인 정예 인원 외주 프로젝트, 워게임 시뮬레이터, 시스템 설계, 에디터 제작, Unreal Widget, JSBSim과 Cesium 사용]
     images:
       - src: "/assets/img/projects/flight-project/0_Thumnail.webp"
         caption: "전투기의 세밀한 전략을 구현하는 워게임 시뮬레이터 (대체 이미지)"
@@ -374,6 +374,43 @@ client:
         - icon: "fa-solid fa-image"
           label: "텍스쳐 스트리밍을 고려하여<br>명도 기준으로 노멀 생성"
 
+  - title: "PZ 프로젝트"
+    desc: "<h5>문제를 먼저 보았기에,<br>결국 방향을 잡게 된 <b>파트장으로의 여정</b></h5>"
+    tags: [Unity, URP, 15인 규모 프로젝트, 프로파일링, 아키텍처 설계, 리팩토링 주도, 파트장]
+    images:
+      - src: "/assets/img/projects/pz-project/profiling_report.png"
+        caption: "이전부터 경고했던 최적화 이슈들을 실측 데이터로 정리한 프로파일링 보고서"
+        stack:
+        - icon: "fa-solid fa-magnifying-glass-chart"
+          label: "감이 아닌 데이터로<br>문제를 증명"
+        - icon: "fa-solid fa-mobile-screen"
+          label: "갤럭시 노트8 실측 기반<br>CPU·GPU·메모리 분석"
+        - icon: "fa-solid fa-triangle-exclamation"
+          label: "경고가 무시된 이슈들이<br>결국 현실이 됨"
+        - icon: "fa-solid fa-wrench"
+          label: "7개 영역의 문제마다<br>구체적 해결책까지 제시"
+      - src: "/assets/img/projects/pz-project/system_diagnosis.png"
+        caption: "계층 없이 나열된 20개의 시스템 — 이 진단이 리팩토링과 파트장 역할의 시작점이 됨"
+        stack:
+        - icon: "fa-solid fa-sitemap"
+          label: "너무 많은<br>매니저와 시스템들"
+        - icon: "fa-solid fa-user-slash"
+          label: "다른 팀원의 코드 추적이<br>불가능한 수준"
+        - icon: "fa-solid fa-arrows-turn-to-dots"
+          label: "문제를 파악하고 있던 내가<br>파트장 역할을 수행하게 됨"
+        - icon: "fa-solid fa-arrow-right"
+          label: "새 프로젝트로의 이식을<br>결정하는 계기"
+      - src: "/assets/img/projects/pz-project/architecture_design.png"
+        caption: "새 프로젝트의 코어 설계를 직접 담당 — 순조롭게 진행되었으나 인원 감축으로 캔슬"
+        stack:
+        - icon: "fa-solid fa-scale-balanced"
+          label: "완벽한 설계가 아닌<br>느슨하고 현실적인 설계"
+        - icon: "fa-solid fa-handshake"
+          label: "코드만 보고도 파악 가능한<br>협업 중심의 구조"
+        - icon: "fa-solid fa-layer-group"
+          label: "제네릭 기반 위에<br>유니크를 올리는 계층 분리"
+        - icon: "fa-solid fa-seedling"
+          label: "회사 사정에 의해 캔슬되었지만<br>성장의 계기가 된 경험"
 others:
   - title: "인프라 & 백엔드"
     desc: "서비스 운영을 위한 백엔드 및 CI/CD"
