@@ -3,7 +3,7 @@ graphics:
     desc: "<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
     tags: [2024 ~ 2025, 11인 규모 프로젝트, URP, HLSL, G-Buffer, 모바일 최적화]
     images:
-      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4"
+      - src: "/assets/img/projects/unity-gi-project/1.mp4"
         caption: "빛의 방향에 따라 환경광이 변화하는 GI 데모"
         stack:
         - icon: "fab fa-unity"
@@ -14,14 +14,14 @@ graphics:
           label: "리얼타임 게임 프로젝트에<br>알맞는 최적화"
         - icon: "fa-brands fa-chrome"
           label: "모바일 위주 최적화<br>하지만 웹에서도 정상 작동"
-      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/3.mp4"
+      - src: "/assets/img/projects/unity-gi-project/3.mp4"
         caption: "PBR기반 재질에 따른 Reflection GI 및 Diffuse GI가 적용된 모습"
         stack:
         - icon: "/assets/img/icons/genshin.svg"
           label: "원신의 환경광 발표자료에서<br>영감을 얻음"
         - icon: "fa-solid fa-cubes"
           label: "기존 URP와 호환성을 유지한<br>PBR 재질 적용"
-      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%202.png"
+      - src: "/assets/img/projects/unity-gi-project/image_2.png"
         caption: "아티스트를 위한 Tool 중 베이킹을 설정하는 화면 일부"
         stack:
         - icon: "fa-solid fa-user-pen"
@@ -32,14 +32,14 @@ graphics:
           label: "아티스트 원하는 의도대로<br>환경광을 설정하도록"
         - icon: "fa-solid fa-sliders"
           label: "프로브 베이킹부터<br>환경광 세부옵션까지"
-      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/2.mp4"
+      - src: "/assets/img/projects/unity-gi-project/2.mp4"
         caption: "G-buffer가 실시간으로 Directional Light의 영향을 받고 반영되는 영상"
         stack:
         - icon: "fa-solid fa-forward"
           label: "편집과 함께 확인가능"
         - icon: "fa-solid fa-panorama"
           label: "베이킹부터 실시간으로<br>GI가 적용되는 모습까지"
-      - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%2010.png"
+      - src: "/assets/img/projects/unity-gi-project/image_10.png"
         caption: "바닥 흙의 색상이 오브젝트에 반영된 웹 시연 장면"
         stack:
         - icon: "fa-brands fa-android"
@@ -131,7 +131,7 @@ graphics:
           label: "환경맵 없이도<br>부족함 없는 GI 효과"
         - icon: "fa-solid fa-lightbulb"
           label: "Unreal Lumen도 근·중경에<br>SDFGI를 활용하는 이유"
-      - src: "https://ounols.kr/media/%EC%9E%90%EC%B2%B4-%EC%97%94%EC%A7%84%EC%97%90-global-illumination%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%82%BD%EC%A7%88%EA%B8%B0-2/C_2023-06-06_22-56-36.mp4"
+      - src: "/assets/img/projects/sdfdgi-project/C_2023-06-06_22-56-36.mp4"
         caption: "왼쪽은 기존 Mesh 기반 렌더링 - 오른쪽은 직접 베이킹한 SDF Model Volume을 시각화"
         stack:
         - icon: "fa-solid fa-person-chalkboard"
@@ -201,7 +201,7 @@ graphics:
           label: "Toon Shader를<br>직접 분석하며 제작"
         - icon: "fa-solid fa-sun"
           label: "스텐실을 이용한<br>역광 효과 강조"
-      - src: "https://ounols.kr/media/Spine-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EA%B8%B0%EC%97%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/3.png"
+      - src: "/assets/img/projects/custom-shader/spine_3.png"
         caption: "Unity Spine 쉐이더를 수정하다가 발견한 버그를 수정하여 실제 Spine 프로젝트에 기여를 했습니다."
         stack:
         - icon: "fa-solid fa-magnifying-glass"
@@ -238,7 +238,7 @@ graphics:
           label: "프리팹 & 씬<br>직렬화 시스템 지원"
         - icon: "fa-solid fa-file-code"
           label: "Squirrel Script<br>런타임 스크립팅 지원"
-      - src: "https://ounols.kr/media/2025-06-01-CSEngine-%EB%A0%8C%EB%8D%94%EB%A7%81/4.png"
+      - src: "/assets/img/projects/csengine-project/rendering_4.png"
         caption: "PBR을 기반의 다양한 렌더링 파이프라인이 적용된 모습"
         stack:
         - icon: "fa-solid fa-layer-group"
@@ -294,13 +294,13 @@ client:
         caption: "전투기의 세밀한 전략을 구현하는 워게임 시뮬레이터 (대체 이미지)"
         stack:
         - icon: "fa-brands fa-unreal-engine"
-          label: "Unreal GUI 에디터와 시뮬레이션<br>설계 및 구현 담당"
+          label: "Unreal GUI 에디터와<br>시뮬레이션 설계 및 구현 담당"
         - icon: "fa-solid fa-jet-fighter"
           label: "JSBSim을 이용한<br>항공역학 시뮬레이션"
         - icon: "fa-solid fa-sitemap"
-          label: "오브젝트 직렬화를 위한<br>전반적인 프레임워크 설계"
+          label: "오브젝트 직렬화를 위한<br>전반적인 프레임워크 작업"
         - icon: "fa-solid fa-people-group"
-          label: "팀원들과 AI 에이전트까지<br>고려한 협업 가이드 제시"
+          label: "데디케이티트 서버(예정)까지<br>고려한 설계 방향"
       - src: "/assets/img/projects/flight-project/SCR-20260321-qrxb.jpeg"
         caption: "세부적인 전장의 시나리오 및 스펙 지정 후 시뮬레이션까지 진행 가능 (대체 이미지)"
         stack:
@@ -311,7 +311,7 @@ client:
         - icon: "fa-solid fa-gears"
           label: "에디터 및 파일 직렬화의 자동화<br>신기능 구현 시 관련 작업 최소화"
         - icon: "fa-solid fa-people-group"
-          label: "팀원들과 AI 에이전트까지<br>고려한 협업 가이드 제시"
+          label: "팀원들과 AI 에이전트도<br>고려한 협업 가이드 마련"
       - src: "/assets/img/projects/flight-project/10_editor_system_architecture.svg"
         caption: "워게임 에디터 및 시뮬레이터의 아키텍처 다이어그램"
         stack:
@@ -365,7 +365,7 @@ client:
         caption: "설계 문제 확인 후, 처음 직접 제시했던 리펙토링 방향에 대해 설명하며 그린 그림 (포트폴리오 사용이 허가 됨)"
         stack:
         - icon: "fa-solid fa-sitemap"
-          label: "너무 많은<br><u class='note-trigger' style='color: steelblue;'>매니저와 시스템들<span class='note-source'>20개 정도의 시스템과 매니저들이 독립적으로 돌아가는 상황이였습니다.</span></u>"
+          label: "본격적으로 검토한 결과<br>너무 많은 <u class='note-trigger' style='color: steelblue;'>매니저와 시스템들<span class='note-source'>20개 정도의 시스템과 매니저들이 독립적으로 돌아가는 상황이였습니다.</span></u>"
         - icon: "fa-solid fa-user-slash"
           label: "다른 팀원의 코드 추적이<br>불가능한 수준"
         - icon: "fa-solid fa-arrows-turn-to-dots"
