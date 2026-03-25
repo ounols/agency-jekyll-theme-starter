@@ -1,0 +1,117 @@
+<!-- Project Item Component
+     Parameters:
+       project — _data/projects.yml 의 항목 객체
+                 (title, desc, tags, images, stack, links)
+-->
+{% assign p = include.project %}
+<div class="project-item">
+
+  <!-- 왼쪽: 제목 · 설명 · 태그 -->
+  <div class="project-col project-summary">
+    <h3 class="project-title">{{ p.title }}</h3>
+    {% if p.desc %}
+    <div class="project-desc">{{ p.desc }}</div>
+    {% endif %}
+    {% if p.tags %}
+    <div class="project-tags">
+      {% for tag in p.tags %}
+      <span class="project-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- 중간: 이미지 슬라이더 -->
+  <div class="project-col project-visual">
+    {% if p.images %}
+      <div class="project-slider">
+        <button class="slider-btn slider-prev note-trigger" aria-label="이전"><i class="fa-solid fa-circle-left"></i><span class="note-source">이전 스토리</span></button>
+        <div class="slider-viewport note-trigger">
+          <span class="note-source"></span>
+          {% for image in p.images %}
+            {% assign src = image.src %}
+            {% if src contains '.mp4' or src contains '.webm' %}
+          <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" {% if forloop.first %}autoplay{% endif %} muted loop playsinline preload="{% if forloop.first %}auto{% else %}none{% endif %}"></video>
+            {% else %}
+          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" alt="{{ p.title }} - {{ forloop.index }}">
+            {% endif %}
+          {% endfor %}
+          {% if p.images.size > 1 %}
+          <div class="slider-dots">
+            {% for image in p.images %}
+            <span class="slider-dot{% if forloop.first %} active{% endif %}"></span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <button class="slider-btn slider-next note-trigger" aria-label="다음"><i class="fa-solid fa-circle-right"></i><span class="note-source">다음 스토리</span></button>
+      </div>
+      <div class="slider-captions">
+        {% for image in p.images %}
+        <p class="slider-caption{% if forloop.first %} active{% endif %}">{{ image.caption }}</p>
+        {% endfor %}
+      </div>
+    {% else %}
+    <div class="project-image-placeholder">
+      <i class="fas fa-image"></i>
+      <span>스크린샷</span>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- 오른쪽: 슬라이드별 detail panel + 링크 -->
+  <div class="project-col project-detail">
+    {% if p.images %}
+      {% for image in p.images %}
+        {% assign panel_stack = image.stack | default: p.stack %}
+        <div class="detail-panel{% if forloop.first %} active{% endif %}">
+          {% if panel_stack %}
+          <div class="project-stack-icons">
+            {% for item in panel_stack %}
+            <div class="project-stack-item">
+              <div class="stack-icon-box">
+                {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
+                  <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
+                {% else %}
+                  <i class="{{ item.icon }}"></i>
+                {% endif %}
+              </div>
+              <span>{{ item.label }}</span>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% elsif p.stack %}
+      <div class="detail-panel active">
+        <div class="project-stack-icons">
+          {% for item in p.stack %}
+          <div class="project-stack-item">
+            <div class="stack-icon-box">
+              {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
+                <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
+              {% else %}
+                <i class="{{ item.icon }}"></i>
+              {% endif %}
+            </div>
+            <span>{{ item.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if p.links %}
+    <div class="project-links">
+      {% for link in p.links %}
+      <a class="project-link-btn note-trigger" href="{{ link.url }}"{% if link.modal %} data-toggle="modal"{% elsif link.target %} target="{{ link.target }}"{% else %} target="_blank" rel="noopener"{% endif %}>
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        {{ link.label }}
+        <span class="note-source">{{ link.note }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+</div>

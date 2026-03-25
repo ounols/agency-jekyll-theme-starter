@@ -43,8 +43,7 @@ header.masthead .btn {
 
 /* Scroll Down Button */
 .scroll-down {
-    position: absolute;
-    bottom: 30px;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;

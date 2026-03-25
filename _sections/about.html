@@ -1,0 +1,109 @@
+---
+title: "About Me"
+subtitle: "상단의 3D Scene은 제가 개발한 자체 엔진으로 직접 만들었습니다."
+section_id: about
+order: 1
+type: freeform
+---
+<style>
+  #about { padding: 0; }
+  .about-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  .about-hero__name {
+    font-family: 'BookkMyungjo', serif;
+    font-weight: 700;
+    font-size: 10cqw;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    width: 70%;
+    user-select: none;
+  }
+  .about-hero__fade-strip {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    /* background-color: #fff; */
+    z-index: 1;
+    text-align: center;
+    container-type: inline-size;
+  }
+  .about-hero__fade-text {
+    font-family: 'Mona12', sans-serif;
+    font-size: 0.9cqw;
+    font-weight: 400;
+    letter-spacing: 0.7em;
+    color: #000000;
+    display: inline-block;
+    opacity: 1;
+    /* transition: opacity 0.8s ease; */
+    background: #ffffff;
+    padding: 1px;
+  }
+  .about-intro-text {
+    font-family: 'Mona12', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5em;
+    font-weight: 500;
+    color: #000000;
+    opacity: 1;
+  }
+  .about-hero__fade-text.is-visible {
+    opacity: 1;
+  }
+</style>
+
+<section class="page-section" id="about">
+  <div class="about-hero">
+    <div class="about-hero__name">JIN YOUNG</div>
+    <div class="about-hero__fade-strip">
+      <span class="about-hero__fade-text">게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 컨텐츠 프로그래밍 | 최적화 프로그래밍</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center" style="padding: 50px 0;">
+        <p class="text-muted" style="font-size: 1.05rem; line-height: 1.9;">
+          <span class="about-intro-text">프로그래머 이진영입니다.</span><br><br>
+          다양한 분야의 프로그래밍의 경험이 있고, 그래픽스 렌더링과 엔진 프로그래밍에 깊은 관심을 갖고 있습니다.<br>
+          흥미로운 것이라면 언제든 도전하고 배우는 것을 좋아합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// (function() {
+//   var phrases = [
+//     '게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 컨텐츠 프로그래밍 | 최적화 프로그래밍',
+//     '이진영 입니다.',
+//   ];
+//   var el = document.querySelector('.about-hero__fade-text');
+//   if (!el) return;
+//   var idx = 0;
+
+//   function show() {
+//     el.textContent = phrases[idx];
+//     el.classList.add('is-visible');
+//     setTimeout(function() {
+//       el.classList.remove('is-visible');
+//       setTimeout(function() {
+//         idx = (idx + 1) % phrases.length;
+//         show();
+//       }, 1000);
+//     }, 3000);
+//   }
+//   show();
+// })();
+</script>

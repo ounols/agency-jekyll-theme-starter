@@ -3,32 +3,28 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4">
-        <span class="copyright"
-          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
-        >
+        <span class="copyright">Copyright &copy; 이진영 {{ 'now' | date: "%Y" }}</span>
       </div>
       <!-- Social Media -->
       <div class="col-md-4">
         <ul class="list-inline social-buttons">
-          {% for link in site.data.sitetext[site.locale].footer.social %}
           <li class="list-inline-item">
-            {% if link.url %}
-            <a href="{{ link.url }}" target="_blank">
-              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+            <a href="https://github.com/ounols" target="_blank">
+              <i class="fab fa-github"></i>
             </a>
-            {% endif %}
           </li>
-          {% endfor %}
+          <li class="list-inline-item">
+            <a href="mailto:ounols@ounols.kr" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
         </ul>
       </div>
       <!-- Legal -->
       <div class="col-md-4">
         <ul class="list-inline quicklinks">
           <li class="list-inline-item">
-            <a href="legal"
-              >{{ site.data.sitetext[site.locale].footer.legal | default:
-              "Privacy Policy" }}</a
-            >
+            <a href="legal">개인정보처리방침</a>
           </li>
         </ul>
       </div>

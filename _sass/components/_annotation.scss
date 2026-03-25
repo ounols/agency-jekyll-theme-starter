@@ -1,0 +1,31 @@
+// 콘텐츠 소스 — 화면에 보이지 않음
+.note-source {
+  display: none;
+}
+
+// 전역 팝업 — body에 직접 붙어 transform 영향 없음
+body > .note-popup {
+  position: fixed;
+  background: $primary;
+  color: $black;
+  padding-left: 0.1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: normal;
+  line-height: 1.6;
+  width: auto;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.01s ease, visibility 0.01s;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  text-align: left;
+  pointer-events: none;
+  letter-spacing: 0.2rem;
+  font-family: 'Mona12', sans-serif;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

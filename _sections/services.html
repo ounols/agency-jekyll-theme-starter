@@ -1,0 +1,213 @@
+---
+title: "Technical Stack"
+subtitle: "주로 사용하는 기술들입니다."
+section_id: stack
+order: 2
+type: freeform
+---
+<section class="bg-light page-section" id="stack">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Technical Stack</h2>
+        <h3 class="section-subheading text-muted"></h3>
+      </div>
+    </div>
+
+    <div class="stack-grid">
+      <!-- Graphics / Rendering -->
+      <div class="stack-card">
+        <div class="stack-card-header">
+          <i class="fas fa-cube"></i>
+          <h3>Graphics &amp; Rendering</h3>
+        </div>
+        <div class="stack-icons">
+          <div class="stack-icon-item note-trigger">
+            <img src="{{ '/assets/img/icons/opengl.svg' | relative_url }}" alt="OpenGL & DirectX">
+            <span>OpenGL & DirectX</span>
+            <span class="note-source">그래픽스 라이브러리를 통해<br>다양한 렌더링 연구 경험</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <span>고급 렌더링 구현 경험</span>
+            <span class="note-source">* SDF 기반 연출 및 포스트 프로세싱<br>* Stylized PBR Rendering</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-solid fa-brush"></i>
+            <span>아트 친화적 구현</span>
+            <span class="note-source">아트팀과의 협업을 통해<br>아트 친화적인 구현 경험</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <img src="{{ '/assets/img/icons/siggraph.png' | relative_url }}" alt="신기술 프로 탐방러">
+            <span>신기술 분석 및 감탄</span>
+            <span class="note-source">최신 게임 그래픽스 기술 동향 분석<br>및 실적용 경험</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Programming -->
+      <div class="stack-card">
+        <div class="stack-card-header">
+          <i class="fas fa-gamepad"></i>
+          <h3>Game Programming</h3>
+        </div>
+        <div class="stack-icons">
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-unity"></i>
+            <span>Unity</span>
+            <span class="note-source">* Unity<br>* C#<br>* Addressable<br>* Shader</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-unreal-engine"></i>
+            <span>Unreal</span>
+            <span class="note-source">* Unreal<br>* C++<br>* std<br>* Meta Human<br>* Shader<br>* Blueprint</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-solid fa-hands-clapping"></i>
+            <span>라이브 경험</span>
+            <span class="note-source">하단의 '랜덤기사단' 항목에서!</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-solid fa-people-group"></i>
+            <span>파트장으로 협업 경험</span>
+            <span class="note-source">하단의 'PZ 프로젝트' 항목에서!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Others -->
+      <div class="stack-card">
+        <div class="stack-card-header">
+          <i class="fas fa-layer-group"></i>
+          <h3>Others</h3>
+        </div>
+        <div class="stack-icons">
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-node-js"></i>
+            <span>백엔드 프로그래밍</span>
+            <span class="note-source">* Node.js<br>* Spring boot<br>* Flask<br>* SQL database</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-jenkins"></i>
+            <span>CI / CD 구축 경험</span>
+            <span class="note-source">* Jenkins<br>* Docker<br>* Github Actions</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-aws"></i>
+            <span>SaaS 경험</span>
+            <span class="note-source">* AWS<br>* Google Cloud<br>* Hyundai SaaS</span>
+          </div>
+          <div class="stack-icon-item note-trigger">
+            <i class="fa-brands fa-jira"></i>
+            <span>협업 중심 솔루션 사용</span>
+            <span class="note-source">* Jira<br>* Slack<br>* Github Organization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.stack-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stack-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.stack-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.stack-card-header i {
+  font-size: 1.5rem;
+  color: #fed136;
+}
+
+.stack-card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #212529;
+}
+
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.stack-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 72px;
+}
+
+.stack-icon-item i {
+  width: 128px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  color: #495057;
+  transition: background 0.2s, color 0.2s;
+}
+
+.stack-icon-item:hover i {
+  background: #fed136;
+  color: #212529;
+}
+
+.stack-icon-item img {
+  width: 128px;
+  height: 128px;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  opacity: 0.75;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.stack-icon-item:hover img {
+  background: #fed136;
+  opacity: 0.85;
+}
+
+.stack-icon-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

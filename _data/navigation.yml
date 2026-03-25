@@ -1,35 +1,15 @@
-#
-# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
-#
-# Configuration: Add to _config.yml
-# locale: "en-US"  [YOUR PREFERRED LOCALE]
-#
-# How to use:
-# {{ site.data.navigation[site.locale].nav.<var_name> | default: 'text' }}
-
-# Korean (default)
-# -----------------
-ko: &DEFAULT_KO
-  nav:
-    - title: "About"
-      section: about
-    - title: "Technical Stack"
-      section: stack
-    - title: "Recent"
-      section: recent
-    - title: "Portfolio"
-      section: portfolio
-    - title: "Timeline"
-      section: timeline
-    - title: "Blog"
-      url: https://ounols.kr
-en-US:
-  <<: *DEFAULT_KO
-en-CA:
-  <<: *DEFAULT_KO
-en-GB:
-  <<: *DEFAULT_KO
-en-AU:
-  <<: *DEFAULT_KO
-ko-KR:
-  <<: *DEFAULT_KO
+- title: "About"
+  section: about
+- title: "Technical Stack"
+  section: stack
+- title: "Key Projects"
+  section: projects
+  children:
+    - title: "Engine & Graphics"
+      section: cat-graphics
+    - title: "Game Programming"
+      section: cat-client
+- title: "Timeline"
+  section: timeline
+- title: "Blog"
+  url: https://ounols.kr
