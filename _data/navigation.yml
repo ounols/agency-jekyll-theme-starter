@@ -4,10 +4,11 @@
   section: stack
 - title: "Key Projects"
   section: projects
-- title: "Recent"
-  section: recent
-- title: "Portfolio"
-  section: portfolio
+  children:
+    - title: "Engine & Graphics"
+      section: cat-graphics
+    - title: "Game Programming"
+      section: cat-client
 - title: "Timeline"
   section: timeline
 - title: "Blog"

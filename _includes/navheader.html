@@ -18,12 +18,21 @@
           <li class="nav-item">
             {%- if link.url -%}
               <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-            {%- else if link.section -%}
+            {%- elsif link.section -%}
               <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
             {%- else -%}
               <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
             {%- endif -%}
           </li>
+          {% for child in link.children %}
+          <li class="nav-item nav-child">
+            {%- if child.url -%}
+              <a class="nav-link js-scroll-trigger" href="{{ child.url }}">{{ child.title }}</a>
+            {%- else -%}
+              <a class="nav-link js-scroll-trigger" href="#{{ child.section }}">{{ child.title }}</a>
+            {%- endif -%}
+          </li>
+          {% endfor %}
         {% endfor %}
         </ul>
       </div>
@@ -41,7 +50,8 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">portfolio</div>
-        <div class="scroll-down" onclick="scrollToAbout()">
+        <div class="scroll-down note-trigger" onclick="scrollToAbout()">
+          <span class="note-source">아래로 스크롤 해주세요!</span>
           <div class="scroll-text">Scroll Down</div>
           <div class="scroll-icon">
             <i class="fas fa-chevron-down"></i>

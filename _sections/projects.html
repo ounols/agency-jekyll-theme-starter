@@ -5,7 +5,7 @@ section_id: projects
 order: 3
 type: freeform
 ---
-<section class="page-section" id="projects">
+<section class="page-section" id="projects" style="padding-bottom: 0 !important;">
   <div>
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -18,7 +18,7 @@ type: freeform
     <div class="project-tabs">
       <button class="project-tab" data-category="graphics">Engine &amp; Graphics</button>
       <button class="project-tab" data-category="client">Game Programming</button>
-      <button class="project-tab" data-category="others">Others</button>
+      <!-- <button class="project-tab" data-category="others">Others</button> -->
     </div>
 
     <!-- Graphics & Rendering -->
@@ -39,12 +39,12 @@ type: freeform
     </div>
 
     <!-- Others -->
-    <div id="cat-others" class="container-fluid px-4 px-lg-5 project-category">
+    <!-- <div id="cat-others" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Others</div>
       {% for project in site.data.projects.others %}
         {% include project-item.html project=project %}
       {% endfor %}
-    </div>
+    </div> -->
 
   </div>
 </section>
@@ -247,6 +247,11 @@ type: freeform
 
 .slider-btn:hover {
   color: #fed136;
+}
+
+.slider-btn.btn-hidden {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 
@@ -566,6 +571,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var panels = slider.closest('.project-item').querySelectorAll('.detail-panel');
     var current = 0;
     var isInView = false;
+    var prevBtn = slider.querySelector('.slider-prev');
+    var nextBtn = slider.querySelector('.slider-next');
+    var nextIcon = nextBtn.querySelector('i');
+    var nextNote = nextBtn.querySelector('.note-source');
+
+    function updatePrevBtn() {
+      if (current === 0) {
+        prevBtn.classList.add('btn-hidden');
+      } else {
+        prevBtn.classList.remove('btn-hidden');
+      }
+    }
+
+    function updateNextBtn() {
+      if (current === slides.length - 1) {
+        nextIcon.className = 'fa-solid fa-circle-check';
+        nextNote.innerHTML = '🎉 스토리 클리어!<br>처음으로 돌아갑니다';
+        NotePopup.refresh(nextNote.innerHTML);
+      } else {
+        nextIcon.className = 'fa-solid fa-circle-right';
+        nextNote.textContent = '다음 스토리';
+      }
+    }
 
     function getVideo(slide) {
       return slide.tagName === 'VIDEO' ? slide : null;
@@ -625,7 +653,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       playActive();
+      updatePrevBtn();
+      updateNextBtn();
     }
+
+    updatePrevBtn();
+    updateNextBtn();
 
     slider.querySelector('.slider-prev').addEventListener('click', function () {
       goTo(current - 1);

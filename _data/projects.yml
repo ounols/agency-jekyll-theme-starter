@@ -1,7 +1,7 @@
 graphics:
   - title: "Unity 실시간 GI 구현"
     desc: "<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
-    tags: [Unity, 15인 규모 프로젝트, URP, HLSL, G-Buffer, 모바일 최적화]
+    tags: [2024 ~ 2025, 11인 규모 프로젝트, URP, HLSL, G-Buffer, 모바일 최적화]
     images:
       - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/1.mp4"
         caption: "빛의 방향에 따라 환경광이 변화하는 GI 데모"
@@ -36,7 +36,7 @@ graphics:
         caption: "G-buffer가 실시간으로 Directional Light의 영향을 받고 반영되는 영상"
         stack:
         - icon: "fa-solid fa-forward"
-          label: "유니티에서 바로 확인가능"
+          label: "편집과 함께 확인가능"
         - icon: "fa-solid fa-panorama"
           label: "베이킹부터 실시간으로<br>GI가 적용되는 모습까지"
       - src: "https://ounols.kr/media/unity%EC%97%90-%EB%8F%99%EC%A0%81-%EC%A1%B0%EB%AA%85%EC%9D%84-%EC%A0%81%EC%9A%A9%ED%95%9C-global-illumination-%EA%B5%AC%ED%98%84/image%2010.png"
@@ -52,7 +52,7 @@ graphics:
 
   - title: "모바일 브라우저용<br>오픈월드 최적화 작업"
     desc: "<h5>아티스트와 소통하며 환경을 조율하고,<br>렌더링 및 배경 최적화를 전반적으로 담당</h5>"
-    tags: [Unity, 5인 소규모 외주 프로젝트, URP, WebGL, HLSL, 모바일 최적화]
+    tags: [2023 ~ 2024, 5인 소규모 외주 프로젝트, URP, WebGL, HLSL, 모바일 최적화]
     images:
       - src: "/assets/img/projects/boh-project/hc_preview.jpg"
         caption: "오픈월드로 만들어진 배경"
@@ -155,7 +155,7 @@ graphics:
 
   - title: "다양한 커스텀 쉐이더 제작"
     desc: "<h5>유니티부터 언리얼까지<br><b>아트 친화적</b>과 <b>최적화</b>를 동시에</h5>"
-    tags: [Unity, 다양한 프로젝트들, Unreal, HLSL, Shader Graph, Amplify Shader, Post Processing]
+    tags: [2020 ~, 다양한 프로젝트들, HLSL, Shader Graph, Amplify Shader, Post Processing]
     images:
       - src: "/assets/img/projects/custom-shader/sketch.mp4"
         caption: "러프 스케치 효과는 텍스쳐 모앙에 맞게 연출되며 아티스트가 쉽게 세부 조절이 가능하도록 구현했습니다."
@@ -168,8 +168,8 @@ graphics:
           label: "러프함, 구체화, 날림 등<br>파라미터로 조절 가능"
         - icon: "fa-solid fa-palette"
           label: "아티스트의 요청으로<br>디테일 조정 가능하게"
-      - src: "/assets/img/projects/boh-project/bs_preview.jpg"
-        caption: "아티스트가 작업한 식생 쉐이더를 모바일에서도 사용 가능하게 최적화를 진행하였습니다."
+      - src: "/assets/img/projects/custom-shader/boh-leaf.jpg"
+        caption: "아티스트가 작업한 식생 쉐이더를 원경 매쉬도 호환되도록 개조, 안정적인 색감 유지와 부피감을 유지할 수 있도록 최적화"
         stack:
         - icon: "fa-solid fa-user-pen"
           label: "아티스트가 먼저 작업하고<br>이 후에 최적화를 진행"
@@ -214,7 +214,7 @@ graphics:
           label: "PR 제출 후<br>Spine 4.2에 공식 머지"
   - title: "C++로 구현한 <b>자체엔진 개발</b>"
     desc: "<h5>PBR · 디퍼드 렌더링 · GUI 에디터까지<br><b>C++</b>로 밑바닥부터 직접 만든 3D 엔진</h5>"
-    tags: [혼자 개발 중, C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
+    tags: [2017 ~, 혼자 개발 중, C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
     images:
       - src: "/assets/img/projects/csengine-project/editor_1.mp4"
         caption: "자체엔진 에디터로 Scene을 불러오는 시연 영상"
@@ -282,52 +282,13 @@ graphics:
       - label: "프로젝트 더 알아보기"
         url: "#p1"
         modal: true
+        note: "내부 페이지가 열립니다!"
 
 client:
-  - title: "랜덤 기사단"
-    desc: "<h5>개발 시작부터 라이브 서비스까지<br>모든 과정을 겪어본 프로젝트</h5>"
-    tags: [Unity, 15인 규모 프로젝트, 설계 참여, 우편함, 퀘스트, 랭킹 시스템, 백엔드, UI, Asset Bundle, 라이브 업데이트]
-    images:
-      - src: "/assets/img/portfolio/r-full.png"
-        caption: "Unity 기반 카드 수집형 타워디펜스 게임"
-        stack:
-        - icon: "fa-solid fa-people-group"
-          label: "게임 프레임워크 설계부터<br>함께 협업"
-        - icon: "fab fa-unity"
-          label: "인게임 설계 참여<br>아웃게임 시스템 담당"
-        - icon: "fa-solid fa-server"
-          label: "JWT 토큰 & 영수증 검증<br>백엔드도 개발"
-        - icon: "fa-brands fa-google-play"
-          label: "GPGS · IAP · Firebase<br>실제 출시 연동"
-      - src: "/assets/img/projects/random-knights/rd-1.jpg"
-        caption: "유저와 매칭되어 게임이 진행되는 모습"
-        stack:
-        - icon: "fa-solid fa-dice"
-          label: "랜덤 다이스 류<br>디펜스 경쟁 게임"
-        - icon: "fa-solid fa-sitemap"
-          label: "간단한 코어 프레임워크와<br>Delegate 기반 이벤트 로직"
-        - icon: "fa-solid fa-pen-ruler"
-          label: "백엔드부터 DB 설계까지<br>게임 백엔드 구축에 참여"
-        - icon: "fa-brands fa-aws"
-          label: "Jenkins와 AWS로<br>CI/CD 구축"
-      - src: "/assets/img/projects/random-knights/rd-2.jpg"
-        caption: "게임 서비스 당시 스크린샷"
-        stack:
-        - icon: "fa-solid fa-list-check"
-          label: "우편함, 일일 퀘스트, 랭킹 등<br>라이브의 핵심 시스템 구현"
-        - icon: "fa-solid fa-hand-holding-heart"
-          label: "에셋 패치를 이용한<br>라이브 업데이트 구현"
-        - icon: "fa-solid fa-lock"
-          label: "서버 통신 시 비동기 싱크<br>해결을 위한 입력 Block 시스템"
-        - icon: "fa-solid fa-rocket"
-          label: "우여곡절 많았지만<br>실제 서비스까지 성공적으로 진행"
-    links:
-      - label: "공식 카페 링크"
-        url: "https://cafe.naver.com/eightgames"
 
   - title: "Unreal 기반<br>워게임 프로젝트"
     desc: "<h5>현재 활발하게 개발 중인<br>전투기 워게임 B2B 프로젝트</h5>"
-    tags: [Unreal, 5인 정예 인원 외주 프로젝트, 워게임 시뮬레이터, 시스템 설계, 에디터 제작, Unreal Widget, JSBSim과 Cesium 사용]
+    tags: [2025 ~, 5인 정예 인원 외주 프로젝트, 워게임 시뮬레이터, 시스템 설계, 에디터 제작, Unreal Widget, JSBSim과 Cesium 사용]
     images:
       - src: "/assets/img/projects/flight-project/0_Thumnail.webp"
         caption: "전투기의 세밀한 전략을 구현하는 워게임 시뮬레이터 (대체 이미지)"
@@ -376,54 +337,209 @@ client:
 
   - title: "PZ 프로젝트"
     desc: "<h5>문제를 먼저 보았기에,<br>결국 방향을 잡게 된 <b>파트장으로의 여정</b></h5>"
-    tags: [Unity, URP, 15인 규모 프로젝트, 프로파일링, 아키텍처 설계, 리팩토링 주도, 파트장]
+    tags: [2024 ~ 2025, 11인 규모 프로젝트, Unity, 프로파일링, 아키텍처 설계, 리팩토링 주도, 파트장]
     images:
-      - src: "/assets/img/projects/pz-project/profiling_report.png"
-        caption: "이전부터 경고했던 최적화 이슈들을 실측 데이터로 정리한 프로파일링 보고서"
+      - src: "/assets/img/projects/pz-project/project-pz.jpg"
+        caption: "PZ 프로젝트 개발 중 인게임 이미지 (외부 발표용 이미지)"
+        stack:
+        - icon: "fa-brands fa-unity"
+          label: "Unity 기반 싱글 플레이"
+        - icon: "/assets/img/projects/pz-project/ref.png"
+          label: "'크립트 오브 더 네크로댄서'<br>형식의 리듬 로그라이크 장르"
+        - icon: "fa-solid fa-wave-square"
+          label: "처음엔 <u class='note-trigger' style='color: steelblue;'>리듬 관련 시스템<span class='note-source'>아쉽게도, 컨셉과 방향이 계속 바뀌며<br>관련 구현도 같이 늦어지던 상황이였습니다😢</span></u> 및<br>최적화 프로그래밍 담당"
+        - icon: "fa-solid fa-circle-right"
+          label: "'다음 스토리' 버튼을 눌러<br>파트장 이야기를 확인해보세요!"
+      - src: "/assets/img/projects/pz-project/pz-opti-doc.jpg"
+        caption: "이전부터 우려했던 최적화 이슈들을 실측 데이터로 정리한 프로파일링 보고서 (포트폴리오 사용이 허가 됨)"
         stack:
         - icon: "fa-solid fa-magnifying-glass-chart"
-          label: "감이 아닌 데이터로<br>문제를 증명"
+          label: "프로파일링 데이터로<br>문제를 증명"
         - icon: "fa-solid fa-mobile-screen"
-          label: "갤럭시 노트8 실측 기반<br>CPU·GPU·메모리 분석"
+          label: "최소사양 기기 기반<br>CPU·GPU·메모리 분석"
         - icon: "fa-solid fa-triangle-exclamation"
-          label: "경고가 무시된 이슈들이<br>결국 현실이 됨"
+          label: "제시했던 이슈들이<br>결국 현실이 됨"
         - icon: "fa-solid fa-wrench"
-          label: "7개 영역의 문제마다<br>구체적 해결책까지 제시"
-      - src: "/assets/img/projects/pz-project/system_diagnosis.png"
-        caption: "계층 없이 나열된 20개의 시스템 — 이 진단이 리팩토링과 파트장 역할의 시작점이 됨"
+          label: "제시했던 이슈마다<br>구체적 해결책도 함께 제시"
+      - src: "/assets/img/projects/pz-project/pz-find-systems.jpg"
+        caption: "설계 문제 확인 후, 처음 직접 제시했던 리펙토링 방향에 대해 설명하며 그린 그림 (포트폴리오 사용이 허가 됨)"
         stack:
         - icon: "fa-solid fa-sitemap"
-          label: "너무 많은<br>매니저와 시스템들"
+          label: "너무 많은<br><u class='note-trigger' style='color: steelblue;'>매니저와 시스템들<span class='note-source'>20개 정도의 시스템과 매니저들이 독립적으로 돌아가는 상황이였습니다.</span></u>"
         - icon: "fa-solid fa-user-slash"
           label: "다른 팀원의 코드 추적이<br>불가능한 수준"
         - icon: "fa-solid fa-arrows-turn-to-dots"
-          label: "문제를 파악하고 있던 내가<br>파트장 역할을 수행하게 됨"
+          label: "설계의 문제도 <u class='note-trigger' style='color: steelblue;'>파악하고 있던 내가<span class='note-source'>당시 구현에 있어서 명확한 지시를 내려줄 사람 없이<br>팀원들이 각자 따로 기능을 만들던 상황이였습니다.</span></u><br>파트장 역할을 수행하게 됨"
         - icon: "fa-solid fa-arrow-right"
           label: "새 프로젝트로의 이식을<br>결정하는 계기"
-      - src: "/assets/img/projects/pz-project/architecture_design.png"
-        caption: "새 프로젝트의 코어 설계를 직접 담당 — 순조롭게 진행되었으나 인원 감축으로 캔슬"
+      - src: "/assets/img/projects/pz-project/pz-doc-intro.jpg"
+        caption: "리펙토링을 진행하면서 작성했던 문서의 개요 중 일부"
         stack:
         - icon: "fa-solid fa-scale-balanced"
-          label: "완벽한 설계가 아닌<br>느슨하고 현실적인 설계"
+          label: "완벽한 설계가 아닌<br><u class='note-trigger' style='color: steelblue;'>느슨하고 현실적인<span class='note-source'>팀원들이 각자 만든 시스템의 로직보다,<br>서로 연결할 개체가 없어 임의로 연결하던 구조가 주요 원인이였기 때문에<br>기존 로직은 최대한 살리는 방향으로 결정했습니다.</span></u> 설계"
         - icon: "fa-solid fa-handshake"
-          label: "코드만 보고도 파악 가능한<br>협업 중심의 구조"
+          label: "<u class='note-trigger' style='color: steelblue;'>코드만 보고도 파악 가능한<span class='note-source'>팀원들이 각자 만든 기능을 외부에서 호출하는 방법이 너무 달라<br>이를 통합 및 객체화를 위한 Controller 클래스를 만들어<br>Controller의 함수와 주석만 봐도 파악이 가능한 구조를 지양했습니다.</span></u><br>협업 중심의 구조"
         - icon: "fa-solid fa-layer-group"
           label: "제네릭 기반 위에<br>유니크를 올리는 계층 분리"
         - icon: "fa-solid fa-seedling"
           label: "회사 사정에 의해 캔슬되었지만<br>성장의 계기가 된 경험"
-others:
-  - title: "인프라 & 백엔드"
-    desc: "서비스 운영을 위한 백엔드 및 CI/CD"
-    tags: [Node.js, Jenkins, AWS]
+
+  - title: "공장 업무에 게임이 들어간<br>B2B 프로젝트"
+    desc: "<h5>H 자동차의 스마트 팩토리 프로젝트로<br>해외 파견까지</h5>"
+    tags: [2022 ~ 2023, 8인 게임 개발팀 대규모 프로젝트, Unity, Addressable, Backend]
+    images:
+      - src: "/assets/img/projects/sw-project/sw-vid.mp4"
+        caption: "공장 공정 진행과 동시에 게임 시스템이 작동하는 실제 모습"
+        stack:
+        - icon: "fa-brands fa-unity"
+          label: "Unity와<br>Spring Boot + Tibero DB"
+        - icon: "fa-solid fa-server"
+          label: "팀 내 유일한 백엔드 경험으로<br>백엔드 시스템 담당"
+        - icon: "fa-solid fa-gauge-high"
+          label: "클라이언트 최적화 작업도 할당"
+        - icon: "fa-solid fa-cube"
+          label: "Addressable 기반<br>패치 배포 시스템 설계"
+      - src: "/assets/img/portfolio/h-3.png"
+        caption: "공정 진행 중에 돌아가는 게임의 스크린샷"
+        stack:
+        - icon: "fa-solid fa-bolt"
+          label: "클라이언트는<br>렌더링 최적화 작업 위주"
+        - icon: "fa-solid fa-layer-group"
+          label: "규모있는 배경으로<br>섹션 컬링 및 지연로딩 적용"
+        - icon: "fa-solid fa-microchip"
+          label: "GPU Instancing과 LOD 시스템을<br>적극적으로 사용"
+        - icon: "fa-solid fa-cubes"
+          label: "Addressable의 종속성을 고려<br>리소스 관리 방식 설계"
+      - src: "/assets/img/projects/sw-project/sw-notice.jpg"
+        caption: "실제 공장 시스템의 공지사항이 모바일과 게임에 동시에 뜨는 모습"
+        stack:
+        - icon: "fa-solid fa-sitemap"
+          label: "공정 DB 데이터와 연결하기 위한<br>아키텍쳐 및 데이터 처리 설계"
+        - icon: "fa-solid fa-plug"
+          label: "게임 백엔드 시스템과<br>클라이언트 API 호출까지"
+        - icon: "fa-solid fa-shield-halved"
+          label: "폐쇄망이라는 특이한 환경<br>모바일과 보안까지"
+        - icon: "fa-solid fa-building"
+          label: "대기업의 엔터프라이즈급 프로젝트 경험<br>처음이라 쉽지 않았던..."
+      - src: "/assets/img/projects/sw-project/sw-name.jpg"
+        caption: "해외 파견 당시 자리에 있던 이름표"
+        stack:
+        - icon: "fa-solid fa-right-left"
+          label: "백엔드 및 클라이언트<br>개발 사항의 인수인계"
+        - icon: "fa-solid fa-industry"
+          label: "실제 공정 작동방식을<br>확인하며 폴리싱 작업"
+        - icon: "fa-solid fa-globe"
+          label: "현지 개발자와 커뮤니케이션<br>문화적 차이와 언어 장벽 극복"
+        - icon: "fa-solid fa-face-smile"
+          label: "생각보다 재밌었고<br>개발자 고충은 어딜가나 비슷하다..."
+
+  - title: "랜덤 기사단"
+    desc: "<h5>개발 시작부터 라이브 서비스까지<br>모든 과정을 겪어본 프로젝트</h5>"
+    tags: [2020 ~ 2021, Unity, 15인 규모 프로젝트, 프레임워크 설계 참여, 우편함과 퀘스트, 클라이언트 프로그래밍, 백엔드, UI, Asset Bundle, 라이브 업데이트]
     images:
       - src: "/assets/img/portfolio/r-full.png"
-        caption: ""
-      - src: "/assets/img/portfolio/moyo.png"
-        caption: ""
-    stack:
-      - icon: "fab fa-node-js"
-        label: "Node.js"
-      - icon: "fab fa-jenkins"
-        label: "Jenkins"
-      - icon: "fab fa-aws"
-        label: "AWS"
+        caption: "Unity 기반 카드 수집형 타워디펜스 게임"
+        stack:
+        - icon: "fa-solid fa-people-group"
+          label: "게임 프레임워크 설계부터<br>함께 협업"
+        - icon: "fab fa-unity"
+          label: "인게임 설계 참여<br>아웃게임 시스템 담당"
+        - icon: "fa-solid fa-server"
+          label: "JWT 토큰 & 영수증 검증<br>백엔드도 개발"
+        - icon: "fa-brands fa-google-play"
+          label: "GPGS · IAP · Firebase<br>실제 출시 연동"
+      - src: "/assets/img/projects/random-knights/rd-1.jpg"
+        caption: "유저와 매칭되어 게임이 진행되는 모습"
+        stack:
+        - icon: "fa-solid fa-dice"
+          label: "랜덤 다이스 류<br>디펜스 경쟁 게임"
+        - icon: "fa-solid fa-sitemap"
+          label: "간단한 코어 프레임워크와<br>Delegate 기반 이벤트 로직"
+        - icon: "fa-solid fa-pen-ruler"
+          label: "백엔드부터 DB 설계까지<br>게임 백엔드 구축에 참여"
+        - icon: "fa-brands fa-aws"
+          label: "Jenkins와 AWS로<br>CI/CD 구축"
+      - src: "/assets/img/projects/random-knights/rd-2.jpg"
+        caption: "게임 서비스 당시 스크린샷"
+        stack:
+        - icon: "fa-solid fa-list-check"
+          label: "우편함, 일일 퀘스트, 랭킹 등<br>라이브의 핵심 시스템 구현"
+        - icon: "fa-solid fa-hand-holding-heart"
+          label: "에셋 패치를 이용한<br>라이브 업데이트 구현"
+        - icon: "fa-solid fa-lock"
+          label: "서버 통신 시 비동기 싱크<br>해결을 위한 입력 Block 시스템"
+        - icon: "fa-solid fa-rocket"
+          label: "우여곡절 많았지만<br>실제 서비스까지 성공적으로 진행"
+    links:
+      - label: "공식 카페 링크"
+        url: "https://cafe.naver.com/eightgames"
+
+  - title: "괴도앙팡<br>대학 팀 프로젝트"
+    desc: "<h5>협업하는 법을<br>처음으로 배우게 되었습니다</h5>"
+    tags: [2017 ~ 2018, Unity]
+    images:
+      - src: "/assets/img/projects/ap-project/ap1.jpg"
+        caption: "괴도 앙팡 플레이 화면"
+        stack:
+        - icon: "fab fa-unity"
+          label: "Unity 5"
+        - icon: "fa-solid fa-people-group"
+          label: "프로그래밍 담당"
+        - icon: "fa-solid fa-trophy"
+          label: "용인 게임 개발<br>아이디어 공모전 금상 수상"
+        - icon: "fa-brands fa-google-play"
+          label: "구글 스토어 출시 및<br>학교 지원 굿즈 사업"
+      - src: "/assets/img/projects/ap-project/ap2.jpg"
+        caption: "괴도 앙팡 플레이 화면 2"
+        stack:
+        - icon: "fa-solid fa-comments"
+          label: "파트별 R&D를 깊이 연구하고<br>서로 피드백하는 문화"
+        - icon: "fa-solid fa-handshake"
+          label: "의견을 존중하면서도<br>문제점은 확실히 짚어주는 팀워크"
+        - icon: "fab fa-git-alt"
+          label: "Git 사용법을 팀원들에게 공유<br>협업 체계를 직접 구축"
+        - icon: "fa-solid fa-gamepad"
+          label: "게임 로직 설계에<br>모든 팀원 참여"
+      - src: "/assets/img/projects/ap-project/ap-fb.jpg"
+        caption: "개발 중 마주친 문제들을 하나씩 해결해 나가며 성장"
+        stack:
+        - icon: "fa-solid fa-memory"
+          label: "타일 오브젝트의 GC 과다 문제<br>오브젝트 풀링으로 해결"
+        - icon: "fa-solid fa-code-merge"
+          label: "Unity 병합 충돌 문제<br>스마트 머지 도입으로 극복"
+        - icon: "fa-solid fa-credit-card"
+          label: "처음 도전한 인앱 결제와<br>광고 연동 구현"
+        - icon: "fa-solid fa-rocket"
+          label: "생애 첫 출시와<br>첫 크런치 모드 경험"
+      - src: "/assets/img/projects/ap-project/apt.jpg"
+        caption: "직접 만들었던 트레일러 영상의 일부분"
+        stack:
+        - icon: "fa-solid fa-music"
+          label: "취미였던 작곡 실력을 살려<br>게임 배경음악 직접 제작"
+        - icon: "fa-solid fa-film"
+          label: "트레일러 영상 기획부터<br>편집까지 직접 완성"
+        - icon: "fa-solid fa-rocket"
+          label: "소박하지만 의미있었던<br>다양한 경험"
+        - icon: "fa-solid fa-heart"
+          label: "좋은 팀워크의 기억"
+    links:
+      - label: "게임 트레일러 영상"
+        url: "https://youtu.be/le6aHDTRmMM"
+      - label: "관련 블로그 소식"
+        url: "https://blog.naver.com/PostList.nhn?blogId=ounols&from=postList&categoryNo=83"
+# others:
+#   - title: "인프라 & 백엔드"
+#     desc: "서비스 운영을 위한 백엔드 및 CI/CD"
+#     tags: [Node.js, Jenkins, AWS]
+#     images:
+#       - src: "/assets/img/portfolio/r-full.png"
+#         caption: ""
+#       - src: "/assets/img/portfolio/moyo.png"
+#         caption: ""
+#     stack:
+#       - icon: "fab fa-node-js"
+#         label: "Node.js"
+#       - icon: "fab fa-jenkins"
+#         label: "Jenkins"
+#       - icon: "fab fa-aws"
+#         label: "AWS"

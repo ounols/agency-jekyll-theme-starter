@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+@import url('https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css');
 
 @font-face {
   font-family: 'NexonLv1Gothic';
@@ -89,8 +90,8 @@ h6 {
   }
   h3.section-subheading {
     font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
+    // font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
     @include serif-font;

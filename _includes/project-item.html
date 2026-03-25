@@ -25,8 +25,9 @@
   <div class="project-col project-visual">
     {% if p.images %}
       <div class="project-slider">
-        <button class="slider-btn slider-prev" aria-label="이전"><i class="fa-solid fa-circle-left"></i></button>
-        <div class="slider-viewport">
+        <button class="slider-btn slider-prev note-trigger" aria-label="이전"><i class="fa-solid fa-circle-left"></i><span class="note-source">이전 스토리</span></button>
+        <div class="slider-viewport note-trigger">
+          <span class="note-source"></span>
           {% for image in p.images %}
             {% assign src = image.src %}
             {% if src contains '.mp4' or src contains '.webm' %}
@@ -43,7 +44,7 @@
           </div>
           {% endif %}
         </div>
-        <button class="slider-btn slider-next" aria-label="다음"><i class="fa-solid fa-circle-right"></i></button>
+        <button class="slider-btn slider-next note-trigger" aria-label="다음"><i class="fa-solid fa-circle-right"></i><span class="note-source">다음 스토리</span></button>
       </div>
       <div class="slider-captions">
         {% for image in p.images %}
@@ -67,7 +68,7 @@
           {% if panel_stack %}
           <div class="project-stack-icons">
             {% for item in panel_stack %}
-            <div class="project-stack-item" title="{{ item.label }}">
+            <div class="project-stack-item">
               <div class="stack-icon-box">
                 {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
                   <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
@@ -86,7 +87,7 @@
       <div class="detail-panel active">
         <div class="project-stack-icons">
           {% for item in p.stack %}
-          <div class="project-stack-item" title="{{ item.label }}">
+          <div class="project-stack-item">
             <div class="stack-icon-box">
               {% if item.icon contains "/" or item.icon contains ".svg" or item.icon contains ".png" %}
                 <img src="{{ item.icon | relative_url }}" alt="{{ item.label }}">
@@ -103,9 +104,10 @@
     {% if p.links %}
     <div class="project-links">
       {% for link in p.links %}
-      <a class="project-link-btn" href="{{ link.url }}"{% if link.modal %} data-toggle="modal"{% elsif link.target %} target="{{ link.target }}"{% else %} target="_blank" rel="noopener"{% endif %}>
+      <a class="project-link-btn note-trigger" href="{{ link.url }}"{% if link.modal %} data-toggle="modal"{% elsif link.target %} target="{{ link.target }}"{% else %} target="_blank" rel="noopener"{% endif %}>
         <i class="fas fa-arrow-up-right-from-square"></i>
         {{ link.label }}
+        <span class="note-source">{{ link.note }}</span>
       </a>
       {% endfor %}
     </div>
