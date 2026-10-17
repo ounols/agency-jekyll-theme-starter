@@ -1,0 +1,798 @@
+---
+title: "AI Workflow"
+subtitle: "AI와 함께 일하는 방식입니다."
+section_id: ai
+order: 6
+type: freeform
+---
+{% assign ai_items = site.data.ai_keywords %}
+<section class="page-section ai-section" id="ai">
+  <div class="container">
+
+    <!-- Header: 제목 + 소개 문구 -->
+    <header class="ai-header">
+      <div class="ai-header__content">
+        <p class="ai-header__eyebrow">AI WORKFLOW</p>
+        <h2 class="ai-header__title">AI와 함께<br>일하는 방식<span class="ai-header__dot" aria-hidden="true"></span></h2>
+      </div>
+      <div class="ai-header__aside">
+        <p class="ai-header__subtitle">AI는 도구를 넘어 협업자라고 생각합니다.<br>모두와 함께하는 팀 프로젝트에서의 AI 사용경험을 토대로 함께 일합니다.</p>
+        <p class="ai-header__hint"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i> 키워드를 눌러 자세히 보기</p>
+      </div>
+    </header>
+
+    <!-- 떠다니는 키워드. JS가 없으면 줄바꿈되는 칩 목록으로 표시 -->
+    <div class="ai-field" data-ai-field>
+      {% for item in ai_items %}
+      <button type="button" class="ai-chip ai-chip--{{ item.group }}" data-ai-chip="{{ forloop.index0 }}" aria-controls="ai-detail" aria-expanded="false">
+        <span class="ai-chip__face">
+          <i class="fa-solid fa-{{ item.icon }}" aria-hidden="true"></i>
+          <span class="ai-chip__label">{{ item.label }}</span>
+        </span>
+      </button>
+      {% endfor %}
+
+      <!-- 키워드 상세: 다른 키워드가 사라진 자리에 페이드인 -->
+      <div class="ai-detail" id="ai-detail" data-ai-detail hidden>
+        <div class="ai-detail__inner" data-ai-inner role="region" aria-labelledby="ai-detail-title">
+          <div class="ai-detail__aside">
+            <button type="button" class="ai-detail__back" data-ai-close><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> 전체 키워드</button>
+            <span class="ai-detail__badge" data-ai-badge><i class="fa-solid" aria-hidden="true"></i></span>
+            <p class="ai-detail__tag" data-ai-tag></p>
+            <h3 class="ai-detail__title" id="ai-detail-title" data-ai-title></h3>
+          </div>
+          <div class="ai-detail__main">
+            <div class="ai-detail__body" data-ai-body></div>
+            <div class="ai-detail__nav">
+              <button type="button" class="ai-detail__step" data-ai-prev><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> 이전</button>
+              <span class="ai-detail__count" data-ai-count></span>
+              <button type="button" class="ai-detail__step" data-ai-next>다음 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="ai-legend" role="list">
+      <li><span class="ai-legend__dot ai-chip--scope"></span>작게 나누기</li>
+      <li><span class="ai-legend__dot ai-chip--share"></span>함께 맞추기</li>
+      <li><span class="ai-legend__dot ai-chip--delegate"></span>잘하는 일 맡기기</li>
+      <li><span class="ai-legend__dot ai-chip--issue"></span>겪었던 문제</li>
+      <li><span class="ai-legend__dot ai-chip--role"></span>나의 역할</li>
+    </ul>
+
+    <!-- 상세 본문 소스 -->
+    <div hidden data-ai-sources>
+      {% for item in ai_items %}
+      <div data-ai-src="{{ forloop.index0 }}" data-group="{{ item.group }}" data-icon="{{ item.icon }}" data-tag="{{ item.tag }}" data-label="{{ item.label }}">{{ item.desc | markdownify }}</div>
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+
+<style>
+/* ── AI Workflow: 떠다니는 키워드 + 팝업 ──
+   간격 단위: 8 / 16 / 24 / 32 / 40 / 64px */
+.ai-section {
+  --ai-ink: #0d1424;
+  --ai-ink-subdued: #5a6478;
+  --ai-accent: #2f6bff;
+  --ai-ease: cubic-bezier(.25, 1, .5, 1);
+  background:
+    radial-gradient(1200px 500px at 70% 60%, #e9efff 0%, rgba(233, 239, 255, 0) 70%),
+    #f7f9fd;
+  color: var(--ai-ink);
+  overflow: hidden;
+}
+
+/* Header */
+.ai-header {
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.ai-header__eyebrow {
+  margin: 0 0 16px;
+  font-family: 'Mona12', sans-serif;
+  font-size: .8rem;
+  letter-spacing: .3em;
+  color: var(--ai-accent);
+}
+
+.ai-header__title {
+  margin: 0;
+  font-family: 'Mona12', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--ai-ink);
+}
+
+.ai-header__dot {
+  display: inline-block;
+  width: .16em;
+  height: .16em;
+  margin-left: .06em;
+  border-radius: 50%;
+  background: var(--ai-accent);
+}
+
+.ai-header__aside {
+  max-width: 30rem;
+  flex-shrink: 1;
+}
+
+.ai-header__subtitle {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ai-ink);
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+
+.ai-header__hint {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--ai-ink-subdued);
+}
+
+/* Field: JS가 켜지면(.is-live) 칩을 절대 위치로 띄운다 */
+.ai-field {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.ai-field.is-live {
+  display: block;
+  padding: 0;
+  height: 560px;
+  touch-action: pan-y;
+}
+
+.ai-field.is-live .ai-chip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+}
+
+/* Chip: 바깥 버튼은 JS가 위치/회전, 안쪽 face가 호버/눌림을 담당 */
+.ai-chip {
+  --chip-bg: #fff;
+  --chip-ink: #1b2a4a;
+  --chip-icon: var(--ai-accent);
+  --chip-edge: #d6deec;
+  padding: 0 0 6px;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ai-chip__face {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: 20px;
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow:
+    0 6px 0 var(--chip-edge),
+    0 18px 30px -10px rgba(30, 50, 100, .28);
+  transition: transform .25s var(--ai-ease), box-shadow .25s var(--ai-ease);
+}
+
+.ai-chip__face i {
+  color: var(--chip-icon);
+  font-size: 1.05em;
+}
+
+.ai-chip:hover .ai-chip__face,
+.ai-chip:focus-visible .ai-chip__face {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 0 var(--chip-edge),
+    0 26px 36px -12px rgba(30, 50, 100, .35);
+}
+
+.ai-chip:active .ai-chip__face {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 var(--chip-edge),
+    0 8px 16px -8px rgba(30, 50, 100, .3);
+  transition-duration: .08s;
+}
+
+.ai-chip:focus {
+  outline: none;
+}
+
+.ai-chip:focus-visible .ai-chip__face {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: 3px;
+}
+
+.ai-chip--intro    { --chip-bg: #fff;    --chip-ink: #1b2a4a; --chip-icon: #2f6bff; --chip-edge: #d6deec; }
+.ai-chip--issue    { --chip-bg: #e9edf3; --chip-ink: #3d4a5f; --chip-icon: #6b7890; --chip-edge: #c4ccd9; }
+.ai-chip--scope    { --chip-bg: linear-gradient(135deg, #4a82ff, #2459f0); --chip-ink: #fff; --chip-icon: #fff; --chip-edge: #1a44c2; }
+.ai-chip--share    { --chip-bg: #d8f3e8; --chip-ink: #0f5e48; --chip-icon: #149a72; --chip-edge: #a3d9c4; }
+.ai-chip--delegate { --chip-bg: #ece5fb; --chip-ink: #4c349a; --chip-icon: #7a5ae0; --chip-edge: #cbbcf0; }
+.ai-chip--role     { --chip-bg: #15181e; --chip-ink: #fff;    --chip-icon: #fff;    --chip-edge: #000; }
+
+/* Legend */
+.ai-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .875rem;
+  color: var(--ai-ink-subdued);
+}
+
+.ai-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-legend__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--chip-bg);
+  box-shadow: 0 2px 0 var(--chip-edge);
+}
+
+/* Detail: 키워드 클릭 시 섹션 안에서만 전환 */
+.ai-field.is-live {
+  transition: height .45s var(--ai-ease);
+}
+
+.ai-field.is-live .ai-chip {
+  transition: opacity .35s var(--ai-ease);
+}
+
+.ai-field.is-focus .ai-chip {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ai-field.is-focus .ai-chip__face {
+  transform: scale(.85);
+  transition-delay: inherit;
+}
+
+.ai-field.is-focus .ai-chip.is-picked .ai-chip__face {
+  transform: scale(1.1);
+}
+
+.ai-detail {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity .3s var(--ai-ease), transform .45s var(--ai-ease), visibility 0s linear .3s;
+}
+
+.ai-field.is-focus .ai-detail {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity .45s var(--ai-ease) .25s, transform .6s var(--ai-ease) .25s, visibility 0s linear 0s;
+}
+
+.ai-detail__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 64px;
+  width: 100%;
+  max-width: 1000px;
+  padding: 32px 0;
+}
+
+.ai-detail__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ai-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ai-ink-subdued);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s var(--ai-ease);
+}
+
+.ai-detail__back:hover {
+  color: var(--ai-ink);
+}
+
+.ai-detail__back i {
+  transition: transform .25s var(--ai-ease);
+}
+
+.ai-detail__back:hover i {
+  transform: translateX(-3px);
+}
+
+.ai-detail__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  background: var(--chip-bg);
+  color: var(--chip-icon);
+  font-size: 1.75rem;
+  box-shadow:
+    0 6px 0 var(--chip-edge),
+    0 18px 30px -10px rgba(30, 50, 100, .28);
+}
+
+.ai-detail__tag {
+  margin: 0 0 8px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--ai-accent);
+}
+
+.ai-detail__title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--ai-ink);
+  word-break: keep-all;
+}
+
+.ai-detail__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 64px;
+  border-left: 1px solid #dfe5ef;
+}
+
+.ai-detail__body p {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2f3a4f;
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+
+.ai-detail__body p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-detail__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.ai-detail__step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #d6deec;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ai-ink);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .2s var(--ai-ease);
+}
+
+.ai-detail__step:hover {
+  border-color: var(--ai-ink);
+}
+
+.ai-detail__count {
+  font-size: .85rem;
+  color: var(--ai-ink-subdued);
+  font-variant-numeric: tabular-nums;
+}
+
+.ai-detail__inner.is-swapping .ai-detail__badge,
+.ai-detail__inner.is-swapping .ai-detail__tag,
+.ai-detail__inner.is-swapping .ai-detail__title,
+.ai-detail__inner.is-swapping .ai-detail__body {
+  animation: ai-swap-in .4s var(--ai-ease) both;
+}
+
+.ai-detail__inner.is-swapping .ai-detail__body {
+  animation-delay: .06s;
+}
+
+@keyframes ai-swap-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-field.is-live,
+  .ai-field.is-live .ai-chip,
+  .ai-detail,
+  .ai-field.is-focus .ai-detail {
+    transition: none;
+  }
+  .ai-field.is-focus .ai-chip__face {
+    transform: none;
+  }
+  .ai-detail__inner.is-swapping * {
+    animation: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .ai-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .ai-header__title {
+    font-size: 4rem;
+  }
+  .ai-detail__inner {
+    gap: 40px;
+  }
+  .ai-detail__main {
+    padding-left: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .ai-header__title {
+    font-size: 3rem;
+  }
+  .ai-header__subtitle {
+    font-size: 1rem;
+  }
+  .ai-chip__face {
+    gap: 8px;
+    padding: 11px 16px;
+    border-radius: 16px;
+    font-size: .9rem;
+  }
+  .ai-detail {
+    align-items: flex-start;
+  }
+  .ai-detail__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 16px 0;
+  }
+  .ai-detail__back {
+    margin-bottom: 24px;
+  }
+  .ai-detail__badge {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    font-size: 1.4rem;
+  }
+  .ai-detail__title {
+    font-size: 1.75rem;
+  }
+  .ai-detail__main {
+    padding-left: 0;
+    padding-top: 24px;
+    border-left: 0;
+    border-top: 1px solid #dfe5ef;
+  }
+  .ai-detail__body p {
+    font-size: 1rem;
+  }
+  .ai-detail__nav {
+    margin-top: 32px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var field = document.querySelector('[data-ai-field]');
+  var detail = document.querySelector('[data-ai-detail]');
+  if (!field || !detail) return;
+
+  var chips = Array.prototype.slice.call(field.querySelectorAll('[data-ai-chip]'));
+  var sources = Array.prototype.slice.call(document.querySelectorAll('[data-ai-src]'));
+  var total = chips.length;
+  if (!total) return;
+
+  /* ── 키워드 상세 ── */
+  var inner = detail.querySelector('[data-ai-inner]');
+  var badge = detail.querySelector('[data-ai-badge]');
+  var badgeIcon = badge.querySelector('i');
+  var tagEl = detail.querySelector('[data-ai-tag]');
+  var titleEl = detail.querySelector('[data-ai-title]');
+  var bodyEl = detail.querySelector('[data-ai-body]');
+  var countEl = detail.querySelector('[data-ai-count]');
+  var backBtn = detail.querySelector('[data-ai-close]');
+  var current = 0;
+  var opener = null;
+  var focused = false;
+  var paused = false;
+
+  detail.hidden = false;
+
+  function fill(index, animate) {
+    current = (index + total) % total;
+    var src = sources[current];
+    badge.className = 'ai-detail__badge ai-chip--' + src.getAttribute('data-group');
+    badgeIcon.className = 'fa-solid fa-' + src.getAttribute('data-icon');
+    tagEl.textContent = src.getAttribute('data-tag');
+    titleEl.textContent = src.getAttribute('data-label');
+    bodyEl.innerHTML = src.innerHTML;
+    countEl.textContent = (current + 1) + ' / ' + total;
+    if (animate) {
+      inner.classList.remove('is-swapping');
+      void inner.offsetWidth;
+      inner.classList.add('is-swapping');
+    }
+    fitHeight();
+  }
+
+  /* 상세 내용이 필드보다 길면 필드를 늘린다. 모바일은 내용 높이에 딱 맞춘다 */
+  function fitHeight() {
+    if (!focused) return;
+    var h = inner.offsetHeight;
+    field.style.height = (window.innerWidth < 640 ? h : Math.max(H, h)) + 'px';
+  }
+
+  /* 클릭한 칩에서 가까운 순서로(닫을 땐 그 반대로) 퍼지듯 사라지고 나타난다 */
+  function stagger(origin, reverse) {
+    var ox = origin.x + origin.w / 2, oy = origin.y + origin.h / 2;
+    var far = Math.sqrt(W * W + H * H) || 1;
+    bodies.forEach(function (b, i) {
+      var d = Math.sqrt(Math.pow(b.x + b.w / 2 - ox, 2) + Math.pow(b.y + b.h / 2 - oy, 2)) / far;
+      var delay = reverse ? 150 + d * 250 : d * 200;
+      chips[i].style.transitionDelay = Math.round(delay) + 'ms';
+    });
+  }
+
+  function setChipsInert(off) {
+    chips.forEach(function (chip) {
+      chip.tabIndex = off ? -1 : 0;
+      chip.setAttribute('aria-hidden', off ? 'true' : 'false');
+      chip.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function openDetail(index) {
+    opener = chips[index];
+    stagger(bodies[index], false);
+    chips.forEach(function (chip, i) { chip.classList.toggle('is-picked', i === index); });
+    focused = true;
+    paused = true;
+    fill(index, false);
+    field.classList.add('is-focus');
+    setChipsInert(true);
+    opener.setAttribute('aria-expanded', 'true');
+    backBtn.focus({ preventScroll: true });
+  }
+
+  function closeDetail() {
+    if (!focused) return;
+    focused = false;
+    stagger(bodies[current], true);
+    field.classList.remove('is-focus');
+    field.style.height = H + 'px';
+    setChipsInert(false);
+    paused = false;
+    /* 이전/다음으로 넘겨 본 키워드가 있으면 그 칩으로 돌아간다 */
+    var target = chips[current] || opener;
+    if (target) target.focus({ preventScroll: true });
+  }
+
+  backBtn.addEventListener('click', closeDetail);
+  detail.querySelector('[data-ai-prev]').addEventListener('click', function () { fill(current - 1, true); });
+  detail.querySelector('[data-ai-next]').addEventListener('click', function () { fill(current + 1, true); });
+
+  /* 내용 바깥의 빈 영역을 누르면 닫는다 */
+  detail.addEventListener('click', function (e) {
+    if (e.target === detail) closeDetail();
+  });
+
+  field.addEventListener('keydown', function (e) {
+    if (!focused) return;
+    if (e.key === 'Escape') closeDetail();
+    else if (e.key === 'ArrowLeft') fill(current - 1, true);
+    else if (e.key === 'ArrowRight') fill(current + 1, true);
+  });
+
+  chips.forEach(function (chip, i) {
+    chip.addEventListener('click', function () { openDetail(i); });
+  });
+
+  /* ── 떠다니는 키워드: 흩뿌린 자리에 고정하고 제자리에서 살짝 흔들린다 ── */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PAD = 8;       // 필드 가장자리 여백
+  var GAP = 14;      // 칩 사이 최소 간격 (흔들림 폭의 두 배보다 크게)
+  var BOB_X = 3;     // 좌우 흔들림 폭(px)
+  var BOB_Y = 5;     // 상하 흔들림 폭(px)
+
+  field.classList.add('is-live');
+
+  var bodies = chips.map(function () {
+    return {
+      x: 0, y: 0, w: 0, h: 0,
+      rot: (Math.random() * 2 - 1) * 6,
+      phase: Math.random() * Math.PI * 2,
+      speed: .8 + Math.random() * .4
+    };
+  });
+
+  var W = 0, H = 0;
+
+  function measure() {
+    var narrow = window.innerWidth < 640;
+    chips.forEach(function (chip, i) {
+      bodies[i].w = chip.offsetWidth;
+      bodies[i].h = chip.offsetHeight;
+    });
+    W = field.clientWidth;
+    var area = bodies.reduce(function (s, b) { return s + (b.w + GAP * 2) * (b.h + GAP * 2); }, 0);
+    H = Math.round(Math.max(narrow ? 420 : 520, area * (narrow ? 1.45 : 2.2) / W));
+    field.style.height = H + 'px';
+  }
+
+  /* 엇갈린 격자에 흩뿌린 뒤 겹침을 풀어 자리를 정한다 */
+  function scatter() {
+    var avgW = bodies.reduce(function (s, b) { return s + b.w; }, 0) / total + GAP * 2;
+    var cols = Math.max(1, Math.floor(W / avgW));
+    var rows = Math.ceil(total / cols);
+    var cellW = W / cols, cellH = H / rows;
+    var order = bodies.map(function (_, i) { return i; }).sort(function () { return Math.random() - .5; });
+    order.forEach(function (bi, k) {
+      var b = bodies[bi];
+      var c = k % cols, r = Math.floor(k / cols);
+      var offset = (r % 2) ? cellW * .35 : 0;
+      b.x = c * cellW + offset + (cellW - b.w) * Math.random();
+      b.y = r * cellH + (cellH - b.h) * Math.random();
+      clamp(b);
+    });
+    for (var n = 0; n < 120; n++) separate();
+  }
+
+  function clamp(b) {
+    b.x = Math.min(Math.max(b.x, PAD + BOB_X), Math.max(PAD, W - b.w - PAD - BOB_X));
+    b.y = Math.min(Math.max(b.y, PAD + BOB_Y), Math.max(PAD, H - b.h - PAD - BOB_Y));
+  }
+
+  /* 겹친 칩끼리 짧은 축 방향으로 밀어낸다 */
+  function separate() {
+    for (var i = 0; i < total; i++) {
+      var a = bodies[i];
+      for (var j = i + 1; j < total; j++) {
+        var b = bodies[j];
+        var dx = (b.x + b.w / 2) - (a.x + a.w / 2);
+        var dy = (b.y + b.h / 2) - (a.y + a.h / 2);
+        var ox = (a.w + b.w) / 2 + GAP - Math.abs(dx);
+        var oy = (a.h + b.h) / 2 + GAP - Math.abs(dy);
+        if (ox <= 0 || oy <= 0) continue;
+        if (ox < oy) {
+          var sx = (dx < 0 ? -1 : 1) * ox / 2;
+          a.x -= sx; b.x += sx;
+        } else {
+          var sy = (dy < 0 ? -1 : 1) * oy / 2;
+          a.y -= sy; b.y += sy;
+        }
+      }
+    }
+    bodies.forEach(clamp);
+  }
+
+  function render(t) {
+    chips.forEach(function (chip, i) {
+      var b = bodies[i];
+      var x = b.x, y = b.y, r = b.rot;
+      if (!reduceMotion) {
+        var k = t * .001 * b.speed + b.phase;
+        x += Math.sin(k * .7) * BOB_X;
+        y += Math.sin(k) * BOB_Y;
+        r += Math.sin(k * .5) * 1.5;
+      }
+      chip.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) rotate(' + r.toFixed(2) + 'deg)';
+    });
+  }
+
+  var visible = false;
+  var running = false;
+
+  function tick(now) {
+    if (!visible) { running = false; return; }
+    if (!paused) render(now);
+    requestAnimationFrame(tick);
+  }
+
+  function start() {
+    if (running || reduceMotion) return;
+    running = true;
+    requestAnimationFrame(tick);
+  }
+
+  function layout() {
+    var oldW = W, oldH = H;
+    measure();
+    if (!oldW) {
+      scatter();
+    } else {
+      bodies.forEach(function (b) {
+        b.x *= W / oldW;
+        b.y *= H / oldH;
+      });
+      for (var n = 0; n < 60; n++) separate();
+    }
+    render(performance.now());
+    fitHeight();
+  }
+
+  layout();
+  /* 웹폰트가 늦게 로드되면 칩 크기가 바뀌므로 다시 잰다 */
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible) start();
+    }, { rootMargin: '200px 0px' }).observe(field);
+  } else {
+    visible = true;
+    start();
+  }
+
+  var resizeTimer = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      if (field.clientWidth !== W) layout();
+    }, 150);
+  });
+});
+</script>

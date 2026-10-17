@@ -9,8 +9,8 @@
       section: cat-graphics
     - title: "Game Programming"
       section: cat-client
-- title: "Game Dev Works"
-  section: gamedev
+- title: "AI Workflow"
+  section: ai
 - title: "Timeline"
   section: timeline
 - title: "Blog"

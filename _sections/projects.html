@@ -308,6 +308,7 @@ type: freeform
 .project-detail {
   padding-left: 1rem;
   display: grid;
+  grid-template-rows: 1fr auto;
   align-items: center;
   justify-content: center;
   align-self: stretch;
@@ -329,10 +330,11 @@ type: freeform
   display: grid;
   grid-template-columns: repeat(2, auto);
   column-gap: 3rem;
-  row-gap: 3rem;
+  row-gap: 2.25rem;
   justify-content: center;
+  align-content: center;
   width: 100%;
-  height: 352px;
+  min-height: 352px;
 }
 
 .project-stack-item {
@@ -420,11 +422,11 @@ type: freeform
 
 /* Links at bottom of project-summary */
 .project-links {
+  grid-row: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: auto;
-  padding-top: 1.25rem;
+  padding-top: 1.5rem;
   justify-content: center;
   align-self: center;
 }

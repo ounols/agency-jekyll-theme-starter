@@ -105,7 +105,7 @@
     <div class="project-links">
       {% for link in p.links %}
       <a class="project-link-btn note-trigger" href="{{ link.url }}"{% if link.modal %} data-toggle="modal"{% elsif link.target %} target="{{ link.target }}"{% else %} target="_blank" rel="noopener"{% endif %}>
-        <i class="fas fa-arrow-up-right-from-square"></i>
+        <i class="{% if link.modal %}fa-solid fa-ellipsis{% else %}fas fa-arrow-up-right-from-square{% endif %}"></i>
         {{ link.label }}
         <span class="note-source">{{ link.note }}</span>
       </a>
