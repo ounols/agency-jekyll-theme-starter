@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Unreal 생성 순서 문제와 생성 가상함수 3단계 분리">
+  <title>Unreal 생성 순서 문제와 생성 가상함수 3단계 분리</title>
+  <style>
+    svg { fill: #E6EDF3; }
+    text { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    .muted, .muted text { fill: #8B949E; }
+    .h1 { font-size: 40px; font-weight: 700; }
+    .sub { font-size: 22px; }
+    .sec { font-size: 20px; font-weight: 700; letter-spacing: 2px; }
+    .bt { font-size: 26px; font-weight: 700; }
+    .bd { font-size: 20px; }
+    .code { font-family: "JetBrains Mono", Consolas, Menlo, monospace; font-size: 20px; }
+    .panel { fill: #21262D; stroke: #30363D; stroke-width: 2; }
+    .arrow { stroke: #8B949E; stroke-width: 3; fill: none; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B949E"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#161b22"/>
+
+  <text x="80" y="92" class="h1">전장 오브젝트의 생성 순서 문제와 3단계 분리</text>
+  <text x="80" y="134" class="sub muted">전장 직렬화 과정에서 확인한 Unreal의 생성 흐름과, 이를 해결한 생성 가상함수 구조</text>
+
+  <!-- PROBLEM -->
+  <text x="80" y="200" class="sec" style="fill:#E5534B">PROBLEM · Unreal 생성 순서</text>
+
+  <g>
+    <rect x="80" y="222" width="420" height="156" rx="14" class="panel"/>
+    <text x="110" y="268" class="bt">① Native C++ 생성자</text>
+    <text x="110" y="304" class="bd muted">C++ 기본값으로 초기화</text>
+    <text x="110" y="350" class="code" style="fill:#8B949E">MaxSpeed = 0</text>
+  </g>
+  <path d="M506 300 H582" class="arrow" marker-end="url(#ah)"/>
+  <g>
+    <rect x="590" y="222" width="420" height="156" rx="14" class="panel"/>
+    <text x="620" y="268" class="bt">② Blueprint</text>
+    <text x="620" y="304" class="bd muted">BP 기본값 · Construction Script</text>
+    <text x="620" y="350" class="code" style="fill:#8B949E">MaxSpeed = <tspan text-decoration="line-through">0</tspan> → 900</text>
+  </g>
+  <path d="M1016 300 H1092" class="arrow" marker-end="url(#ah)"/>
+  <g>
+    <rect x="1100" y="222" width="420" height="156" rx="14" class="panel"/>
+    <text x="1130" y="268" class="bt">③ Property 직렬화</text>
+    <text x="1130" y="304" class="bd muted">전장 파일에 저장된 값 적용</text>
+    <text x="1130" y="350" class="code" style="fill:#F5A623">MaxSpeed = <tspan text-decoration="line-through" style="fill:#8B949E">900</tspan> → 1250</text>
+  </g>
+
+  <rect x="80" y="402" width="1440" height="68" rx="12" fill="#E5534B" fill-opacity="0.12" stroke="#E5534B" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="110" y="444" class="bd" style="font-size:22px">생성자에서 만든 값과 참조는 다음 단계에서 덮어씌워짐 — 생성자만으로는 <tspan font-weight="700" style="fill:#FF7B72">최종 데이터가 준비된 시점</tspan>을 알 수 없음</text>
+
+  <!-- bridge -->
+  <path d="M800 486 V548" class="arrow" marker-end="url(#ah)"/>
+  <text x="830" y="526" class="bd muted">③까지 모두 끝난 뒤, 생성 가상함수를 3단계로 나눠 순서대로 호출</text>
+
+  <!-- SOLUTION -->
+  <text x="80" y="590" class="sec" style="fill:#50B87A">SOLUTION · 생성 가상함수 3단계 분리</text>
+
+  <g>
+    <rect x="80" y="612" width="420" height="236" rx="14" class="panel"/>
+    <path d="M80 626 a14 14 0 0 1 14 -14 h392 a14 14 0 0 1 14 14 v40 h-420 z" fill="#4A90D9"/>
+    <text x="110" y="651" class="bd" font-weight="700" style="fill:#fff">1단계 · Init</text>
+    <text x="110" y="712" class="bt">자기 초기화</text>
+    <text x="110" y="756" class="bd muted">직렬화가 끝난 자신의</text>
+    <text x="110" y="786" class="bd muted">데이터만으로 초기화</text>
+    <text x="110" y="826" class="bd" style="fill:#4A90D9">다른 액터는 아직 참조하지 않음</text>
+  </g>
+  <path d="M506 730 H582" class="arrow" marker-end="url(#ah)"/>
+  <g>
+    <rect x="590" y="612" width="420" height="236" rx="14" class="panel"/>
+    <path d="M590 626 a14 14 0 0 1 14 -14 h392 a14 14 0 0 1 14 14 v40 h-420 z" fill="#50B87A"/>
+    <text x="620" y="651" class="bd" font-weight="700" style="fill:#fff">2단계 · Link</text>
+    <text x="620" y="712" class="bt">참조 연결</text>
+    <text x="620" y="756" class="bd muted">ID로 저장된 참조를</text>
+    <text x="620" y="786" class="bd muted">실제 액터 · 기존 데이터와 연결</text>
+    <text x="620" y="826" class="bd" style="fill:#50B87A">모든 오브젝트가 1단계를 마친 상태</text>
+  </g>
+  <path d="M1016 730 H1092" class="arrow" marker-end="url(#ah)"/>
+  <g>
+    <rect x="1100" y="612" width="420" height="236" rx="14" class="panel"/>
+    <path d="M1100 626 a14 14 0 0 1 14 -14 h392 a14 14 0 0 1 14 14 v40 h-420 z" fill="#F5A623"/>
+    <text x="1130" y="651" class="bd" font-weight="700" style="fill:#fff">3단계 · Ready</text>
+    <text x="1130" y="712" class="bt">활성화</text>
+    <text x="1130" y="756" class="bd muted">링크된 결과로 파생 데이터 계산</text>
+    <text x="1130" y="786" class="bd muted">BT · UMG 바인딩</text>
+    <text x="1130" y="826" class="bd" style="fill:#F5A623">이후 시뮬레이션 시작</text>
+  </g>
+
+  <text x="800" y="920" text-anchor="middle" class="sub muted">각 단계는 전장의 모든 오브젝트에 일괄 적용 → 생성 · 로드 순서와 무관하게 항상 같은 결과</text>
+</svg>

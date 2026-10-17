@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="3단계 분리를 활용한 전장 오브젝트 링크 흐름">
+  <title>3단계 분리를 활용한 전장 오브젝트 링크 흐름</title>
+  <style>
+    svg { fill: #E6EDF3; }
+    text { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    .muted, .muted text { fill: #8B949E; }
+    .h1 { font-size: 40px; font-weight: 700; }
+    .sub { font-size: 22px; }
+    .ch { font-size: 24px; font-weight: 700; }
+    .cs { font-size: 18px; }
+    .nm { font-size: 22px; font-weight: 700; }
+    .chip { font-size: 18px; font-weight: 700; }
+    .lb { font-size: 17px; }
+    .panel { fill: #21262D; stroke: #30363D; stroke-width: 2; }
+    .barrier { stroke: #8B949E; stroke-width: 2; stroke-dasharray: 8 8; stroke-opacity: 0.7; }
+    .link { stroke: #50B87A; stroke-width: 3; fill: none; }
+  </style>
+  <defs>
+    <marker id="lh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#50B87A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#161b22"/>
+
+  <text x="80" y="92" class="h1">3단계 분리를 활용한 전장 오브젝트 링크</text>
+  <text x="80" y="134" class="sub muted">한 단계가 전장 전체에서 끝나야 다음 단계로 — 로드 순서와 무관하게 참조가 연결됨</text>
+
+  <!-- column headers -->
+  <g text-anchor="middle">
+    <text x="445" y="206" class="ch">로드 · 직렬화</text>
+    <text x="445" y="234" class="cs muted">C++ → BP → Property</text>
+    <text x="715" y="206" class="ch" style="fill:#4A90D9">1단계 · Init</text>
+    <text x="715" y="234" class="cs muted">자기 데이터만</text>
+    <text x="1035" y="206" class="ch" style="fill:#50B87A">2단계 · Link</text>
+    <text x="1035" y="234" class="cs muted">ID → 액터 참조</text>
+    <text x="1380" y="206" class="ch" style="fill:#F5A623">3단계 · Ready</text>
+    <text x="1380" y="234" class="cs muted">BT · UMG 연결</text>
+  </g>
+
+  <!-- barriers -->
+  <line x1="580" y1="180" x2="580" y2="790" class="barrier"/>
+  <line x1="850" y1="180" x2="850" y2="790" class="barrier"/>
+  <line x1="1220" y1="180" x2="1220" y2="790" class="barrier"/>
+  <g text-anchor="middle" class="lb" fill="#8B949E">
+    <text x="580" y="818">전체 완료 대기</text>
+    <text x="850" y="818">전체 완료 대기</text>
+    <text x="1220" y="818">전체 완료 대기</text>
+  </g>
+
+  <!-- rows: y centers 300 / 405 / 510 / 615 / 720 -->
+  <g>
+    <rect x="80" y="266" width="230" height="68" rx="12" class="panel"/>
+    <text x="104" y="308" class="nm">✈ 전투기 A</text>
+    <rect x="80" y="371" width="230" height="68" rx="12" class="panel"/>
+    <text x="104" y="413" class="nm">✈ 전투기 B</text>
+    <rect x="80" y="476" width="230" height="68" rx="12" class="panel"/>
+    <text x="104" y="518" class="nm">◆ 편대</text>
+    <rect x="80" y="581" width="230" height="68" rx="12" class="panel"/>
+    <text x="104" y="623" class="nm">⋯ 임무 경로</text>
+    <rect x="80" y="686" width="230" height="68" rx="12" class="panel"/>
+    <text x="104" y="728" class="nm">▲ 목표 기지</text>
+  </g>
+
+  <!-- load column -->
+  <g>
+    <rect x="360" y="280" width="170" height="40" rx="20" fill="#30363D"/>
+    <rect x="360" y="385" width="170" height="40" rx="20" fill="#30363D"/>
+    <rect x="360" y="490" width="170" height="40" rx="20" fill="#30363D"/>
+    <rect x="360" y="595" width="170" height="40" rx="20" fill="#30363D"/>
+    <rect x="360" y="700" width="170" height="40" rx="20" fill="#30363D"/>
+  </g>
+  <g text-anchor="middle" class="chip" fill="#C9D1D9">
+    <text x="445" y="306">Spawn</text>
+    <text x="445" y="411">Spawn</text>
+    <text x="445" y="516">Spawn</text>
+    <text x="445" y="621">Spawn</text>
+    <text x="445" y="726">Spawn</text>
+  </g>
+
+  <!-- init column -->
+  <g fill="#4A90D9" fill-opacity="0.18" stroke="#4A90D9" stroke-width="2">
+    <rect x="640" y="280" width="150" height="40" rx="20"/>
+    <rect x="640" y="385" width="150" height="40" rx="20"/>
+    <rect x="640" y="490" width="150" height="40" rx="20"/>
+    <rect x="640" y="595" width="150" height="40" rx="20"/>
+    <rect x="640" y="700" width="150" height="40" rx="20"/>
+  </g>
+  <g text-anchor="middle" class="chip" fill="#79B8FF">
+    <text x="715" y="306">Init ✓</text>
+    <text x="715" y="411">Init ✓</text>
+    <text x="715" y="516">Init ✓</text>
+    <text x="715" y="621">Init ✓</text>
+    <text x="715" y="726">Init ✓</text>
+  </g>
+
+  <!-- link column -->
+  <g fill="#50B87A" fill-opacity="0.18" stroke="#50B87A" stroke-width="2">
+    <rect x="880" y="280" width="110" height="40" rx="20"/>
+    <rect x="880" y="385" width="110" height="40" rx="20"/>
+    <rect x="880" y="490" width="110" height="40" rx="20"/>
+    <rect x="880" y="595" width="110" height="40" rx="20"/>
+    <rect x="880" y="700" width="110" height="40" rx="20"/>
+  </g>
+  <g text-anchor="middle" class="chip" fill="#7EE2A8">
+    <text x="935" y="306">Link</text>
+    <text x="935" y="411">Link</text>
+    <text x="935" y="516">Link</text>
+    <text x="935" y="621">Link</text>
+    <text x="935" y="726">Link</text>
+  </g>
+  <!-- reference arrows -->
+  <path d="M994 296 C1100 296 1100 500 1000 504" class="link" marker-end="url(#lh)"/>
+  <path d="M994 405 C1060 405 1060 500 1000 508" class="link" marker-end="url(#lh)"/>
+  <path d="M994 516 C1060 516 1060 610 1000 612" class="link" marker-end="url(#lh)"/>
+  <path d="M994 304 C1260 304 1260 716 1000 718" class="link" marker-end="url(#lh)" stroke-opacity="0.75"/>
+  <g class="lb" fill="#7EE2A8">
+    <text x="1084" y="405">소속</text>
+    <text x="1056" y="572">경로</text>
+    <text x="1070" y="645">교전 목표</text>
+  </g>
+
+  <!-- ready column -->
+  <g fill="#F5A623" fill-opacity="0.18" stroke="#F5A623" stroke-width="2">
+    <rect x="1270" y="280" width="220" height="40" rx="20"/>
+    <rect x="1270" y="385" width="220" height="40" rx="20"/>
+    <rect x="1270" y="490" width="220" height="40" rx="20"/>
+    <rect x="1270" y="595" width="220" height="40" rx="20"/>
+    <rect x="1270" y="700" width="220" height="40" rx="20"/>
+  </g>
+  <g text-anchor="middle" class="chip" fill="#FFC266">
+    <text x="1380" y="306">BT 시작</text>
+    <text x="1380" y="411">BT 시작</text>
+    <text x="1380" y="516">UMG 갱신</text>
+    <text x="1380" y="621">Ready ✓</text>
+    <text x="1380" y="726">Ready ✓</text>
+  </g>
+
+  <!-- takeaway -->
+  <rect x="80" y="860" width="1440" height="80" rx="12" fill="#50B87A" fill-opacity="0.12" stroke="#50B87A" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="110" y="910" class="sub">링크 시점엔 모든 대상이 이미 Init을 마친 상태 — <tspan font-weight="700" style="fill:#7EE2A8">누가 먼저 로드됐는지 신경 쓸 필요 없음</tspan></text>
+</svg>

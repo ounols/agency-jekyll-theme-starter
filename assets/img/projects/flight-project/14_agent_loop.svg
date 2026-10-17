@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="시간순 필터링 로그 기반 AI 에이전트 루프">
+  <title>시간순 필터링 로그 기반 AI 에이전트 루프</title>
+  <style>
+    svg { fill: #E6EDF3; }
+    text { font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    .muted, .muted text { fill: #8B949E; }
+    .h1 { font-size: 40px; font-weight: 700; }
+    .sub { font-size: 22px; }
+    .rg { font-size: 18px; font-weight: 700; letter-spacing: 2px; }
+    .tag { font-size: 16px; font-weight: 700; letter-spacing: 1.5px; fill: #fff; }
+    .nt { font-size: 26px; font-weight: 700; }
+    .ns { font-size: 19px; }
+    .pl { font-size: 17px; font-weight: 700; }
+    .ps { font-size: 15px; }
+    .code { font-family: "JetBrains Mono", Consolas, Menlo, monospace; font-size: 18px; }
+    .panel { fill: #21262D; stroke-width: 2; }
+    .region { fill: #1C2128; stroke: #30363D; stroke-width: 2; stroke-dasharray: 10 8; }
+    .e { stroke-width: 3; fill: none; }
+  </style>
+  <defs>
+    <marker id="mb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A90D9"/></marker>
+    <marker id="mg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#50B87A"/></marker>
+    <marker id="mo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#F5A623"/></marker>
+    <marker id="mp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B57EDC"/></marker>
+    <marker id="mm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8B949E"/></marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#161b22"/>
+
+  <text x="80" y="92" class="h1">시간순 필터링 로그로 돌리는 AI 에이전트 루프</text>
+  <text x="80" y="134" class="sub muted">로그를 통째로 넘기지 않고, 임무 시나리오 단계부터 필요한 이벤트만 시간순으로 추려 AI에게 전달</text>
+  <rect x="80" y="190" width="260" height="150" rx="14" class="panel" stroke="#8B949E" stroke-opacity="0.6"/>
+  <path d="M80 204 a14 14 0 0 1 14 -14 h232 a14 14 0 0 1 14 14 v26 h-260 z" fill="#8B949E"/>
+  <text x="102" y="217" class="tag">STEP 1</text>
+  <text x="102" y="270" class="nt">시뮬레이션</text>
+  <text x="102" y="310" class="ns muted">온전한 전장 실행</text>
+  <path d="M342 265 H364" class="e" stroke="#8B949E" marker-end="url(#mm)"/>
+  <rect x="370" y="190" width="260" height="150" rx="14" class="panel" stroke="#4A90D9" stroke-opacity="0.6"/>
+  <path d="M370 204 a14 14 0 0 1 14 -14 h232 a14 14 0 0 1 14 14 v26 h-260 z" fill="#4A90D9"/>
+  <text x="392" y="217" class="tag">STEP 2</text>
+  <text x="392" y="270" class="nt">로그 수집</text>
+  <text x="392" y="310" class="ns muted">임무 시나리오 단계부터</text>
+  <path d="M632 265 H654" class="e" stroke="#8B949E" marker-end="url(#mm)"/>
+  <rect x="660" y="190" width="260" height="150" rx="14" class="panel" stroke="#B57EDC" stroke-opacity="0.6"/>
+  <path d="M660 204 a14 14 0 0 1 14 -14 h232 a14 14 0 0 1 14 14 v26 h-260 z" fill="#B57EDC"/>
+  <text x="682" y="217" class="tag">STEP 3</text>
+  <text x="682" y="270" class="nt">시간순 필터링</text>
+  <text x="682" y="310" class="ns muted">관련 이벤트만 정렬</text>
+  <path d="M922 265 H944" class="e" stroke="#8B949E" marker-end="url(#mm)"/>
+  <rect x="950" y="190" width="260" height="150" rx="14" class="panel" stroke="#50B87A" stroke-opacity="0.6"/>
+  <path d="M950 204 a14 14 0 0 1 14 -14 h232 a14 14 0 0 1 14 14 v26 h-260 z" fill="#50B87A"/>
+  <text x="972" y="217" class="tag">STEP 4</text>
+  <text x="972" y="270" class="nt">AI 에이전트</text>
+  <text x="972" y="310" class="ns muted">실제 기동과 비교 분석</text>
+  <path d="M1212 265 H1234" class="e" stroke="#8B949E" marker-end="url(#mm)"/>
+  <rect x="1240" y="190" width="260" height="150" rx="14" class="panel" stroke="#F5A623" stroke-opacity="0.6"/>
+  <path d="M1240 204 a14 14 0 0 1 14 -14 h232 a14 14 0 0 1 14 14 v26 h-260 z" fill="#F5A623"/>
+  <text x="1262" y="217" class="tag">STEP 5</text>
+  <text x="1262" y="270" class="nt">Controller 개선</text>
+  <text x="1262" y="310" class="ns muted">움직임 로직 수정</text>
+  <path d="M1290 344 V400 H210 V352" class="e" stroke="#F5A623" stroke-dasharray="8 6" marker-end="url(#mo)"/>
+  <rect x="560" y="382" width="480" height="36" rx="18" fill="#161b22"/>
+  <text x="800" y="407" text-anchor="middle" class="pl" fill="#FFC266">에이전트 루프 · 실제 같은 움직임이 될 때까지 반복</text>
+
+  <rect x="80" y="460" width="760" height="350" rx="14" fill="#0D1117" stroke="#B57EDC" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="104" y="500" class="pl" fill="#D2A8FF">AI에게 전달되는 로그 (예시)</text>
+  <g class="code">
+    <text x="104" y="548"><tspan fill="#8B949E">[T+000.0]</tspan> <tspan fill="#F5A623">MISSION</tspan> Ingress 단계 시작</text>
+    <text x="104" y="584"><tspan fill="#8B949E">[T+012.4]</tspan> <tspan fill="#4A90D9">F-1</tspan> Waypoint#2 도달</text>
+    <text x="104" y="620"><tspan fill="#8B949E">[T+013.1]</tspan> <tspan fill="#4A90D9">F-2</tspan> 편대 대형 유지</text>
+    <text x="104" y="656"><tspan fill="#8B949E">[T+047.9]</tspan> <tspan fill="#50B87A">F-1</tspan> Target 탐지 → 교전</text>
+    <text x="104" y="692"><tspan fill="#8B949E">[T+052.3]</tspan> <tspan fill="#E5534B">F-1</tspan> 급선회 · 비현실적 기동</text>
+  </g>
+  <text x="104" y="748" class="ps muted">프레임 단위 상태 · 무관한 오브젝트 · 중복 이벤트는 제외</text>
+  <text x="104" y="776" class="ps muted">시간 순서가 유지되어 AI가 인과관계를 바로 파악</text>
+
+  <rect x="880" y="460" width="640" height="350" rx="14" class="panel" stroke="#30363D"/>
+  <text x="904" y="500" class="pl">토큰 사용량 비교 (개념도)</text>
+  <text x="904" y="556" class="ns muted">원본 로그를 무작정 붙여넣기</text>
+  <rect x="904" y="572" width="592" height="34" rx="8" fill="#8B949E" fill-opacity="0.35"/>
+  <text x="920" y="596" class="ps" fill="#C9D1D9">전체 로그 · 모든 오브젝트 · 반복마다 다시 전송</text>
+  <text x="904" y="660" class="ns">임무 단계부터 시간순 필터링</text>
+  <rect x="904" y="676" width="150" height="34" rx="8" fill="#50B87A"/>
+  <text x="1070" y="700" class="ps" fill="#7EE2A8">필요한 이벤트만</text>
+  <text x="904" y="766" class="ps muted">같은 컨텍스트 안에서 루프를 더 많이 반복할 수 있음</text>
+
+  <rect x="80" y="850" width="1440" height="86" rx="12" fill="#50B87A" fill-opacity="0.12" stroke="#50B87A" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="110" y="904" class="sub">AI에게 <tspan fill="#7EE2A8" font-weight="700">무엇을 보여줄지 먼저 설계</tspan> — 로그를 통째로 넘기는 것보다 훨씬 경제적인 토큰 사용</text>
+</svg>
