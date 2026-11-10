@@ -36,7 +36,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/rendering.png" class="feature-image" alt="렌더링">
+          <img loading="lazy" src="assets/img/portfolio/csengine/rendering.png" class="feature-image" alt="렌더링">
         </div>
         <div class="feature-content">
           <h5>렌더링</h5>
@@ -49,7 +49,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/editor1.png" class="feature-image" alt="에디터">
+          <img loading="lazy" src="assets/img/portfolio/csengine/editor1.png" class="feature-image" alt="에디터">
         </div>
         <div class="feature-content">
           <h5>에디터</h5>
@@ -62,7 +62,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/ani.png" class="feature-image" alt="애니메이션">
+          <img loading="lazy" src="assets/img/portfolio/csengine/ani.png" class="feature-image" alt="애니메이션">
         </div>
         <div class="feature-content">
           <h5>애니메이션</h5>
@@ -75,7 +75,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/prefab.png" class="feature-image" alt="프리팹 & 씬">
+          <img loading="lazy" src="assets/img/portfolio/csengine/prefab.png" class="feature-image" alt="프리팹 & 씬">
         </div>
         <div class="feature-content">
           <h5>프리팹 & 씬</h5>
@@ -88,7 +88,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/script.png" class="feature-image" alt="커스텀 스크립트">
+          <img loading="lazy" src="assets/img/portfolio/csengine/script.png" class="feature-image" alt="커스텀 스크립트">
         </div>
         <div class="feature-content">
           <h5>커스텀 스크립트</h5>
@@ -101,7 +101,7 @@ caption:
     <div class="col-lg-6 col-md-12">
       <div class="feature-card">
         <div class="feature-image-container">
-          <img src="assets/img/portfolio/csengine/cross.png" class="feature-image" alt="크로스 플랫폼">
+          <img loading="lazy" src="assets/img/portfolio/csengine/cross.png" class="feature-image" alt="크로스 플랫폼">
         </div>
         <div class="feature-content">
           <h5>크로스 플랫폼</h5>
@@ -120,26 +120,111 @@ caption:
 ## 대표 코드
 
 <div class="code-links mb-5">
-  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/ReflectionMgr.h" target="_blank" rel="noopener">
-    <b>리플렉션</b>
-    <span>타입 이름으로 객체를 등록하고 생성하는 구조</span>
-    <code>src/Manager/ReflectionMgr.h</code>
-  </a>
-  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Util/VariableBinder.h" target="_blank" rel="noopener">
-    <b>직렬화</b>
-    <span>컴포넌트 값을 저장하고 복원하는 인터페이스</span>
-    <code>src/Util/VariableBinder.h</code>
-  </a>
-  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/Render/DeferredRenderGroup.cpp" target="_blank" rel="noopener">
-    <b>디퍼드 렌더링</b>
-    <span>G-Buffer와 라이트 패스를 묶는 렌더 그룹</span>
-    <code>src/Manager/Render/DeferredRenderGroup.cpp</code>
-  </a>
-  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Component/Animation/AnimatorComponent.cpp" target="_blank" rel="noopener">
-    <b>스켈레탈 애니메이션</b>
-    <span>시간에 따른 포즈를 관절 계층에 적용하는 과정</span>
-    <code>src/Component/Animation/AnimatorComponent.cpp</code>
-  </a>
+  <details>
+    <summary>
+      <b>리플렉션</b>
+      <span class="code-links__meta">
+        <span class="code-links__desc">매크로로 타입을 등록하고 이름으로 객체를 생성</span>
+        <code class="code-links__path">src/Manager/ReflectionMgr.cpp</code>
+      </span>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </summary>
+    <pre><code>// src/Util/ComponentDef.h
+#define COMPONENT_CONSTRUCTOR(CLASSNAME) \
+namespace __REFELCTION_DUMP__ { namespace CLASSNAME {                    \
+unsigned char* __CSE_REFLECTION_DUMP__ = \
+CSE::ReflectionMgr::DefineWrapper::SetDefine(#CLASSNAME, []() { return new CSE::CLASSNAME(nullptr); });}} \
+CSE::CLASSNAME::CLASSNAME(CSE::SGameObject* l_gameObject) : CSE::SComponent(#CLASSNAME, l_gameObject)
+
+// src/Manager/ReflectionMgr.cpp
+ReflectionObject* ReflectionMgr::CreateObject(const std::string&amp; type) {
+    const auto&amp; func = m_reflected.find(type);
+    if(func == m_reflected.end()) return nullptr;
+    return func-&gt;second();
+}</code></pre>
+    <a class="code-links__source" href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/ReflectionMgr.cpp#L19-L23" target="_blank" rel="noopener">GitHub에서 전체 코드 보기</a>
+  </details>
+  <details>
+    <summary>
+      <b>직렬화</b>
+      <span class="code-links__meta">
+        <span class="code-links__desc">씬 파일의 값을 이름으로 찾아 컴포넌트에 복원</span>
+        <code class="code-links__path">src/Util/Loader/SCENE/SSceneLoader.cpp</code>
+      </span>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </summary>
+    <pre><code>void SSceneLoader::LinkingReference(std::vector&lt;ComponentValue*&gt;&amp; comps) {
+    for (auto comp: comps) {
+        auto node = comp-&gt;node;
+        for (const auto&amp; value: node.children) {
+            if (value.name != "value") continue;
+
+            std::string v_name = value.getAttribute("name").value;
+            auto v_values = value.value.toStringVector();
+
+            for (int i = 0; i &lt; v_values.size(); ++i) {
+                v_values[i] = ConvertSpaceStr(v_values[i], true);
+            }
+
+            comp-&gt;comp-&gt;SetValue(v_name, v_values);
+        }
+    }
+}</code></pre>
+    <a class="code-links__source" href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Util/Loader/SCENE/SSceneLoader.cpp#L236-L252" target="_blank" rel="noopener">GitHub에서 전체 코드 보기</a>
+  </details>
+  <details>
+    <summary>
+      <b>디퍼드 렌더링</b>
+      <span class="code-links__meta">
+        <span class="code-links__desc">Geometry Pass와 Light Pass로 나눈 렌더링 흐름</span>
+        <code class="code-links__path">src/Manager/Render/DeferredRenderGroup.cpp</code>
+      </span>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </summary>
+    <pre><code>/** ======================
+ *  1. Geometry Pass
+ */
+gbuffer.AttachGeometryFrameBuffer();
+glViewport(0, 0, *m_width, *m_height);
+glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+// ...
+
+/** ======================
+ *  2. Light Pass
+ */
+const auto&amp; deferredBuffer =
+        frameBuffer == nullptr ? m_renderMgr-&gt;GetMainBuffer() : frameBuffer;
+deferredBuffer-&gt;AttachFrameBuffer();
+gbuffer.AttachLightPass();</code></pre>
+    <a class="code-links__source" href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/Render/DeferredRenderGroup.cpp#L59-L125" target="_blank" rel="noopener">GitHub에서 전체 코드 보기</a>
+  </details>
+  <details>
+    <summary>
+      <b>스켈레탈 애니메이션</b>
+      <span class="code-links__meta">
+        <span class="code-links__desc">관절 계층을 순회하며 스키닝 행렬을 계산</span>
+        <code class="code-links__path">src/Component/Animation/AnimatorComponent.cpp</code>
+      </span>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </summary>
+    <pre><code>void AnimatorComponent::applyPoseToJoints(std::vector&lt;mat4&gt;&amp; currentPose, JointComponent* joint,
+                                          const mat4&amp; parentTransform) {
+    const auto&amp; object = joint-&gt;GetGameObject();
+    const int jointId = joint-&gt;GetAnimationJointId();
+    const mat4&amp; currentLocalTransform = currentPose[jointId];
+    mat4&amp;&amp; currentTransform = currentLocalTransform * parentTransform;
+    auto children = object-&gt;GetChildren();
+    for (const auto&amp; child : children) {
+        const auto&amp; joint_component = child-&gt;GetComponent&lt;JointComponent&gt;();
+        if (joint_component != nullptr)
+            applyPoseToJoints(currentPose, joint_component, currentTransform);
+    }
+    currentTransform = joint-&gt;GetInverseTransformMatrix() * currentTransform;
+    joint-&gt;SetAnimationMatrix(std::move(currentTransform));
+}</code></pre>
+    <a class="code-links__source" href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Component/Animation/AnimatorComponent.cpp#L65-L79" target="_blank" rel="noopener">GitHub에서 전체 코드 보기</a>
+  </details>
 </div>
 
 ---
@@ -182,12 +267,12 @@ caption:
             <div class="feature-icon bg-success bg-gradient text-white rounded-3 me-3">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
-            <h5 class="card-title mb-0">C++에서의 Reflection 구현</h5>
+            <h5 class="card-title mb-0">타입 이름 기반 리플렉션</h5>
           </div>
           <p class="card-text">
-            메타데이터 추출, 동적 타입 정보 관리, 객체 직렬화 등을 통해 
-            <strong>Unreal Engine의 GC 및 리플렉션 시스템</strong>의 작동 원리를 체득했습니다. 
-            이를 통해 복잡한 객체 관리와 에디터 툴 개발에 필요한 핵심 기술을 습득했습니다.
+            매크로로 컴포넌트 타입을 등록하고, 씬 파일에 적힌 <strong>타입 이름으로 객체를 생성해 값을 복원</strong>하는 구조를 직접 만들었습니다. 
+            이 과정에서 엔진에 타입 등록과 직렬화 계층이 필요한 이유를 이해했고, 
+            에디터 툴 개발의 기반으로 활용했습니다.
           </p>
         </div>
       </div>
@@ -235,24 +320,46 @@ caption:
 /* 사이트는 Bootstrap 4라서 이 페이지에서 쓰는 Bootstrap 5 유틸리티만 직접 정의 */
 #p1 .row.g-4 { margin: -1.5rem -0.75rem 0; }
 #p1 .row.g-4 > * { margin-top: 1.5rem; padding-right: 0.75rem; padding-left: 0.75rem; }
-#p1 .code-links a {
+#p1 .code-links details { border-bottom: 1px solid #21262d; }
+#p1 .code-links details:first-child { border-top: 1px solid #21262d; }
+#p1 .code-links summary {
   display: grid;
-  grid-template-columns: 11rem minmax(0, 1fr);
+  grid-template-columns: 11rem minmax(0, 1fr) auto;
   column-gap: 1rem;
+  align-items: start;
   padding: 0.9rem 0.5rem;
-  border-bottom: 1px solid #21262d;
   color: #c9d1d9;
-  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
   transition: background-color 0.15s ease;
 }
-#p1 .code-links a:first-child { border-top: 1px solid #21262d; }
-#p1 .code-links a:hover,
-#p1 .code-links a:focus-visible { background-color: #161b22; color: #f0f6fc; text-decoration: none; }
-#p1 .code-links a:focus-visible { outline: 2px solid #fed136; outline-offset: 2px; }
-#p1 .code-links b { grid-row: span 2; color: #f0f6fc; }
-#p1 .code-links code { color: #8b949e; font-size: 0.82rem; overflow-wrap: anywhere; }
+#p1 .code-links summary::-webkit-details-marker { display: none; }
+#p1 .code-links summary:hover,
+#p1 .code-links summary:focus-visible { background-color: #161b22; color: #f0f6fc; }
+#p1 .code-links summary:focus-visible { outline: 2px solid #fed136; outline-offset: -2px; }
+#p1 .code-links b { color: #f0f6fc; }
+#p1 .code-links__desc { display: block; word-break: keep-all; }
+#p1 .code-links__path { display: block; margin-top: 0.15rem; color: #8b949e; font-size: 0.82rem; overflow-wrap: anywhere; }
+#p1 .code-links summary i { margin-top: 0.3rem; color: #8b949e; font-size: 0.75rem; transition: transform 0.2s; }
+#p1 .code-links details[open] summary i { transform: rotate(180deg); }
+#p1 .code-links pre {
+  margin: 0 0.5rem 0.75rem;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  background: #010409;
+  color: #c9d1d9;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  tab-size: 4;
+}
+#p1 .code-links pre code { color: inherit; font-size: inherit; }
+#p1 .code-links__source { display: inline-block; margin: 0 0.5rem 1rem; color: #58a6ff; font-size: 0.88rem; }
+#p1 .code-links__source:hover { color: #79c0ff; }
 @media (max-width: 575px) {
-  #p1 .code-links a { grid-template-columns: minmax(0, 1fr); row-gap: 0.15rem; }
+  #p1 .code-links summary { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0.15rem; }
+  #p1 .code-links__meta { grid-column: 1 / -1; grid-row: 2; }
 }
 #p1 .card-body { padding: 1rem; }
 #p1 .bg-primary { background-color: #0d6efd !important; }
@@ -379,7 +486,7 @@ caption:
 <div class="row d-flex justify-content-center">
   <div class="col-sm-6">
       <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/portfolio/pac.png" alt="">
+      <img loading="lazy" class="mx-auto rounded-circle" src="assets/img/portfolio/pac.png" alt="">
       <h3>팩맨 프로토타입</h3>
       <p class="text-muted">FSM 기반 고스트 AI 및 길찾기 시스템 테스트</p>
       <a href="https://ounols.kr/posts/팩맨-데모/" target="_blank" class="section-subheading btn btn-primary">팩맨 데모 보기</a>
@@ -388,7 +495,7 @@ caption:
 
   <div class="col-sm-6">
       <div class="team-member">
-      <img class="mx-auto rounded-circle" src="assets/img/portfolio/moyo.png" alt="">
+      <img loading="lazy" class="mx-auto rounded-circle" src="assets/img/portfolio/moyo.png" alt="">
       <h3>모여다오 프로젝트</h3>
       <p class="text-muted">NFT 컨셉 기반 3D 씬 활용</p>
       <a href="https://ounols.kr/posts/모여다오-프로젝트" target="_blank" class="section-subheading btn btn-primary">모여다오 데모 보기</a>

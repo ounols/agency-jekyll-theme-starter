@@ -298,7 +298,7 @@
   function setActive(active) {
     if (active) {
       outer.classList.remove('paused');
-      outer.querySelectorAll('video').forEach(function (v) { v.play(); });
+      outer.querySelectorAll('video').forEach(function (v) { v.play().catch(function () {}); });
     } else {
       outer.classList.add('paused');
       outer.querySelectorAll('video').forEach(function (v) { v.pause(); });

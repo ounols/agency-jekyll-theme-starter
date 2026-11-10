@@ -121,6 +121,18 @@ type: freeform
   padding-top: 1rem;
 }
 
+#projects > div > .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .project-category-label {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    letter-spacing: 0.08em;
+  }
+}
+
 /* Project Item — 3 column grid */
 .project-item {
   display: grid;
@@ -214,7 +226,8 @@ type: freeform
   background: #21262d;
 }
 
-.project-compact__thumb img {
+.project-compact__thumb img,
+.project-compact__thumb video {
   display: block;
   width: 100%;
   height: 100%;
@@ -799,6 +812,23 @@ document.addEventListener('DOMContentLoaded', function () {
     revealObserver.observe(item);
   });
 
+  /* 요약 행 썸네일 영상: 화면에 보일 때만 재생 */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var thumbObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.play().catch(function () {});
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll('.project-compact__thumb video').forEach(function (video) {
+      thumbObserver.observe(video);
+    });
+  }
+
   /* Image sliders */
   document.querySelectorAll('.project-slider').forEach(function (slider) {
     var slides = slider.querySelectorAll('.slider-slide');
@@ -839,7 +869,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function playActive() {
       var vid = getVideo(slides[current]);
       if (vid && isInView) {
-        if (vid.preload === 'none') vid.preload = 'auto';
+        if (vid.preload !== 'auto') vid.preload = 'auto';
         vid.play().catch(function () {});
       }
     }

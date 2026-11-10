@@ -8,7 +8,11 @@
   <details class="project-compact">
     <summary>
       <span class="project-compact__thumb">
+        {% if thumb contains '.mp4' or thumb contains '.webm' %}
+        <video src="{{ thumb | relative_url }}" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+        {% else %}
         <img src="{{ thumb | relative_url }}" loading="lazy" alt="">
+        {% endif %}
       </span>
       <span class="project-compact__info">
         <span class="project-compact__title">{{ project.title | replace: "<br>", " " | strip_html }}</span>

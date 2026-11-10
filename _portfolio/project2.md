@@ -14,7 +14,7 @@ caption:
 
 <!-- ───────── HERO ───────── -->
 <section class="wg-hero">
-  <img class="wg-hero-img" src="assets/img/projects/flight-project/0_Thumnail.webp" alt="전투기 워게임 시뮬레이터 (대체 이미지)">
+  <img loading="lazy" class="wg-hero-img" src="assets/img/projects/flight-project/0_Thumnail.webp" alt="전투기 워게임 시뮬레이터 (대체 이미지)">
   <div class="wg-hero-body">
     <p class="wg-eyebrow">2025 ~ 2026 · 5인 정예 외주 · 에디터 · 시뮬레이션 설계 및 구현</p>
     <h3 class="wg-hero-title">전장을 직접 편집하고,<br>그대로 시뮬레이션하는 전투기 워게임</h3>
@@ -35,7 +35,7 @@ caption:
 
 <div class="wg-split">
   <figure class="wg-figure">
-    <img src="assets/img/projects/flight-project/10_editor_system_architecture.svg" alt="에디터 및 시뮬레이터 아키텍처">
+    <img loading="lazy" src="assets/img/projects/flight-project/10_editor_system_architecture.svg" alt="에디터 및 시뮬레이터 아키텍처">
   </figure>
   <div>
     <p>기능 요구사항이 계속 바뀌는 B2B 프로젝트라, 화면이 바뀌어도 데이터가 흔들리지 않도록 MVC를 변형한 <b>MVC + Observer</b> 구조로 설계했습니다.</p>
@@ -62,7 +62,7 @@ caption:
     <span class="wg-tl-label">해결</span>
     <p>생성 관련 가상함수를 <b>Init · Link · Ready 3단계</b>로 분리하고, Property 적용이 모두 끝난 뒤 순서대로 호출하도록 전장 오브젝트 공통 규약으로 만들었습니다.</p>
     <figure class="wg-figure">
-      <img src="assets/img/projects/flight-project/11_construction_order.svg" alt="Unreal 생성 순서 문제와 3단계 분리">
+      <img loading="lazy" src="assets/img/projects/flight-project/11_construction_order.svg" alt="Unreal 생성 순서 문제와 3단계 분리">
     </figure>
     <div class="wg-phases">
       <div style="--c:#4A90D9"><b>Init</b><span>자기 데이터만으로 초기화</span></div>
@@ -74,7 +74,7 @@ caption:
     <span class="wg-tl-label">확장 · 링크</span>
     <p>전투기는 소속 편대와 교전 목표를, 편대는 임무 경로를 참조합니다. 로드 순서는 보장되지 않기 때문에, <b>각 단계를 전장 전체에 일괄 적용</b>하고 모두 끝나야 다음 단계로 넘어가게 했습니다. Link 시점엔 모든 대상이 이미 Init을 마쳤으므로 <b>로드 순서와 무관하게 항상 같은 결과</b>가 나옵니다.</p>
     <figure class="wg-figure">
-      <img src="assets/img/projects/flight-project/12_link_phase.svg" alt="3단계 분리를 활용한 오브젝트 링크">
+      <img loading="lazy" src="assets/img/projects/flight-project/12_link_phase.svg" alt="3단계 분리를 활용한 오브젝트 링크">
     </figure>
   </li>
 </ol>
@@ -86,7 +86,7 @@ caption:
   <div><i class="fa-solid fa-brain"></i><b>Behavior Tree</b><span>AI 전투기 의사결정, Ready 이후 안전하게 동작</span></div>
   <div><i class="fa-solid fa-location-crosshairs"></i><b>Cesium</b><span>통합 지오레퍼런싱, 위경도 ↔ Unreal 좌표 호환</span></div>
   <div><i class="fa-solid fa-jet-fighter"></i><b>JSBSim</b><span>항공역학 시뮬레이션 연동</span></div>
-  <div><i class="fa-solid fa-sun"></i><b>Material</b><span>위성사진 명도 기반 노멀 생성 쉐이더</span></div>
+  <div><i class="fa-solid fa-sun"></i><b>Material</b><span>위성사진 명도 기반 노멀 생성 셰이더</span></div>
   <div><i class="fa-solid fa-server"></i><b>설계 방향</b><span>데디케이티드 서버(예정)까지 고려</span></div>
 </div>
 
@@ -115,7 +115,7 @@ caption:
 </div>
 
 <figure class="wg-figure">
-  <img src="assets/img/projects/flight-project/13_component_controller.svg" alt="컴포넌트 Controller 구조와 AI 에이전트용 규약">
+  <img loading="lazy" src="assets/img/projects/flight-project/13_component_controller.svg" alt="컴포넌트 Controller 구조와 AI 에이전트용 규약">
 </figure>
 
 <div class="wg-principle">
@@ -127,7 +127,7 @@ caption:
 </div>
 
 <figure class="wg-figure">
-  <img src="assets/img/projects/flight-project/14_agent_loop.svg" alt="시간순 필터링 로그 기반 AI 에이전트 루프">
+  <img loading="lazy" src="assets/img/projects/flight-project/14_agent_loop.svg" alt="시간순 필터링 로그 기반 AI 에이전트 루프">
 </figure>
 
 <p>AI 에이전트는 이 로그를 읽고 실제 같은 움직임이 될 때까지 Controller를 고치는 루프를 반복했습니다. 시간 순서가 유지된 핵심 이벤트만 받기 때문에 인과관계를 바로 파악할 수 있었고, 로그를 무작정 붙여 돌리는 것보다 <b>훨씬 적은 토큰</b>으로 같은 비용에 더 많이 반복할 수 있었습니다.</p>

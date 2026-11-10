@@ -38,9 +38,9 @@
           {% for image in p.images %}
             {% assign src = image.src %}
             {% if src contains '.mp4' or src contains '.webm' %}
-          <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" {% if forloop.first and include.eager %}autoplay{% endif %} muted loop playsinline preload="{% if forloop.first and include.eager %}auto{% else %}none{% endif %}"></video>
+          <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" muted loop playsinline preload="{% if forloop.first and include.eager %}metadata{% else %}none{% endif %}"></video>
             {% else %}
-          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}"{% unless include.eager %} loading="lazy"{% endunless %} alt="{{ p.title | strip_html }} - {{ forloop.index }}">
+          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}"{% unless forloop.first and include.eager %} loading="lazy"{% endunless %} alt="{{ p.title | strip_html }} - {{ forloop.index }}">
             {% endif %}
           {% endfor %}
           {% if p.images.size > 1 %}

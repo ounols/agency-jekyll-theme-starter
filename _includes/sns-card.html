@@ -1,6 +1,6 @@
 <a class="sns-card" {% if include.link %}href="{{ include.link }}" target="_blank" rel="noopener"{% endif %}>
   {% if include.img contains '.mp4' or include.img contains '.webm' %}
-  <video src="{{ include.img }}" autoplay muted loop playsinline preload="auto"></video>
+  <video src="{{ include.img }}" muted loop playsinline preload="none"></video>
   {% else %}
   <img src="{{ include.img }}" alt="{{ include.caption }}" loading="lazy">
   {% endif %}

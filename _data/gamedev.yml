@@ -17,7 +17,7 @@
 - id: spine-contrib
   title: "Spine 런타임에 기여해 정식 컨트리뷰터가 됐습니다"
   tag: "오픈소스 기여"
-  desc: "<br>Unity URP 12 미만 환경에서 Spine 캐릭터에 DOF 같은 포스트 프로세싱이 적용되지 않는 문제를 깊이 노멀 버퍼의 부재로 진단했습니다. Spine 스프라이트 쉐이더에 DepthNormals 패스를 추가한 PR을 spine-runtimes에 보냈고, 그대로 머지되어 Spine 4.2 정식 버전부터 함께 배포되고 있습니다."
+  desc: "<br>Unity URP 12 미만 환경에서 Spine 캐릭터에 DOF 같은 포스트 프로세싱이 적용되지 않는 문제를 깊이 노멀 버퍼의 부재로 진단했습니다. Spine 스프라이트 셰이더에 DepthNormals 패스를 추가한 PR을 spine-runtimes에 보냈고, 그대로 머지되어 Spine 4.2 정식 버전부터 함께 배포되고 있습니다."
   img: "/assets/img/gamedev/spine-pr.webp"
   img_mobile: "/assets/img/gamedev/spine-pr-mobile.webp"
   offset: 0

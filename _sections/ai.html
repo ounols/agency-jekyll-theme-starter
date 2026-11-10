@@ -21,6 +21,26 @@ type: freeform
       </div>
     </header>
 
+    <dl class="ai-summary">
+      <div>
+        <dt><span class="ai-legend__dot ai-chip--scope"></span>작게 나누기</dt>
+        <dd>AI가 온전히 이해할 크기로 작업을 나누고, 플랜 모드로 계획을 먼저 검토합니다.</dd>
+      </div>
+      <div>
+        <dt><span class="ai-legend__dot ai-chip--share"></span>함께 맞추기</dt>
+        <dd>팀 공통 프롬프트와 헤더 주석으로 누가 작업해도 같은 기준을 따르게 합니다.</dd>
+      </div>
+      <div>
+        <dt><span class="ai-legend__dot ai-chip--delegate"></span>잘하는 일 맡기기</dt>
+        <dd>직렬화 같은 반복 작업을 맡기고, 결과는 diff로 한 줄씩 직접 검수합니다.</dd>
+      </div>
+    </dl>
+    <p class="ai-case">
+      <b>실제로 바꾼 방식</b>
+      <span>워게임 프로젝트에서 프레임 단위 로그 전체를 넘기던 방식을 버리고, 임무 단계부터 시간순으로 걸러낸 로그만 에이전트에 전달했습니다.</span>
+      <a href="#p2" data-toggle="modal">과정 보기</a>
+    </p>
+
     <!-- 떠다니는 키워드. JS가 없으면 줄바꿈되는 칩 목록으로 표시 -->
     <div class="ai-field" data-ai-field>
       {% for item in ai_items %}
@@ -141,6 +161,73 @@ type: freeform
   margin: 0;
   font-size: .9rem;
   color: var(--ai-ink-subdued);
+}
+
+/* 클릭 없이 보이는 핵심 원칙 */
+.ai-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  margin: 40px 0 16px;
+  border-top: 2px solid var(--ai-ink);
+}
+
+.ai-summary > div {
+  padding-top: 16px;
+}
+
+.ai-summary dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: 'Mona12', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--ai-ink);
+}
+
+.ai-summary dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ai-ink-subdued);
+  word-break: keep-all;
+}
+
+.ai-case {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin: 24px 0 32px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(13, 20, 36, .14);
+  border-bottom: 1px solid rgba(13, 20, 36, .14);
+  color: var(--ai-ink);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.ai-case b {
+  font-weight: 700;
+}
+
+.ai-case span {
+  flex: 1 1 24rem;
+}
+
+.ai-case a {
+  color: var(--ai-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .ai-summary {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 8px;
+  }
 }
 
 /* Field: JS가 켜지면(.is-live) 칩을 절대 위치로 띄운다 */
