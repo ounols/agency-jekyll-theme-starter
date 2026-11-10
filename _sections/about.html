@@ -39,7 +39,7 @@ type: freeform
   }
   .about-hero__fade-text {
     font-family: 'Mona12', sans-serif;
-    font-size: 0.9cqw;
+    font-size: max(12px, 0.9cqw);
     font-weight: 400;
     letter-spacing: 0.7em;
     color: #000000;
@@ -60,13 +60,30 @@ type: freeform
   .about-hero__fade-text.is-visible {
     opacity: 1;
   }
+  @media (max-width: 991px) {
+    .about-hero {
+      flex-direction: column;
+      min-height: 280px;
+    }
+    .about-hero__fade-strip {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+      padding: 0 16px;
+    }
+    .about-hero__fade-text {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      line-height: 1.8;
+    }
+  }
 </style>
 
 <section class="page-section" id="about">
   <div class="about-hero">
     <div class="about-hero__name">JIN YOUNG</div>
     <div class="about-hero__fade-strip">
-      <span class="about-hero__fade-text">게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 컨텐츠 프로그래밍 | 최적화 프로그래밍</span>
+      <span class="about-hero__fade-text">게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 콘텐츠 프로그래밍 | 최적화 프로그래밍</span>
     </div>
   </div>
 
@@ -86,7 +103,7 @@ type: freeform
 <script>
 // (function() {
 //   var phrases = [
-//     '게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 컨텐츠 프로그래밍 | 최적화 프로그래밍',
+//     '게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 콘텐츠 프로그래밍 | 최적화 프로그래밍',
 //     '이진영 입니다.',
 //   ];
 //   var el = document.querySelector('.about-hero__fade-text');

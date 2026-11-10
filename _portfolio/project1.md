@@ -205,6 +205,17 @@ caption:
 </div>
 
 <style>
+/* 사이트는 Bootstrap 4라서 이 페이지에서 쓰는 Bootstrap 5 유틸리티만 직접 정의 */
+#p1 .row.g-4 { margin: -1.5rem -0.75rem 0; }
+#p1 .row.g-4 > * { margin-top: 1.5rem; padding-right: 0.75rem; padding-left: 0.75rem; }
+#p1 .card-body { padding: 1rem; }
+#p1 .bg-primary { background-color: #0d6efd !important; }
+#p1 .bg-success { background-color: #198754 !important; }
+#p1 .bg-info { background-color: #0dcaf0 !important; }
+#p1 .me-3 { margin-right: 1rem; }
+#p1 .rounded-3 { border-radius: 0.3rem; }
+#p1 .bg-gradient { background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); }
+
 .experience-section .feature-icon {
   width: 50px;
   height: 50px;

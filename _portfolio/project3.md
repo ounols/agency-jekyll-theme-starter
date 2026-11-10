@@ -1,4 +1,5 @@
 ---
+published: false
 title: "랜덤 기사단 - Eight Studio"
 subtitle: Eight Studio에서 개발에 참여했던 모바일 수집형 게임
 # image: assets/img/portfolio/r-full.png
@@ -9,11 +10,6 @@ caption:
   subtitle: Eight Studio의 모바일 수집형 게임
   thumbnail: assets/img/portfolio/r.png
 ---
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
 
 ## 간단 소개
 

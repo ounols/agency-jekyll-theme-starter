@@ -88,3 +88,41 @@ header.masthead .btn {
         transform: translateY(-5px);
     }
 }
+
+/* 레이아웃 기준값: 컨테이너 최대 폭, 12px 그리드 여백, 제목 굵기, 링크 색 */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.container {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.row {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.row > * {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+ol, ul {
+    padding-left: 2rem;
+}
+
+a {
+    color: #0d6efd;
+}
+
+a:hover {
+    color: #0a58ca;
+}

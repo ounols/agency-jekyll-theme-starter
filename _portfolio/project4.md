@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Smart Worktainment System - B2B 게임 프로젝트"
 subtitle: H 자동차 기업의 스마트 팩토리 작업자 효율 향상 게이미피케이션 시스템
 #image: assets/img/portfolio/h-1.png
@@ -8,11 +9,6 @@ caption:
   subtitle: H사 스마트 팩토리 게이미피케이션 프로젝트
   thumbnail: assets/img/portfolio/h.png
 ---
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
 
 ## 간단 소개
 

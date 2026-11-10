@@ -1,4 +1,5 @@
 ---
+published: false
 title: "보훈 메타버스 - 대규모 배경 최적화"
 subtitle: 모바일 웹 브라우저로 돌아가는 보훈 메타버스 프로젝트의 대규모 배경 최적화를 담당
 # image: assets/img/portfolio/h-1.png
@@ -9,11 +10,6 @@ caption:
   subtitle: 모바일 WebGL의 구동을 목표로 대규모 배경의 최적화
   thumbnail: assets/img/portfolio/b/b.png
 ---
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
 
 ## 간단 소개
 
