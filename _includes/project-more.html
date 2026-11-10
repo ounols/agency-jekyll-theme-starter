@@ -1,0 +1,35 @@
+<!-- 접힌 상태에서도 요약이 보이는 프로젝트 목록
+     Parameters:
+       items — _data/projects.yml 항목 배열. 항목별 thumb가 없으면 첫 슬라이드를 사용
+-->
+<div class="project-more">
+  {% for project in include.items %}
+  {% assign thumb = project.thumb | default: project.images[0].src %}
+  <details class="project-compact">
+    <summary>
+      <span class="project-compact__thumb">
+        <img src="{{ thumb | relative_url }}" loading="lazy" alt="">
+      </span>
+      <span class="project-compact__info">
+        <span class="project-compact__title">{{ project.title | replace: "<br>", " " | strip_html }}</span>
+        <span class="project-compact__tags">
+          {% for tag in project.tags limit: 2 %}
+          <span class="project-tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+      </span>
+      <span class="project-compact__brief">
+        <span><b>문제</b><span>{{ project.brief.problem }}</span></span>
+        <span><b>역할</b><span>{{ project.brief.role }}</span></span>
+        <span class="project-compact__result"><b>결과</b><span>{{ project.brief.result }}</span></span>
+      </span>
+      <span class="project-compact__action">
+        <span class="project-compact__open">자세히 보기</span>
+        <span class="project-compact__close">접기</span>
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </span>
+    </summary>
+    {% include project-item.html project=project %}
+  </details>
+  {% endfor %}
+</div>

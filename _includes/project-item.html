@@ -4,13 +4,20 @@
                  (title, desc, tags, images, stack, links)
 -->
 {% assign p = include.project %}
-<div class="project-item">
+<div class="project-item"{% if p.id %} id="project-{{ p.id }}"{% endif %}>
 
   <!-- 왼쪽: 제목 · 설명 · 태그 -->
   <div class="project-col project-summary">
     <h3 class="project-title">{{ p.title }}</h3>
     {% if p.desc %}
     <div class="project-desc">{{ p.desc }}</div>
+    {% endif %}
+    {% if p.brief %}
+    <dl class="project-brief">
+      <div><dt>문제</dt><dd>{{ p.brief.problem }}</dd></div>
+      <div><dt>역할</dt><dd>{{ p.brief.role }}</dd></div>
+      <div class="project-brief__result"><dt>결과</dt><dd>{{ p.brief.result }}</dd></div>
+    </dl>
     {% endif %}
     {% if p.tags %}
     <div class="project-tags">
@@ -31,9 +38,9 @@
           {% for image in p.images %}
             {% assign src = image.src %}
             {% if src contains '.mp4' or src contains '.webm' %}
-          <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" {% if forloop.first %}autoplay{% endif %} muted loop playsinline preload="{% if forloop.first %}auto{% else %}none{% endif %}"></video>
+          <video class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" {% if forloop.first and include.eager %}autoplay{% endif %} muted loop playsinline preload="{% if forloop.first and include.eager %}auto{% else %}none{% endif %}"></video>
             {% else %}
-          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}" alt="{{ p.title }} - {{ forloop.index }}">
+          <img class="slider-slide{% if forloop.first %} active{% endif %}" src="{{ src | relative_url }}"{% unless include.eager %} loading="lazy"{% endunless %} alt="{{ p.title | strip_html }} - {{ forloop.index }}">
             {% endif %}
           {% endfor %}
           {% if p.images.size > 1 %}

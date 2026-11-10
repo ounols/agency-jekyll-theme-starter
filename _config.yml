@@ -1,11 +1,12 @@
 # Site settings
-url    : "https://supreme-fiesta-5gvp476v79v3vrpg-4000.app.github.dev"
-baseurl: "/"
+url    : "https://pofo.ounols.kr"
+baseurl: ""
 
-title      : "Portfolio"
-email      : contact@ounols.kr
-description: "포트폴리오 사이트입니다."
-author     : "Ounols"
+title      : "이진영 | 게임 클라이언트·그래픽스 프로그래머"
+brand      : "이진영"
+email      : ounols@ounols.kr
+description: "C++ 자체 엔진을 2017년부터 개발해 온 게임 클라이언트·그래픽스 프로그래머 이진영의 포트폴리오입니다. Unreal C++, Unity, 모바일 WebGL 최적화, 라이브 서비스 경험을 담았습니다."
+author     : "이진영"
 
 collections:
   portfolio:

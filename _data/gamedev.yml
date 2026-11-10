@@ -14,24 +14,6 @@
 # 데스크톱 캔버스는 한 번에 7장(큰 카드 4장 + 얇은 카드 3장)을 그리므로 7개 이상 채우는 것을 권장합니다.
 # 순서는 자유롭게 바꿔도 됩니다.
 
-- id: ai-agent-team
-  title: "AI 에이전트를 팀의 게임 개발 워크플로에 끌어들였습니다"
-  tag: "AI · 사내 워크플로"
-  desc: "<br>Claude Code가 Unity 컴포넌트·어셈블리와 Unreal UCLASS·모듈 구조를 분석하는 전용 도구를 직접 만들고, 회사 프로젝트에 맞춘 멀티 에이전트 워크플로를 구축했습니다. 여러 게임 엔진에서 특정 작업을 반복 수행하는 루프 에이전트를 연구했으며, 위 사진은 자체엔진의 루프 에이전트를 만들었던 화면입니다.<br>이러한 경험을 바탕으로 팀원과 AI 에이전트가 함께 따르는 협업 가이드를 마련해 반복 작업을 줄였습니다."
-  img: "/assets/img/gamedev/ai-agent.png"
-  offset: 0
-  cta: ""
-  url: ""
-
-- id: ai-local-llm
-  title: "작업 규모에 맞는 로컬 LLM의 체급을 취미삼아 연구하고 있습니다"
-  tag: "AI · 개인 연구"
-  desc: "<br>개인 자동화 파이프라인을 claude code에 맡겨 왔지만, 2026년 4월부터 모델의 일관성이 흔들리면서 개인적으로 만들어놨던 CI/CD의 절반이 제대로 돌지 않는 일을 겪었습니다. 그 뒤로는 직접 일관성을 검증할 수 있는 소형 로컬 LLM에 집중해, 파인튜닝하거나 맡길 작업의 규모에 따라 어느 정도 체급의 모델이 필요한지를 공부하고 있습니다.<br>집에서 Gemma3 270M을 파인튜닝해 경제 기사를 판단하는 모델을 만들어 보고, ARM 서버에 LFM2.5 350M을 올려 속도와 지능, 대화 능력을 검증하는 식으로 실험을 이어가고 있습니다."
-  img: "/assets/img/gamedev/local-llm.webp"
-  offset: 0
-  cta: "계기가 된 글 보기"
-  url: "https://ounols.kr/posts/strange-claude/"
-
 - id: spine-contrib
   title: "Spine 런타임에 기여해 정식 컨트리뷰터가 됐습니다"
   tag: "오픈소스 기여"
@@ -41,6 +23,15 @@
   offset: 0
   cta: "머지된 PR 보기"
   url: "https://github.com/EsotericSoftware/spine-runtimes/pull/2164"
+
+- id: ai-agent-team
+  title: "AI 에이전트를 팀의 게임 개발 워크플로에 끌어들였습니다"
+  tag: "AI · 사내 워크플로"
+  desc: "<br>Claude Code가 Unity 컴포넌트·어셈블리와 Unreal UCLASS·모듈 구조를 분석하는 전용 도구를 직접 만들고, 회사 프로젝트에 맞춘 멀티 에이전트 워크플로를 구축했습니다. 여러 게임 엔진에서 특정 작업을 반복 수행하는 루프 에이전트를 연구했으며, 위 사진은 자체엔진의 루프 에이전트를 만들었던 화면입니다.<br>이러한 경험을 바탕으로 팀원과 AI 에이전트가 함께 따르는 협업 가이드를 마련해 반복 작업을 줄였습니다."
+  img: "/assets/img/gamedev/ai-agent.png"
+  offset: 0
+  cta: ""
+  url: ""
 
 - id: game-math-series
   title: "블로그에 '게임 수학' 시리즈를 연재하고 있습니다"
@@ -60,23 +51,14 @@
   cta: "블로그 글 보기"
   url: "https://ounols.kr/posts/%EB%AA%A8%EC%97%AC%EB%8B%A4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"
 
-- id: ajou-mentor
-  title: "아주대 소프트콘 캡스톤 디자인에서 AR 프로젝트 멘토를 맡았습니다"
-  tag: "멘토링"
-  desc: "<br>2021-1학기 AJOU SOFTCON에서 AR로 가구를 가상 배치해 보고 구매를 결정하는 팀 Scanit의 프로젝트를 멘토링했습니다. AR 구현을 위한 Unity 사용법 교육과 Unity 이슈 해결, 코드 커버리지 확인을 담당했고, 팀은 SW캡스톤 부문 우수상을 받았습니다."
-  img: "/assets/img/gamedev/ajou-softcon.webp"
+- id: angpang-maptool
+  title: "퍼즐 게임을 위한 맵툴을 C++로 직접 만들었습니다"
+  tag: "툴 개발"
+  desc: "<br>레벨 디자인이 핵심인 퍼즐 게임이라 WinAPI·OpenGL 기반 맵툴을 따로 제작했습니다. 맵 크기 조정과 타일 배치, 저장·불러오기에서 시작해 구역 지정, 타일 에셋 추가, 이동 횟수 제한, 포탈 태그와 말풍선 배치까지 확장했고, 저장한 맵 파일을 Unity에서 파싱해 바로 플레이할 수 있게 했습니다."
+  img: "/assets/img/gamedev/angpang-maptool.webp"
   offset: 0
-  cta: "프로젝트 보기"
-  url: "https://softcon.ajou.ac.kr/works/works_prev.asp?uid=426&wTerm=2021-1"
-
-- id: miracle-diary
-  title: "군 복무 중 3박 4일 해커톤으로 만든 게임형 다이어리, 미라클 다이어리"
-  tag: "해커톤 수상"
-  desc: "<br>2019 군장병 공개SW 역량강화 교육에서 4인 팀으로 습관과 할 일을 정리하고 일기 수에 따라 레벨이 오르는 안드로이드 앱을 만들어 앱 부문 정보통신산업진흥원장상을 받았습니다. 메인 클라이언트 프로그래밍과 팀원 역할 분담, Git 브랜치 관리, 발표 영상 제작을 맡았습니다."
-  img: "/assets/img/gamedev/miracle-diary.webp"
-  offset: 0
-  cta: "GitHub 보기"
-  url: "https://github.com/osam2019/APP_MIRACLE_DIARY_TEAM"
+  cta: ""
+  url: ""
 
 - id: yongyong-gokgok
   title: "용인 스마트폰 게임개발 아이디어 공모전 금상, 괴도앙팡으로 지스타 전시"
@@ -87,14 +69,32 @@
   cta: "발표 영상 보기"
   url: "https://youtu.be/X3F_wuN5YH8"
 
-- id: angpang-maptool
-  title: "퍼즐 게임을 위한 맵툴을 C++로 직접 만들었습니다"
-  tag: "툴 개발"
-  desc: "<br>레벨 디자인이 핵심인 퍼즐 게임이라 WinAPI·OpenGL 기반 맵툴을 따로 제작했습니다. 맵 크기 조정과 타일 배치, 저장·불러오기에서 시작해 구역 지정, 타일 에셋 추가, 이동 횟수 제한, 포탈 태그와 말풍선 배치까지 확장했고, 저장한 맵 파일을 Unity에서 파싱해 바로 플레이할 수 있게 했습니다."
-  img: "/assets/img/gamedev/angpang-maptool.webp"
+- id: miracle-diary
+  title: "군 복무 중 3박 4일 해커톤으로 만든 게임형 다이어리, 미라클 다이어리"
+  tag: "해커톤 수상"
+  desc: "<br>2019 군장병 공개SW 역량강화 교육에서 4인 팀으로 습관과 할 일을 정리하고 일기 수에 따라 레벨이 오르는 안드로이드 앱을 만들어 앱 부문 정보통신산업진흥원장상을 받았습니다. 메인 클라이언트 프로그래밍과 팀원 역할 분담, Git 브랜치 관리, 발표 영상 제작을 맡았습니다."
+  img: "/assets/img/gamedev/miracle-diary.webp"
   offset: 0
-  cta: ""
-  url: ""
+  cta: "GitHub 보기"
+  url: "https://github.com/osam2019/APP_MIRACLE_DIARY_TEAM"
+
+- id: ajou-mentor
+  title: "아주대 소프트콘 캡스톤 디자인에서 AR 프로젝트 멘토를 맡았습니다"
+  tag: "멘토링"
+  desc: "<br>2021-1학기 AJOU SOFTCON에서 AR로 가구를 가상 배치해 보고 구매를 결정하는 팀 Scanit의 프로젝트를 멘토링했습니다. AR 구현을 위한 Unity 사용법 교육과 Unity 이슈 해결, 코드 커버리지 확인을 담당했고, 팀은 SW캡스톤 부문 우수상을 받았습니다."
+  img: "/assets/img/gamedev/ajou-softcon.webp"
+  offset: 0
+  cta: "프로젝트 보기"
+  url: "https://softcon.ajou.ac.kr/works/works_prev.asp?uid=426&wTerm=2021-1"
+
+- id: ai-local-llm
+  title: "작업 규모에 맞는 로컬 LLM의 체급을 취미삼아 연구하고 있습니다"
+  tag: "AI · 개인 연구"
+  desc: "<br>개인 자동화 파이프라인을 claude code에 맡겨 왔지만, 2026년 4월부터 모델의 일관성이 흔들리면서 개인적으로 만들어놨던 CI/CD의 절반이 제대로 돌지 않는 일을 겪었습니다. 그 뒤로는 직접 일관성을 검증할 수 있는 소형 로컬 LLM에 집중해, 파인튜닝하거나 맡길 작업의 규모에 따라 어느 정도 체급의 모델이 필요한지를 공부하고 있습니다.<br>집에서 Gemma3 270M을 파인튜닝해 경제 기사를 판단하는 모델을 만들어 보고, ARM 서버에 LFM2.5 350M을 올려 속도와 지능, 대화 능력을 검증하는 식으로 실험을 이어가고 있습니다."
+  img: "/assets/img/gamedev/local-llm.webp"
+  offset: 0
+  cta: "계기가 된 글 보기"
+  url: "https://ounols.kr/posts/strange-claude/"
 
 - id: musicapex
   title: "고교 시절 혼자 만든 리듬게임 시뮬레이터, MusicApex"

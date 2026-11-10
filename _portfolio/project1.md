@@ -117,6 +117,33 @@ caption:
 ---
 
 
+## 대표 코드
+
+<div class="code-links mb-5">
+  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/ReflectionMgr.h" target="_blank" rel="noopener">
+    <b>리플렉션</b>
+    <span>타입 이름으로 객체를 등록하고 생성하는 구조</span>
+    <code>src/Manager/ReflectionMgr.h</code>
+  </a>
+  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Util/VariableBinder.h" target="_blank" rel="noopener">
+    <b>직렬화</b>
+    <span>컴포넌트 값을 저장하고 복원하는 인터페이스</span>
+    <code>src/Util/VariableBinder.h</code>
+  </a>
+  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Manager/Render/DeferredRenderGroup.cpp" target="_blank" rel="noopener">
+    <b>디퍼드 렌더링</b>
+    <span>G-Buffer와 라이트 패스를 묶는 렌더 그룹</span>
+    <code>src/Manager/Render/DeferredRenderGroup.cpp</code>
+  </a>
+  <a href="https://github.com/ounols/CSEngine/blob/52688ea45728cccbca661948f4be4950174402f3/src/Component/Animation/AnimatorComponent.cpp" target="_blank" rel="noopener">
+    <b>스켈레탈 애니메이션</b>
+    <span>시간에 따른 포즈를 관절 계층에 적용하는 과정</span>
+    <code>src/Component/Animation/AnimatorComponent.cpp</code>
+  </a>
+</div>
+
+---
+
 ## 이 프로젝트를 통해
 
 <div class="experience-section py-4">
@@ -208,6 +235,25 @@ caption:
 /* 사이트는 Bootstrap 4라서 이 페이지에서 쓰는 Bootstrap 5 유틸리티만 직접 정의 */
 #p1 .row.g-4 { margin: -1.5rem -0.75rem 0; }
 #p1 .row.g-4 > * { margin-top: 1.5rem; padding-right: 0.75rem; padding-left: 0.75rem; }
+#p1 .code-links a {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  column-gap: 1rem;
+  padding: 0.9rem 0.5rem;
+  border-bottom: 1px solid #21262d;
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+#p1 .code-links a:first-child { border-top: 1px solid #21262d; }
+#p1 .code-links a:hover,
+#p1 .code-links a:focus-visible { background-color: #161b22; color: #f0f6fc; text-decoration: none; }
+#p1 .code-links a:focus-visible { outline: 2px solid #fed136; outline-offset: 2px; }
+#p1 .code-links b { grid-row: span 2; color: #f0f6fc; }
+#p1 .code-links code { color: #8b949e; font-size: 0.82rem; overflow-wrap: anywhere; }
+@media (max-width: 575px) {
+  #p1 .code-links a { grid-template-columns: minmax(0, 1fr); row-gap: 0.15rem; }
+}
 #p1 .card-body { padding: 1rem; }
 #p1 .bg-primary { background-color: #0d6efd !important; }
 #p1 .bg-success { background-color: #198754 !important; }

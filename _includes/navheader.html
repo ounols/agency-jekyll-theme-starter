@@ -5,7 +5,7 @@
           {%- if site.logo -%}
             <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}"/>
           {%- else -%}
-            {{ site.title }}
+            {{ site.brand }}
           {%- endif -%}
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,8 @@
     </iframe>
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">portfolio</div>
+        <h1 class="intro-lead-in">게임 클라이언트·그래픽스 프로그래머 이진영</h1>
+        <p class="intro-engine-note">지금 보이는 장면은 제가 만든 C++ 엔진이 실시간으로 그리고 있습니다.</p>
         <div class="scroll-down note-trigger" onclick="scrollToAbout()">
           <span class="note-source">아래로 스크롤 해주세요!</span>
           <div class="scroll-text">Scroll Down</div>
@@ -59,9 +60,29 @@
         </div>
       </div>
     </div>
-    
+    <p class="portfolio-loading" id="portfolio-loading" role="status">포트폴리오를 로딩하는 중</p>
 
     <script>
+      (function () {
+        const banner = document.getElementById('portfolio-banner');
+        const loadingNote = document.getElementById('portfolio-loading');
+        const fallbackTimer = setTimeout(hideLoadingNote, 10000);
+
+        function hideLoadingNote() {
+          clearTimeout(fallbackTimer);
+          window.removeEventListener('message', onBannerMessage);
+          loadingNote.classList.add('is-done');
+        }
+
+        function onBannerMessage(event) {
+          if (event.source === banner.contentWindow && event.data && event.data.type === 'banner-ready') {
+            hideLoadingNote();
+          }
+        }
+
+        window.addEventListener('message', onBannerMessage);
+      })();
+
       function scrollToAbout() {
         const aboutSection = document.querySelector('#about');
         if (aboutSection) {

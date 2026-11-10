@@ -60,6 +60,77 @@ type: freeform
   .about-hero__fade-text.is-visible {
     opacity: 1;
   }
+  .about-proof {
+    margin-top: 3.5rem;
+    border-top: 2px solid #000000;
+  }
+  .about-proof__row {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: baseline;
+    padding: 1.15rem 0.5rem;
+    border-bottom: 1px solid #d0d7de;
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.15s ease, padding-left 0.15s ease;
+  }
+  .about-proof__row:hover,
+  .about-proof__row:focus-visible {
+    background-color: #f6f8fa;
+    color: #000000;
+    padding-left: 1rem;
+    text-decoration: none;
+  }
+  .about-proof__row:focus-visible,
+  .about-links a:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+  .about-proof__label {
+    font-family: 'Mona12', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+  }
+  .about-proof__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #24292f;
+    word-break: keep-all;
+  }
+  .about-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 2rem;
+    margin-top: 2.25rem;
+  }
+  .about-links a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2px;
+  }
+  .about-links a:hover {
+    color: #57606a;
+    border-bottom-color: #57606a;
+    text-decoration: none;
+  }
+  .about-links i {
+    margin-right: 0.45rem;
+  }
+  @media (max-width: 575px) {
+    .about-proof__row {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 0.2rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .about-proof__row {
+      transition: none;
+    }
+  }
   @media (max-width: 991px) {
     .about-hero {
       flex-direction: column;
@@ -83,18 +154,48 @@ type: freeform
   <div class="about-hero">
     <div class="about-hero__name">JIN YOUNG</div>
     <div class="about-hero__fade-strip">
-      <span class="about-hero__fade-text">게임 개발자 | 그래픽스 렌더링 | 엔진 프로그래밍 | 콘텐츠 프로그래밍 | 최적화 프로그래밍</span>
+      <span class="about-hero__fade-text">게임 클라이언트 | 엔진 그래픽스 | 최적화</span>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center" style="padding: 50px 0;">
-        <p class="text-muted" style="font-size: 1.05rem; line-height: 1.9;">
+      <div class="col-lg-8 mx-auto" style="padding-top: 50px; padding-bottom: 80px;">
+        <p class="text-muted text-center" style="font-size: 1.05rem; line-height: 1.9; word-break: keep-all;">
           <span class="about-intro-text">프로그래머 이진영입니다.</span><br><br>
-          다양한 분야의 프로그래밍의 경험이 있고, 그래픽스 렌더링과 엔진 프로그래밍에 깊은 관심을 갖고 있습니다.<br>
-          흥미로운 것이라면 언제든 도전하고 배우는 것을 좋아합니다.
+          C++ 엔진을 직접 만들며 익힌 구조와 렌더링 지식으로 게임의 구조 문제와 성능 문제를 풀어 왔습니다.<br>
+          2020년부터 Unity와 Unreal 실무 프로젝트에서 콘텐츠, 렌더링, 최적화를 맡았습니다.
         </p>
+
+        <nav class="about-proof" aria-label="대표 프로젝트로 이동">
+          <a class="about-proof__row js-scroll-trigger" href="#project-csengine">
+            <span class="about-proof__label">자체 엔진</span>
+            <span class="about-proof__text">C++로 2017년부터 혼자 개발하며 렌더링, 리플렉션, 에디터까지 구현했습니다. GitHub 스타 103개를 받았습니다.</span>
+          </a>
+          <a class="about-proof__row js-scroll-trigger" href="#project-wargame">
+            <span class="about-proof__label">Unreal C++</span>
+            <span class="about-proof__text">전투기 워게임 시뮬레이터의 에디터, 시뮬레이션, 직렬화 프레임워크를 맡았습니다.</span>
+          </a>
+          <a class="about-proof__row js-scroll-trigger" href="#project-openworld">
+            <span class="about-proof__label">최적화</span>
+            <span class="about-proof__text">3D 오픈월드를 갤럭시 S10 모바일 브라우저에서 RAM 700MB, 50fps로 구동했습니다.</span>
+          </a>
+          <a class="about-proof__row js-scroll-trigger" href="#project-pz">
+            <span class="about-proof__label">팀 리드</span>
+            <span class="about-proof__text">11인 프로젝트에서 파트장으로 프로파일링과 구조 리팩토링을 이끌었습니다.</span>
+          </a>
+          <a class="about-proof__row js-scroll-trigger" href="#project-random-knights">
+            <span class="about-proof__label">라이브 서비스</span>
+            <span class="about-proof__text">랜덤 기사단의 Google Play 출시와 라이브 운영 시스템을 개발했습니다.</span>
+          </a>
+        </nav>
+
+        <div class="about-links">
+          <a href="https://github.com/ounols" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub 보기</a>
+          <a href="https://ounols.github.io/CSEngine-Demo" target="_blank" rel="noopener"><i class="fas fa-play" aria-hidden="true"></i>엔진 웹 데모 실행</a>
+          <a href="https://ounols.kr" target="_blank" rel="noopener"><i class="fas fa-pen-nib" aria-hidden="true"></i>기술 블로그 읽기</a>
+          <a href="mailto:ounols@ounols.kr"><i class="fas fa-envelope" aria-hidden="true"></i>메일 보내기</a>
+        </div>
       </div>
     </div>
   </div>

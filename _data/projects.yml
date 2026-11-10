@@ -1,5 +1,11 @@
 graphics:
   - title: "Unity 실시간 GI 구현"
+    id: unity-gi
+    featured: 2
+    brief:
+      problem: "밤낮에 따라 변하는 환경광이 필요했고 모바일에서도 실시간으로 돌아가야 했습니다."
+      role: "11인 프로젝트에서 G-Buffer 기반 GI의 연구와 구현, 아티스트용 베이킹 툴 제작을 맡았습니다."
+      result: "기존 URP 재질과 호환되는 실시간 GI를 모바일과 웹에서 동작시켰습니다."
     desc: "<h5>모바일에서도 돌릴 수 있는 G-buffer기반 GI,<br><b>아티스트를 위한 Tool까지 구현하여 제공</b></h5>"
     tags: [2024 ~ 2025, 11인 규모 프로젝트, URP, HLSL, G-Buffer, 모바일 최적화]
     images:
@@ -51,6 +57,12 @@ graphics:
         url: "https://ounols.kr/posts/unity에-동적-조명을-적용한-global-illumination-구현"
 
   - title: "모바일 브라우저용<br>오픈월드 최적화 작업"
+    id: openworld
+    featured: 3
+    brief:
+      problem: "보급형 기기까지 고려한 모바일 브라우저에서 3D 오픈월드를 구동해야 했습니다."
+      role: "5인 프로젝트에서 렌더링과 배경 최적화 전반, 텍스처 가이드라인 수립을 맡았습니다."
+      result: "갤럭시 S10 브라우저에서 RAM 700MB, 50fps를 달성했습니다."
     desc: "<h5>아티스트와 소통하며 환경을 조율하고,<br>렌더링 및 배경 최적화를 전반적으로 담당</h5>"
     tags: [2023 ~ 2024, 5인 소규모 외주 프로젝트, URP, WebGL, HLSL, 모바일 최적화]
     images:
@@ -106,6 +118,12 @@ graphics:
         url: "https://mpva.kr"
 
   - title: "OpenGL 실시간 SDF-based GI 연구"
+    id: sdf-gi
+    thumb: "/assets/img/projects/sdfdgi-project/vs.jpg"
+    brief:
+      problem: "환경맵 없이 화면 밖 조명까지 반영하는 GI를 자체 엔진에 넣고자 했습니다."
+      role: "대학 졸업 연구로 렌더링 파이프라인, Mesh to SDF 베이킹, 실시간 SDF맵 갱신을 직접 구현했습니다."
+      result: "오브젝트 위치에 따라 SDF맵을 우선 갱신하는 실시간 GI를 완성했습니다."
     desc: "<h5>Unreal의 Lumen 시스템에서 영감을 얻고,<br>OpenGL과 C++로 SDFDGI를 구현</h5>"
     tags: [자체엔진, OpenGL, C++, SDF, Global Illumination]
     images:
@@ -154,6 +172,12 @@ graphics:
         url: "https://ounols.kr/posts/자체-엔진에-global-illumination을-적용하기-위한-삽질기-2"
 
   - title: "다양한 커스텀 쉐이더 제작"
+    id: custom-shader
+    featured: 4
+    brief:
+      problem: "프로젝트마다 다른 아트 방향을 구현하면서 모바일 성능과 아티스트의 조절 편의도 챙겨야 했습니다."
+      role: "Unity와 Unreal에서 HLSL, Shader Graph, Amplify Shader, 머티리얼 에디터로 쉐이더를 제작하고 최적화했습니다."
+      result: "스케치, 식생, 툰 쉐이더를 구현했고 Spine 4.2에 DepthNormals 패스를 기여했습니다."
     desc: "<h5>유니티부터 언리얼까지<br><b>아트 친화적</b>과 <b>최적화</b>를 동시에</h5>"
     tags: [2020 ~, 다양한 프로젝트들, HLSL, Shader Graph, Amplify Shader, Post Processing]
     images:
@@ -213,6 +237,12 @@ graphics:
         - icon: "fa-brands fa-github"
           label: "PR 제출 후<br>Spine 4.2에 공식 머지"
   - title: "C++로 구현한 <b>자체엔진 개발</b>"
+    id: csengine
+    featured: 1
+    brief:
+      problem: "Java 리듬게임에서 겪은 성능 한계를 넘기 위해 C++로 엔진을 직접 만들기 시작했습니다."
+      role: "2017년부터 1인 개발로 렌더링, 리플렉션, 직렬화, 스크립팅, 에디터, 멀티 플랫폼 빌드를 구현했습니다."
+      result: "Windows, Linux, Android, macOS, WebGL을 지원하고 GitHub 스타 103개를 받았습니다."
     desc: "<h5>PBR · 디퍼드 렌더링 · GUI 에디터까지<br><b>C++</b>로 밑바닥부터 직접 만든 3D 엔진</h5>"
     tags: [2017 ~, 혼자 개발 중, C++, OpenGL, GLSL, PBR, Deferred Rendering, ImGui]
     images:
@@ -279,6 +309,8 @@ graphics:
         - icon: "fa-solid fa-heart"
           label: "내가 하고 싶은 일을<br>알게 해준 프로젝트"
     links:
+      - label: "GitHub 소스 코드 (외부)"
+        url: "https://github.com/ounols/CSEngine"
       - label: "프로젝트 더 알아보기"
         url: "#p1"
         modal: true
@@ -287,6 +319,12 @@ graphics:
 client:
 
   - title: "Unreal 기반<br>워게임 프로젝트"
+    id: wargame
+    featured: 1
+    brief:
+      problem: "전장 파일을 불러오면 Unreal 생성 순서 때문에 초기화한 값과 참조가 어긋났습니다."
+      role: "5인 프로젝트에서 UMG 에디터, 시뮬레이션, 오브젝트 직렬화 프레임워크를 맡았습니다."
+      result: "Init, Link, Ready 3단계 규약으로 로드 순서와 무관하게 같은 결과를 보장했습니다."
     desc: "<h5>고도화 된 워게임 시뮬레이션<br>전투기 워게임 B2B 프로젝트</h5>"
     tags: [2025 ~ 2026, 5인 정예 인원 외주 프로젝트, 워게임 시뮬레이터, 직렬화 프레임워크, UMG, Behavior Tree, AI 에이전트 활용, JSBSim과 Cesium 사용]
     images:
@@ -341,6 +379,12 @@ client:
         note: "내부 페이지가 열립니다!"
 
   - title: "PZ 프로젝트"
+    id: pz
+    featured: 2
+    brief:
+      problem: "20개 정도의 시스템과 매니저가 따로 돌아가 다른 팀원의 코드를 추적하기 어려웠습니다."
+      role: "11인 프로젝트의 파트장으로 프로파일링 보고서를 만들고 리팩토링 방향을 정했습니다."
+      result: "기존 로직을 살리면서 호출 방식을 Controller로 통합하는 구조로 이끌었습니다."
     desc: "<h5>문제를 먼저 보았기에,<br>결국 방향을 잡게 된 <b>파트장으로의 여정</b></h5>"
     tags: [2024 ~ 2025, 11인 규모 프로젝트, Unity, 프로파일링, 아키텍처 설계, 리팩토링 주도, 파트장]
     images:
@@ -390,6 +434,12 @@ client:
           label: "회사 사정에 의해 캔슬되었지만<br>성장의 계기가 된 경험"
 
   - title: "공장 업무에 게임이 들어간<br>B2B 프로젝트"
+    id: smart-factory
+    thumb: "/assets/img/portfolio/h-3.png"
+    brief:
+      problem: "실제 공장 공정 데이터와 연동되는 게임을 폐쇄망 환경에서 구동해야 했습니다."
+      role: "8인 팀에서 Spring Boot와 Tibero 백엔드, 클라이언트 렌더링 최적화, Addressable 패치 배포를 맡았습니다."
+      result: "공정과 동시에 작동하는 시스템을 만들고 해외 현장에서 폴리싱과 인수인계까지 마쳤습니다."
     desc: "<h5>H 자동차의 스마트 팩토리 프로젝트로<br>해외 파견까지</h5>"
     tags: [2022 ~ 2023, 8인 게임 개발팀 대규모 프로젝트, Unity, Addressable, Backend]
     images:
@@ -439,6 +489,12 @@ client:
           label: "생각보다 재밌었고<br>개발자 고충은 어딜가나 비슷하다..."
 
   - title: "랜덤 기사단"
+    id: random-knights
+    featured: 3
+    brief:
+      problem: "카드 수집형 디펜스 게임의 출시와 라이브 운영에 필요한 시스템을 갖춰야 했습니다."
+      role: "15인 프로젝트에서 아웃게임 시스템, JWT와 영수증 검증 백엔드, Jenkins와 AWS CI/CD를 맡았습니다."
+      result: "Google Play에 출시하고 우편함, 일일 퀘스트, 랭킹, 에셋 패치 업데이트를 구현했습니다."
     desc: "<h5>개발 시작부터 라이브 서비스까지<br>모든 과정을 겪어본 프로젝트</h5>"
     tags: [2020 ~ 2021, Unity, 15인 규모 프로젝트, 프레임워크 설계 참여, 우편함과 퀘스트, 클라이언트 프로그래밍, 백엔드, UI, Asset Bundle, 라이브 업데이트]
     images:
@@ -480,6 +536,12 @@ client:
         url: "https://cafe.naver.com/eightgames"
 
   - title: "괴도앙팡<br>대학 팀 프로젝트"
+    id: angpang
+    thumb: "/assets/img/projects/ap-project/ap1.jpg"
+    brief:
+      problem: "대학 팀 프로젝트로 만든 퍼즐 게임을 구글 스토어 출시까지 완성해야 했습니다."
+      role: "프로그래밍을 맡아 팀에 Git 협업을 도입하고 타일 오브젝트의 GC 문제를 오브젝트 풀링으로 해결했습니다."
+      result: "구글 스토어에 출시해 1만 다운로드를 넘겼고 지스타 2017에 전시했습니다."
     desc: "<h5>협업하는 법을<br>처음으로 배우게 되었습니다</h5>"
     tags: [2017 ~ 2018, Unity]
     images:

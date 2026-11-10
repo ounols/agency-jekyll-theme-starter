@@ -41,6 +41,79 @@ header.masthead .btn {
     pointer-events: auto;
 }
 
+header.masthead .intro-text h1.intro-lead-in,
+header.masthead .intro-text .intro-engine-note {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    background: #000000;
+    word-break: keep-all;
+}
+
+header.masthead .intro-text h1.intro-lead-in {
+    font-family: 'BookkMyungjo', serif;
+    font-size: clamp(1.5rem, 3vw, 2.75rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    padding: 0.2em 0.55em;
+}
+
+header.masthead .intro-text .intro-engine-note {
+    font-family: 'Mona12', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    padding: 0.35em 0.9em;
+}
+
+/* 엔진 배너가 준비될 때까지 표시 */
+.portfolio-loading {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 50%;
+    z-index: 3;
+    margin: 0;
+    padding: 0.3em 0.8em;
+    background: #000000;
+    color: #c9d1d9;
+    font-family: 'Mona12', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity 0.6s ease;
+}
+
+.portfolio-loading::after {
+    content: "...";
+    display: inline-block;
+    clip-path: inset(0 100% 0 0);
+    animation: portfolio-loading-dots 1.4s steps(4, jump-none) infinite;
+}
+
+.portfolio-loading.is-done {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+}
+
+@keyframes portfolio-loading-dots {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-loading::after {
+        clip-path: none;
+        animation: none;
+    }
+}
+
 /* Scroll Down Button */
 .scroll-down {
     position: relative;

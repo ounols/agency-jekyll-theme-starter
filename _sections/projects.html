@@ -10,7 +10,7 @@ type: freeform
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Key Projects</h2>
-        <h3 class="section-subheading text-muted">주요 프로젝트와 핵심 기능들을 소개합니다.</h3>
+        <h3 class="section-subheading text-muted">프로젝트마다 풀어야 했던 문제, 맡은 역할, 결과를 먼저 적었습니다.</h3>
       </div>
     </div>
 
@@ -24,18 +24,24 @@ type: freeform
     <!-- Graphics & Rendering -->
     <div id="cat-graphics" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Engine &amp; Graphics</div>
-      {% for project in site.data.projects.graphics %}
-        {% include project-item.html project=project %}
+      {% assign graphics_featured = site.data.projects.graphics | where_exp: "item", "item.featured" | sort: "featured" %}
+      {% assign graphics_more = site.data.projects.graphics | where_exp: "item", "item.featured == nil" %}
+      {% for project in graphics_featured %}
+        {% include project-item.html project=project eager=true %}
       {% endfor %}
+      {% include project-more.html items=graphics_more %}
       {% include sns-marquee.html %}
     </div>
 
     <!-- Game Programming -->
     <div id="cat-client" class="container-fluid px-4 px-lg-5 project-category">
       <div class="project-category-label">Game Programming</div>
-      {% for project in site.data.projects.client %}
-        {% include project-item.html project=project %}
+      {% assign client_featured = site.data.projects.client | where_exp: "item", "item.featured" | sort: "featured" %}
+      {% assign client_more = site.data.projects.client | where_exp: "item", "item.featured == nil" %}
+      {% for project in client_featured %}
+        {% include project-item.html project=project eager=true %}
       {% endfor %}
+      {% include project-more.html items=client_more %}
     </div>
 
     <!-- Others -->
@@ -126,6 +132,235 @@ type: freeform
 
 .project-item + .project-item {
   border-top: 1px solid #21262d;
+}
+
+/* 문제 · 역할 · 결과 요약 */
+.project-brief {
+  margin: 0 0 1.5rem;
+}
+
+.project-brief > div {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  column-gap: 0.5rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid #21262d;
+}
+
+.project-brief dt {
+  font-family: 'Mona12', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #8b949e;
+}
+
+.project-brief dd {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  word-break: keep-all;
+}
+
+.project-brief__result dt {
+  color: #fed136;
+}
+
+.project-brief__result dd {
+  color: #f0f6fc;
+  font-weight: 600;
+}
+
+/* 접힌 상태에서도 요약이 보이는 프로젝트 */
+.project-more {
+  margin-bottom: 4rem;
+  border-top: 1px solid #21262d;
+}
+
+.project-compact {
+  border-bottom: 1px solid #21262d;
+}
+
+.project-compact > summary {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr) minmax(0, 1.7fr) auto;
+  column-gap: 2rem;
+  align-items: center;
+  padding: 1.75rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.15s ease;
+}
+
+.project-compact > summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-compact > summary:hover {
+  background-color: rgba(230, 237, 243, 0.05);
+}
+
+.project-compact > summary:focus-visible {
+  outline: 2px solid #fed136;
+  outline-offset: -2px;
+}
+
+.project-compact__thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #21262d;
+}
+
+.project-compact__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-compact__info {
+  display: block;
+}
+
+.project-compact__title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #f0f6fc;
+  word-break: keep-all;
+}
+
+.project-compact__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.project-compact__brief {
+  display: block;
+}
+
+.project-compact__brief > span {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  column-gap: 0.5rem;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c9d1d9;
+  word-break: keep-all;
+}
+
+.project-compact__brief b {
+  font-family: 'Mona12', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #8b949e;
+}
+
+.project-compact__brief .project-compact__result {
+  color: #f0f6fc;
+  font-weight: 600;
+}
+
+.project-compact__brief .project-compact__result b {
+  color: #fed136;
+}
+
+.project-compact__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-compact > summary:hover .project-compact__action {
+  color: #f0f6fc;
+}
+
+.project-compact__action i {
+  font-size: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.project-compact__close {
+  display: none;
+}
+
+.project-compact[open] > summary {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0.75rem;
+}
+
+.project-compact[open] > summary:hover {
+  background-color: transparent;
+}
+
+.project-compact[open] .project-compact__thumb,
+.project-compact[open] .project-compact__info,
+.project-compact[open] .project-compact__brief,
+.project-compact[open] .project-compact__open {
+  display: none;
+}
+
+.project-compact[open] .project-compact__close {
+  display: inline;
+}
+
+.project-compact[open] .project-compact__action {
+  padding: 0.55rem 1.5rem;
+  border: 2px solid #30363d;
+  border-radius: 50px;
+  color: #c9d1d9;
+}
+
+.project-compact[open] .project-compact__action i {
+  transform: rotate(180deg);
+}
+
+.project-compact .project-item {
+  padding: 2rem 0 5rem;
+}
+
+@media (max-width: 1199px) {
+  .project-compact > summary {
+    grid-template-columns: 9rem minmax(0, 1fr) auto;
+    row-gap: 1rem;
+  }
+
+  .project-compact__brief {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 575px) {
+  .project-compact > summary {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .project-compact__action {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-compact > summary,
+  .project-compact__action i {
+    transition: none;
+  }
 }
 
 /* Left column — Summary */
